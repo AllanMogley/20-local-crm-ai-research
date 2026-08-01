@@ -1,4 +1,4 @@
 [submodule "twenty"]
 	path = twenty
-	url = git@github.com:twentyhq/twenty.git
+	url = git@github.com:AllanMogley/twenty.git
 	branch = main
