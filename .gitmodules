@@ -2,3 +2,7 @@
 	path = twenty
 	url = git@github.com:AllanMogley/twenty.git
 	branch = main
+[submodule "openwebui"]
+	path = openwebui
+	url = git@github.com:AllanMogley/22-open-webui.git
+	branch = main
