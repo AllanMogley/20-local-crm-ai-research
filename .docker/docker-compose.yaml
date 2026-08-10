@@ -54,6 +54,42 @@ services:
       - 'MCP_ENABLE=true'
     restart: unless-stopped
 
+  mcp:
+      build:
+        context: /mnt/my-space/1-ai-agents/3-open-webui/mcpo
+        dockerfile: /mnt/my-space/1-ai-agents/3-open-webui/mcpo/Dockerfile
+      image: mcp
+      volumes:
+        - /home/allanmogley/Downloads/mcp.json:/app/config/config.json
+      container_name: mcp
+      tty: true
+      stdin_open: true
+      command:
+
+        # - "mcpo"
+        # - "--port"
+        # - "8000"
+        # - "--"
+        # - "uvx"
+        # - "mcp-server-time"
+        # - "--local-timezone=America/New_York"
+
+
+        - mcpo
+        - --port
+        - "8001"
+        - --server-type
+        - streamable-http
+        - --header
+        - '{"Authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBjODg2OTBiLTgwMzItNGQ4OS05YzZmLTg2NzQzZGFiMzBjMSJ9.eyJzdWIiOiI1M2VhMjE4ZS03MzYxLTQ4N2YtODJjZC05YjdjMjcxODZjMWMiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiNTNlYTIxOGUtNzM2MS00ODdmLTgyY2QtOWI3YzI3MTg2YzFjIiwiaWF0IjoxNzg2Mzc4Mzc0LCJleHAiOjQ5Mzk4OTE5NzMsImp0aSI6IjhmYTRmZmZhLThlNmUtNDI2ZC1hZGY0LWY2ZTA5MmZhMWU3NSJ9.ZppVYTKNSxHZ7nv47o-ubUt-D7qLxQCJ6RaksDS0kS4QPj3FxMexdwVys-lT25vrILaQqW7iOOVAO82-l9L57g"}'
+        - --
+        - http://server:3000/mcp
+      
+      networks:
+        - crm
+      ports:
+        - 8001:8000
+
 networks:
   crm:
     driver: bridge
