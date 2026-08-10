@@ -1,0 +1,63 @@
+services:
+
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - /mnt/my-space/1-ai-agents/1-models/1-ollama:/root/.ollama
+    container_name: ollama
+    networks:
+      - crm
+    ports:
+      - "11434:11434"
+    stdin_open: true
+    tty: true
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    environment:
+      - OLLAMA_VULKAN=1
+      - OLLAMA_NUM_PARALLEL=4
+
+  tau-bench:
+    build:
+      context: .
+      dockerfile: Dockerfile-taubench
+    image: tau-bench
+    container_name: tau-bench
+    networks:
+      - crm
+    stdin_open: true
+    tty: true
+    environment:
+      - OPENAI_API_BASE=ollama:11434
+      - OPENAI_API_KEY=ollama
+      - MODEL=qwen3:8b
+
+  open-webui:
+    build:
+      context: /mnt/my-space/4-local-ai-crm/20-local-crm-ai-research/openwebui/
+      dockerfile: /mnt/my-space/4-local-ai-crm/20-local-crm-ai-research/.docker/Dockerfile-openwebui
+    image: openwebui
+    container_name: openwebui
+    networks:
+      - crm
+    volumes:
+      - open-webui:/app/backend/data
+    depends_on:
+      - ollama
+    ports:
+      - ${OPEN_WEBUI_PORT-8080}:8080
+    environment:
+      - 'OLLAMA_BASE_URL=http://ollama:11434' 
+      - 'WEBUI_SECRET_KEY='
+      - 'ENABLE_MCP_SERVER=true'
+      - 'MCP_ENABLE=true'
+    restart: unless-stopped
+
+networks:
+  crm:
+    driver: bridge
+
+volumes:
+  ollama: {}
+  open-webui: {}
