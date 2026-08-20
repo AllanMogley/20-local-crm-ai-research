@@ -17,6 +17,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 # Confirm npm and node versions (optional debugging info)
 RUN node -v && npm -v
 
+# Clone git repo
+# RUN git clone --depth 1 --single-branch --branch main https://github.com/open-webui/mcpo.git /app
+
 # Copy your mcpo source code (assuming in src/mcpo)
 COPY . /app
 WORKDIR /app
@@ -28,6 +31,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Install mcpo (assuming pyproject.toml is properly configured)
 RUN uv pip install . && rm -rf ~/.cache
+
 
 # Verify mcpo installed correctly
 RUN which mcpo
