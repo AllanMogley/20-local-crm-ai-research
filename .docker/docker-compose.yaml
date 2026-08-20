@@ -1,9 +1,10 @@
 services:
 
   ollama:
-    image: ollama/ollama
+    # image: ollama/ollama
+    image: ollama/ollama:0.32.15
     volumes:
-      - /mnt/my-space/1-ai-agents/1-models/1-ollama:/root/.ollama
+      - /mnt/my-space/1-ai-agents/1-models/1-ollama:/ollama
     container_name: ollama
     networks:
       - crm
@@ -11,12 +12,13 @@ services:
       - "11434:11434"
     stdin_open: true
     tty: true
-    devices:
-      - /dev/kfd
-      - /dev/dri
+    # devices:
+      # - /dev/kfd
+      # - /dev/dri
     environment:
-      - OLLAMA_VULKAN=1
-      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_CONTEXT_LENGTH=200
+      # - OLLAMA_VULKAN=1
+      # - OLLAMA_NUM_PARALLEL=4
 
   tau-bench:
     build:
@@ -52,7 +54,7 @@ services:
       - 'WEBUI_SECRET_KEY='
       - 'ENABLE_MCP_SERVER=true'
       - 'MCP_ENABLE=true'
-    restart: unless-stopped
+    # restart: unless-stopped
 
   mcp:
       build:
@@ -66,24 +68,24 @@ services:
       stdin_open: true
       command:
 
-        # - "mcpo"
-        # - "--port"
-        # - "8000"
-        # - "--"
-        # - "uvx"
-        # - "mcp-server-time"
-        # - "--local-timezone=America/New_York"
+        - "mcpo"
+        - "--port"
+        - "8000"
+        - "--"
+        - "uvx"
+        - "mcp-server-time"
+        - "--local-timezone=America/New_York"
 
 
-        - mcpo
-        - --port
-        - "8001"
-        - --server-type
-        - streamable-http
-        - --header
-        - '{"Authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBjODg2OTBiLTgwMzItNGQ4OS05YzZmLTg2NzQzZGFiMzBjMSJ9.eyJzdWIiOiI1M2VhMjE4ZS03MzYxLTQ4N2YtODJjZC05YjdjMjcxODZjMWMiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiNTNlYTIxOGUtNzM2MS00ODdmLTgyY2QtOWI3YzI3MTg2YzFjIiwiaWF0IjoxNzg2Mzc4Mzc0LCJleHAiOjQ5Mzk4OTE5NzMsImp0aSI6IjhmYTRmZmZhLThlNmUtNDI2ZC1hZGY0LWY2ZTA5MmZhMWU3NSJ9.ZppVYTKNSxHZ7nv47o-ubUt-D7qLxQCJ6RaksDS0kS4QPj3FxMexdwVys-lT25vrILaQqW7iOOVAO82-l9L57g"}'
-        - --
-        - http://server:3000/mcp
+        # - mcpo
+        # - --port
+        # - "8001"
+        # - --server-type
+        # - streamable-http
+        # - --header
+        # - '{"Authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBjODg2OTBiLTgwMzItNGQ4OS05YzZmLTg2NzQzZGFiMzBjMSJ9.eyJzdWIiOiI1M2VhMjE4ZS03MzYxLTQ4N2YtODJjZC05YjdjMjcxODZjMWMiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiNTNlYTIxOGUtNzM2MS00ODdmLTgyY2QtOWI3YzI3MTg2YzFjIiwiaWF0IjoxNzg2Mzc4Mzc0LCJleHAiOjQ5Mzk4OTE5NzMsImp0aSI6IjhmYTRmZmZhLThlNmUtNDI2ZC1hZGY0LWY2ZTA5MmZhMWU3NSJ9.ZppVYTKNSxHZ7nv47o-ubUt-D7qLxQCJ6RaksDS0kS4QPj3FxMexdwVys-lT25vrILaQqW7iOOVAO82-l9L57g"}'
+        # - --
+        # - http://server:3000/mcp
       
       networks:
         - crm
