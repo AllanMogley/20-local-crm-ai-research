@@ -1,0 +1,4204 @@
+NodeName=cn01 Arch=x86_64 CoresPerSocket=64 
+   CPUAlloc=0 CPUEfctv=128 CPUTot=128 CPULoad=0.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:8(S:1,3,5,7)
+   NodeAddr=cn01 NodeHostName=cn01 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=514375 AllocMem=0 FreeMem=494447 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=ai 
+   BootTime=2026-08-18T09:15:45 SlurmdStartTime=2026-08-25T03:46:16
+   LastBusyTime=2026-08-25T23:28:43 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=514375M,billing=128,gres/gpu=8
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=cn02 Arch=x86_64 CoresPerSocket=64 
+   CPUAlloc=0 CPUEfctv=128 CPUTot=128 CPULoad=0.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:8(S:1,3,5,7)
+   NodeAddr=cn02 NodeHostName=cn02 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=514375 AllocMem=0 FreeMem=504298 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=ai 
+   BootTime=2026-08-18T09:15:41 SlurmdStartTime=2026-08-25T03:46:16
+   LastBusyTime=2026-08-25T23:18:29 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=514375M,billing=128,gres/gpu=8
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=cn03 Arch=x86_64 CoresPerSocket=64 
+   CPUAlloc=0 CPUEfctv=128 CPUTot=128 CPULoad=0.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:8(S:1,3,5,7)
+   NodeAddr=cn03 NodeHostName=cn03 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=514375 AllocMem=0 FreeMem=506307 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=ai 
+   BootTime=2026-08-18T09:15:47 SlurmdStartTime=2026-08-25T03:46:16
+   LastBusyTime=2026-08-25T03:46:16 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=514375M,billing=128,gres/gpu=8
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=cn04 Arch=x86_64 CoresPerSocket=64 
+   CPUAlloc=0 CPUEfctv=128 CPUTot=128 CPULoad=0.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:8(S:1,3,5,7)
+   NodeAddr=cn04 NodeHostName=cn04 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=514375 AllocMem=0 FreeMem=506116 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=ai 
+   BootTime=2026-08-18T09:15:43 SlurmdStartTime=2026-08-25T03:46:16
+   LastBusyTime=2026-08-25T03:46:16 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=514375M,billing=128,gres/gpu=8
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=sdflex0 Arch=x86_64 CoresPerSocket=18 
+   CPUAlloc=222 CPUEfctv=288 CPUTot=288 CPULoad=210.68
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=sdflex0 NodeHostName=sdflex0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=12189851 AllocMem=9289728 FreeMem=7145384 Sockets=16 Boards=8
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=bigdata 
+   BootTime=2026-08-18T09:15:27 SlurmdStartTime=2026-08-25T03:46:15
+   LastBusyTime=2026-08-22T15:42:36 ResumeAfterTime=None
+   CfgTRES=cpu=288,mem=12189851M,billing=288
+   AllocTRES=cpu=222,mem=9072G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.96
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s0b0n0 NodeHostName=x1000c0s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=239057 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:26 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T22:58:27 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=116.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s0b0n1 NodeHostName=x1000c0s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=108000 FreeMem=234473 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:31 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-16T18:05:19 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=108000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=99.95
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s0b1n0 NodeHostName=x1000c0s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=160000 FreeMem=232326 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:29 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-21T13:18:44 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=160000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=111.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s0b1n1 NodeHostName=x1000c0s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=22745 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:11
+   LastBusyTime=2026-08-25T18:11:27 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=89.00
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s1b0n0 NodeHostName=x1000c0s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144192 FreeMem=234059 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-24T12:04:20 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=144192M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.57
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s1b0n1 NodeHostName=x1000c0s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=239864 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:27 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-26T00:41:44 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.51
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s1b1n0 NodeHostName=x1000c0s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=189004 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:29 SlurmdStartTime=2026-08-25T14:32:43
+   LastBusyTime=2026-08-25T20:03:23 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=124.64
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s1b1n1 NodeHostName=x1000c0s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=116000 FreeMem=242390 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:34 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-18T20:40:32 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=116000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=16.46
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s2b0n0 NodeHostName=x1000c0s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=54037 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-21T09:18:33 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.98
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s2b0n1 NodeHostName=x1000c0s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=171079 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-25T17:27:51 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.87
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s2b1n0 NodeHostName=x1000c0s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=175598 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T20:06:54 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s2b1n1 NodeHostName=x1000c0s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=238900 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:43
+   LastBusyTime=2026-08-25T23:45:56 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=124 CPUEfctv=128 CPUTot=128 CPULoad=111.98
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s3b0n0 NodeHostName=x1000c0s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=84096 FreeMem=231910 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:40 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-18T15:49:29 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=124,mem=84096M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=24.19
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s3b0n1 NodeHostName=x1000c0s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=249122 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-26T01:22:35 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.32
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s3b1n0 NodeHostName=x1000c0s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244156 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T23:50:06 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=102.75
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s3b1n1 NodeHostName=x1000c0s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=160000 FreeMem=238993 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:37 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-24T17:03:34 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=160000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=98.96
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s4b0n0 NodeHostName=x1000c0s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=160000 FreeMem=237516 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:36 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T12:37:59 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=160000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.16
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s4b0n1 NodeHostName=x1000c0s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244089 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:43
+   LastBusyTime=2026-08-26T00:23:07 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.29
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s4b1n0 NodeHostName=x1000c0s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=236174 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:31 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T22:56:36 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=126 CPUEfctv=128 CPUTot=128 CPULoad=126.23
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s4b1n1 NodeHostName=x1000c0s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=98192 FreeMem=238916 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:38 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-17T18:37:48 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=126,mem=98192M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s5b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=126 CPUEfctv=128 CPUTot=128 CPULoad=109.71
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s5b0n0 NodeHostName=x1000c0s5b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=122528 FreeMem=229006 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:39 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-17T18:37:48 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=126,mem=122528M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s5b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=129.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s5b0n1 NodeHostName=x1000c0s5b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=121724 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:33:10
+   LastBusyTime=2026-08-23T12:29:44 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s5b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.74
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s5b1n0 NodeHostName=x1000c0s5b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=130572 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:37 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-23T12:29:44 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c0s5b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=116.01
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c0s5b1n1 NodeHostName=x1000c0s5b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=112000 FreeMem=230670 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:38 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-23T20:07:06 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=112000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.76
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s0b0n0 NodeHostName=x1000c1s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=197345 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:46 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-25T20:06:54 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=73.45
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s0b0n1 NodeHostName=x1000c1s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=192000 FreeMem=232903 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-24T10:10:17 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=187.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.35
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s0b1n0 NodeHostName=x1000c1s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=72192 FreeMem=237324 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:46 SlurmdStartTime=2026-08-25T14:33:05
+   LastBusyTime=2026-08-24T11:08:09 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=70.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s0b1n1 NodeHostName=x1000c1s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=243284 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T23:50:06 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.40
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s1b0n0 NodeHostName=x1000c1s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=241063 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:46 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T23:18:45 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=16.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s1b0n1 NodeHostName=x1000c1s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=160519 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:39 SlurmdStartTime=2026-08-25T14:32:44
+   LastBusyTime=2026-08-25T08:35:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s1b1n0 NodeHostName=x1000c1s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=227550 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T06:03:54 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s1b1n1 NodeHostName=x1000c1s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=219034 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:47 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T06:03:54 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s2b0n0 NodeHostName=x1000c1s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=236275 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-25T06:03:54 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s2b0n1 NodeHostName=x1000c1s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=237245 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-25T06:03:54 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.58
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s2b1n0 NodeHostName=x1000c1s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=195438 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:33:09
+   LastBusyTime=2026-08-23T10:41:24 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=124 CPUEfctv=128 CPUTot=128 CPULoad=77.57
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s2b1n1 NodeHostName=x1000c1s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=156528 FreeMem=218629 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:38 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-24T12:49:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=124,mem=156528M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.11
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s3b0n0 NodeHostName=x1000c1s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=141147 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:11 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T17:31:11 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=119.62
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s3b0n1 NodeHostName=x1000c1s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240070 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:11 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T22:16:08 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=109.28
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s3b1n0 NodeHostName=x1000c1s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144000 FreeMem=240681 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:41 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-16T14:20:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=144000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=129.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s3b1n1 NodeHostName=x1000c1s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=167763 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:41 SlurmdStartTime=2026-08-25T14:33:10
+   LastBusyTime=2026-08-21T07:40:41 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=124 CPUEfctv=128 CPUTot=128 CPULoad=103.68
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s4b0n0 NodeHostName=x1000c1s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144000 FreeMem=208587 Sockets=8 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:07 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T12:29:19 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=124,mem=144000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=121 CPUEfctv=128 CPUTot=128 CPULoad=40.39
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s4b0n1 NodeHostName=x1000c1s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=157950 FreeMem=232656 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:08 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-17T12:35:14 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=121,mem=157950M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.65
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s4b1n0 NodeHostName=x1000c1s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244689 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-25T23:18:45 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=125 CPUEfctv=128 CPUTot=128 CPULoad=73.55
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s4b1n1 NodeHostName=x1000c1s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=148000 FreeMem=209746 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-18T14:54:28 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=125,mem=148000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s5b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s5b0n0 NodeHostName=x1000c1s5b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=204800 FreeMem=225408 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:55
+   LastBusyTime=2026-08-25T21:28:00 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=200G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s5b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=123.43
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s5b0n1 NodeHostName=x1000c1s5b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=100743 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:04
+   LastBusyTime=2026-08-25T20:29:08 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s5b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=65.43
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s5b1n0 NodeHostName=x1000c1s5b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=9942 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:43 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-25T21:49:22 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c1s5b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.42
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c1s5b1n1 NodeHostName=x1000c1s5b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244487 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:28 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-25T22:20:40 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=68.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s0b0n0 NodeHostName=x1000c2s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=192000 FreeMem=231690 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:35 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-25T09:49:46 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=187.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=36.85
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s0b0n1 NodeHostName=x1000c2s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=236000 FreeMem=212849 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:48 SlurmdStartTime=2026-08-25T14:32:45
+   LastBusyTime=2026-08-16T09:35:22 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=236000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.78
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s0b1n0 NodeHostName=x1000c2s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=186019 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:37 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-22T03:37:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.75
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s0b1n1 NodeHostName=x1000c2s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=185202 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:38 SlurmdStartTime=2026-08-25T14:33:10
+   LastBusyTime=2026-08-22T03:37:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.28
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s1b0n0 NodeHostName=x1000c2s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244532 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T23:48:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s1b0n1 NodeHostName=x1000c2s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=66682 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:11
+   LastBusyTime=2026-08-25T00:25:38 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=16.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s1b1n0 NodeHostName=x1000c2s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=166938 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:41 SlurmdStartTime=2026-08-25T14:32:46
+   LastBusyTime=2026-08-25T08:36:04 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=123 CPUEfctv=128 CPUTot=128 CPULoad=68.62
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s1b1n1 NodeHostName=x1000c2s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=174167 FreeMem=198592 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:45 SlurmdStartTime=2026-08-25T14:32:48
+   LastBusyTime=2026-08-21T13:36:44 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=123,mem=174167M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.35
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s2b0n0 NodeHostName=x1000c2s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=243519 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-11T13:13:31 SlurmdStartTime=2026-08-25T14:33:02
+   LastBusyTime=2026-08-25T23:01:02 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.11
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s2b0n1 NodeHostName=x1000c2s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=247459 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-11T13:11:52 SlurmdStartTime=2026-08-25T14:32:48
+   LastBusyTime=2026-08-24T16:57:35 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.22
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s2b1n0 NodeHostName=x1000c2s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=241562 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-11T13:11:50 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-25T21:37:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.80
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s2b1n1 NodeHostName=x1000c2s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=245303 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-11T13:11:52 SlurmdStartTime=2026-08-25T14:32:47
+   LastBusyTime=2026-08-25T21:31:36 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.79
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s3b0n0 NodeHostName=x1000c2s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=126868 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:28 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-25T02:38:06 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.83
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s3b0n1 NodeHostName=x1000c2s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=243241 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:48
+   LastBusyTime=2026-08-25T23:25:04 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=129.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s3b1n0 NodeHostName=x1000c2s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=231512 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-24T08:13:13 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=62.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=96.56
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s3b1n1 NodeHostName=x1000c2s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=156000 FreeMem=235785 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:48
+   LastBusyTime=2026-08-18T18:13:52 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=156000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s4b0n0 NodeHostName=x1000c2s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=214310 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:33:10
+   LastBusyTime=2026-08-24T11:04:58 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.59
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s4b0n1 NodeHostName=x1000c2s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=174308 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:43 SlurmdStartTime=2026-08-25T14:33:12
+   LastBusyTime=2026-08-23T03:13:13 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=124.31
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s4b1n0 NodeHostName=x1000c2s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=239729 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:48
+   LastBusyTime=2026-07-31T22:52:01 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.45
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s4b1n1 NodeHostName=x1000c2s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=246549 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:38 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-25T12:00:35 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s5b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=104.86
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s5b0n0 NodeHostName=x1000c2s5b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=194929 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:51
+   LastBusyTime=2026-08-25T06:19:23 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s5b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=106.21
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s5b0n1 NodeHostName=x1000c2s5b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=201312 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:43 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-25T06:56:34 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s5b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=114.09
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s5b1n0 NodeHostName=x1000c2s5b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=122182 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-25T19:02:33 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c2s5b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.12
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c2s5b1n1 NodeHostName=x1000c2s5b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240487 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-25T20:33:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=140.63
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s0b0n0 NodeHostName=x1000c3s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=108421 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:36 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-26T00:29:55 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.90
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s0b0n1 NodeHostName=x1000c3s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=229743 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:37 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-26T00:41:42 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s0b1n0 NodeHostName=x1000c3s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=73987 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:46 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-21T16:21:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s0b1n1 NodeHostName=x1000c3s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=74015 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-21T16:21:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s1b0n0 NodeHostName=x1000c3s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=74220 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-21T16:21:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s1b0n1 NodeHostName=x1000c3s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=74538 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-21T16:21:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=122 CPUEfctv=128 CPUTot=128 CPULoad=102.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s1b1n0 NodeHostName=x1000c3s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144000 FreeMem=229313 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:39 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-24T08:53:04 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=122,mem=144000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.76
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s1b1n1 NodeHostName=x1000c3s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=243743 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:41 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-25T23:56:20 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=109.27
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s2b0n0 NodeHostName=x1000c3s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=90854 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:33 SlurmdStartTime=2026-08-25T14:32:49
+   LastBusyTime=2026-08-25T17:47:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s2b0n1 NodeHostName=x1000c3s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240897 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:43 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-25T11:04:04 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s2b1n0 NodeHostName=x1000c3s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244926 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:51
+   LastBusyTime=2026-08-25T21:48:17 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.20
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s2b1n1 NodeHostName=x1000c3s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=236593 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:36 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-25T21:28:00 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.32
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s3b0n0 NodeHostName=x1000c3s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240604 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-25T21:28:00 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.97
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s3b0n1 NodeHostName=x1000c3s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=237370 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:09
+   LastBusyTime=2026-08-25T20:49:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=129.11
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s3b1n0 NodeHostName=x1000c3s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=201709 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:51
+   LastBusyTime=2026-08-25T20:49:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s3b1n1 NodeHostName=x1000c3s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=75590 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:24 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-21T09:31:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.07
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s4b0n0 NodeHostName=x1000c3s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=76064 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:51
+   LastBusyTime=2026-08-21T09:31:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s4b0n1 NodeHostName=x1000c3s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=72362 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:35 SlurmdStartTime=2026-08-25T14:32:51
+   LastBusyTime=2026-08-21T10:02:38 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s4b1n0 NodeHostName=x1000c3s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=70476 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:51
+   LastBusyTime=2026-08-21T17:20:06 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.45
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s4b1n1 NodeHostName=x1000c3s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=178490 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:31 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-23T03:13:13 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s5b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=105.63
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s5b0n0 NodeHostName=x1000c3s5b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=199013 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T23:18:48 SlurmdStartTime=2026-08-25T14:32:53
+   LastBusyTime=2026-08-25T06:27:26 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s5b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=122 CPUEfctv=128 CPUTot=128 CPULoad=17.80
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s5b0n1 NodeHostName=x1000c3s5b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=178334 FreeMem=174268 Sockets=8 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-16T15:00:47 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=122,mem=178334M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s5b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=121 CPUEfctv=128 CPUTot=128 CPULoad=99.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s5b1n0 NodeHostName=x1000c3s5b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144384 FreeMem=241106 Sockets=8 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:45 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-24T11:59:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=121,mem=141G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c3s5b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=124.16
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c3s5b1n1 NodeHostName=x1000c3s5b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=192000 FreeMem=238624 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:45 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-17T15:18:39 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=187.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=81.32
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s0b0n0 NodeHostName=x1000c4s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=145536 FreeMem=196808 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:50
+   LastBusyTime=2026-08-22T18:34:04 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=145536M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.56
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s0b0n1 NodeHostName=x1000c4s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=187884 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:37 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-25T20:03:43 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.57
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s0b1n0 NodeHostName=x1000c4s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=245501 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:32 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-25T22:18:18 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=123.95
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s0b1n1 NodeHostName=x1000c4s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=112243 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-25T19:14:01 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.56
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s1b0n0 NodeHostName=x1000c4s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244586 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-20T20:32:08 SlurmdStartTime=2026-08-25T14:33:16
+   LastBusyTime=2026-08-25T23:12:18 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.71
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s1b0n1 NodeHostName=x1000c4s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=243733 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-25T22:16:02 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s1b1n0 NodeHostName=x1000c4s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240474 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:49 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-26T00:41:50 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=119.54
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s1b1n1 NodeHostName=x1000c4s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=241205 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:44 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-25T11:48:28 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=125.92
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s2b0n0 NodeHostName=x1000c4s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=96000 FreeMem=240231 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:37 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-23T22:49:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=96000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=112.75
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s2b0n1 NodeHostName=x1000c4s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=136000 FreeMem=236689 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:55
+   LastBusyTime=2026-08-23T22:49:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=136000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s2b1n0 NodeHostName=x1000c4s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=74928 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:32:53
+   LastBusyTime=2026-08-21T12:16:46 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.07
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s2b1n1 NodeHostName=x1000c4s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=75586 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:47 SlurmdStartTime=2026-08-25T14:32:53
+   LastBusyTime=2026-08-21T12:16:46 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.07
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s3b0n0 NodeHostName=x1000c4s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=74723 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:32:53
+   LastBusyTime=2026-08-21T12:16:46 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.07
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s3b0n1 NodeHostName=x1000c4s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=75712 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:46 SlurmdStartTime=2026-08-25T14:32:52
+   LastBusyTime=2026-08-21T12:16:46 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=63.93
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s3b1n0 NodeHostName=x1000c4s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=121016 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:36 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-25T21:28:00 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.55
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s3b1n1 NodeHostName=x1000c4s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=246583 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:32:56
+   LastBusyTime=2026-08-18T15:48:14 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.01
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s4b0n0 NodeHostName=x1000c4s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=233348 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-26T00:41:52 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=112.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s4b0n1 NodeHostName=x1000c4s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144000 FreeMem=238552 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-23T19:52:48 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=144000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=83.95
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s4b1n0 NodeHostName=x1000c4s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=176000 FreeMem=188812 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:31 SlurmdStartTime=2026-08-25T14:32:55
+   LastBusyTime=2026-08-23T19:52:48 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=176000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.84
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s4b1n1 NodeHostName=x1000c4s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=241996 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:48 SlurmdStartTime=2026-08-25T14:32:55
+   LastBusyTime=2026-08-25T22:42:53 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s5b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.80
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s5b0n0 NodeHostName=x1000c4s5b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240251 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:28 SlurmdStartTime=2026-08-25T14:32:55
+   LastBusyTime=2026-08-25T22:37:36 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s5b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.91
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s5b0n1 NodeHostName=x1000c4s5b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=167219 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:35 SlurmdStartTime=2026-08-25T14:32:56
+   LastBusyTime=2026-08-25T20:13:52 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s5b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s5b1n0 NodeHostName=x1000c4s5b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=219085 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:55
+   LastBusyTime=2026-08-26T00:41:19 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c4s5b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.20
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c4s5b1n1 NodeHostName=x1000c4s5b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=245332 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:56
+   LastBusyTime=2026-08-26T00:29:55 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.52
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s0b0n0 NodeHostName=x1000c5s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=245440 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:31 SlurmdStartTime=2026-08-25T14:32:54
+   LastBusyTime=2026-08-25T22:33:57 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=86.55
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s0b0n1 NodeHostName=x1000c5s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=205912 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:24 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-25T06:20:24 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=112.22
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s0b1n0 NodeHostName=x1000c5s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144000 FreeMem=228648 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:27 SlurmdStartTime=2026-08-25T14:32:58
+   LastBusyTime=2026-08-17T09:31:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=144000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=121 CPUEfctv=128 CPUTot=128 CPULoad=112.22
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s0b1n1 NodeHostName=x1000c5s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128384 FreeMem=243544 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:36 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-25T11:24:23 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=121,mem=128384M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s1b0n0 NodeHostName=x1000c5s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=225184 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:44 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-25T05:53:49 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=129.25
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s1b0n1 NodeHostName=x1000c5s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=137079 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:44 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-19T19:47:32 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.85
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s1b1n0 NodeHostName=x1000c5s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=124641 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:42 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-19T19:47:32 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=129.37
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s1b1n1 NodeHostName=x1000c5s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=199115 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:41 SlurmdStartTime=2026-08-25T14:32:56
+   LastBusyTime=2026-08-25T20:04:16 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=16.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s2b0n0 NodeHostName=x1000c5s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=153384 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:56
+   LastBusyTime=2026-08-25T06:56:48 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.88
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s2b0n1 NodeHostName=x1000c5s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240202 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-26T00:22:03 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.22
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s2b1n0 NodeHostName=x1000c5s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=236243 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-25T20:49:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.30
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s2b1n1 NodeHostName=x1000c5s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=233126 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:37 SlurmdStartTime=2026-08-25T14:33:00
+   LastBusyTime=2026-08-25T20:49:16 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=106.16
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s3b0n0 NodeHostName=x1000c5s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=205641 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:32:59
+   LastBusyTime=2026-08-25T05:59:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=124.56
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s3b0n1 NodeHostName=x1000c5s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244282 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:38 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-26T00:23:03 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=21.17
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s3b1n0 NodeHostName=x1000c5s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=224000 FreeMem=106599 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:39 SlurmdStartTime=2026-08-25T14:33:00
+   LastBusyTime=2026-08-24T16:56:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=224000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=113.64
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s3b1n1 NodeHostName=x1000c5s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=131802 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-25T19:06:51 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s4b0n0 NodeHostName=x1000c5s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=233518 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:45 SlurmdStartTime=2026-08-25T14:32:57
+   LastBusyTime=2026-08-25T05:44:03 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.33
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s4b0n1 NodeHostName=x1000c5s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=127182 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:37 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-19T20:10:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.41
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s4b1n0 NodeHostName=x1000c5s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=131407 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:29 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-19T20:10:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.41
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s4b1n1 NodeHostName=x1000c5s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=135502 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:29 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-19T20:10:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s5b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.66
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s5b0n0 NodeHostName=x1000c5s5b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=127542 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:28 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-19T20:10:37 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s5b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=104.80
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s5b0n1 NodeHostName=x1000c5s5b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=129056 FreeMem=225266 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:31 SlurmdStartTime=2026-08-25T14:32:59
+   LastBusyTime=2026-08-23T23:24:56 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=129056M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s5b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=122 CPUEfctv=128 CPUTot=128 CPULoad=92.21
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s5b1n0 NodeHostName=x1000c5s5b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=138528 FreeMem=225825 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:32 SlurmdStartTime=2026-08-25T14:33:00
+   LastBusyTime=2026-08-23T23:24:56 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=122,mem=138528M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c5s5b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=124.00
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c5s5b1n1 NodeHostName=x1000c5s5b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=89604 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T09:18:57 SlurmdStartTime=2026-08-25T14:33:04
+   LastBusyTime=2026-08-25T18:38:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.99
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s0b0n0 NodeHostName=x1000c6s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=64411 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:30 SlurmdStartTime=2026-08-25T14:33:25
+   LastBusyTime=2026-08-25T00:22:36 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=123.76
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s0b0n1 NodeHostName=x1000c6s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=246889 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:26 SlurmdStartTime=2026-08-25T14:33:06
+   LastBusyTime=2026-08-26T01:02:19 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=122.27
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s0b1n0 NodeHostName=x1000c6s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=103118 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:38 SlurmdStartTime=2026-08-25T14:33:03
+   LastBusyTime=2026-08-25T20:31:00 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.21
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s0b1n1 NodeHostName=x1000c6s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=134589 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:27
+   LastBusyTime=2026-08-19T19:59:11 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.88
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s1b0n0 NodeHostName=x1000c6s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=185968 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:03
+   LastBusyTime=2026-08-25T20:06:28 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s1b0n1 NodeHostName=x1000c6s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=246875 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:33:24
+   LastBusyTime=2026-08-26T00:36:18 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.80
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s1b1n0 NodeHostName=x1000c6s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=179404 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:27
+   LastBusyTime=2026-08-25T12:59:59 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=102.09
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s1b1n1 NodeHostName=x1000c6s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=206785 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:06
+   LastBusyTime=2026-08-25T06:11:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=21.15
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s2b0n0 NodeHostName=x1000c6s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=224000 FreeMem=119501 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:34 SlurmdStartTime=2026-08-25T14:33:06
+   LastBusyTime=2026-08-24T11:58:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=224000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s2b0n1 NodeHostName=x1000c6s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=235444 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:05
+   LastBusyTime=2026-08-25T05:28:08 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=89.71
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s2b1n0 NodeHostName=x1000c6s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=248000 FreeMem=229992 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:39 SlurmdStartTime=2026-08-25T14:33:06
+   LastBusyTime=2026-08-25T17:35:16 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=248000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.67
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s2b1n1 NodeHostName=x1000c6s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=127029 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:39 SlurmdStartTime=2026-08-25T14:33:31
+   LastBusyTime=2026-08-19T19:43:13 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.65
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s3b0n0 NodeHostName=x1000c6s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=137043 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:33:40
+   LastBusyTime=2026-08-19T20:03:29 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.98
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s3b0n1 NodeHostName=x1000c6s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=135829 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:33:28
+   LastBusyTime=2026-08-19T20:04:05 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.87
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s3b1n0 NodeHostName=x1000c6s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=136700 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:33:32
+   LastBusyTime=2026-08-19T20:03:50 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s3b1n1 NodeHostName=x1000c6s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=212195 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:09
+   LastBusyTime=2026-08-21T02:35:38 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=0.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s4b0n0 NodeHostName=x1000c6s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=250132 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:34 SlurmdStartTime=2026-08-25T14:33:11
+   LastBusyTime=2026-08-21T02:35:38 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=121 CPUEfctv=128 CPUTot=128 CPULoad=92.81
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s4b0n1 NodeHostName=x1000c6s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=168384 FreeMem=240502 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:43 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-24T16:56:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=121,mem=168384M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=103.94
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s4b1n0 NodeHostName=x1000c6s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=202533 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:14
+   LastBusyTime=2026-08-25T06:01:44 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c6s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=116.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c6s4b1n1 NodeHostName=x1000c6s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=144000 FreeMem=242166 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:36 SlurmdStartTime=2026-08-25T14:33:12
+   LastBusyTime=2026-08-24T16:56:25 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=144000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=126.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s0b0n0 NodeHostName=x1000c7s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=116755 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:35 SlurmdStartTime=2026-08-25T14:33:12
+   LastBusyTime=2026-08-25T19:16:48 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.73
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s0b0n1 NodeHostName=x1000c7s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=197734 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:40 SlurmdStartTime=2026-08-25T14:33:27
+   LastBusyTime=2026-08-25T19:53:51 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s0b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=63.59
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s0b1n0 NodeHostName=x1000c7s0b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=192000 FreeMem=235723 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:12
+   LastBusyTime=2026-08-18T14:31:23 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=187.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s0b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=1.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s0b1n1 NodeHostName=x1000c7s0b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=234836 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:12
+   LastBusyTime=2026-08-25T05:54:17 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=32.68
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s1b0n0 NodeHostName=x1000c7s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244496 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:46 SlurmdStartTime=2026-08-25T14:33:14
+   LastBusyTime=2026-08-26T01:29:29 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.58
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s1b0n1 NodeHostName=x1000c7s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244238 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-26T00:16:36 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s1b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=118.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s1b1n0 NodeHostName=x1000c7s1b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=86730 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:40 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-25T17:40:38 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s1b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=124.66
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s1b1n1 NodeHostName=x1000c7s1b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=116096 FreeMem=245036 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:45 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-18T03:23:15 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=116096M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=125 CPUEfctv=128 CPUTot=128 CPULoad=112.86
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s2b0n0 NodeHostName=x1000c7s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=132384 FreeMem=239924 Sockets=8 Boards=1
+   State=MIXED+PLANNED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:08 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-25T11:59:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=125,mem=132384M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=119.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s2b0n1 NodeHostName=x1000c7s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240584 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:05 SlurmdStartTime=2026-08-25T14:33:14
+   LastBusyTime=2026-08-25T22:13:13 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s2b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.17
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s2b1n0 NodeHostName=x1000c7s2b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=151734 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:35
+   LastBusyTime=2026-08-19T16:44:06 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s2b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.92
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s2b1n1 NodeHostName=x1000c7s2b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=152468 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:33:36
+   LastBusyTime=2026-08-19T16:44:12 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=112.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s3b0n0 NodeHostName=x1000c7s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=21185 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:33:13
+   LastBusyTime=2026-08-25T19:16:15 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=67.29
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s3b0n1 NodeHostName=x1000c7s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=192000 FreeMem=236555 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:43 SlurmdStartTime=2026-08-25T14:33:14
+   LastBusyTime=2026-08-18T03:23:15 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=187.50G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s3b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.63
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s3b1n0 NodeHostName=x1000c7s3b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=242663 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-07-31T22:48:43 SlurmdStartTime=2026-08-25T14:33:36
+   LastBusyTime=2026-08-25T22:14:53 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s3b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=103.85
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s3b1n1 NodeHostName=x1000c7s3b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=204676 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:35 SlurmdStartTime=2026-08-25T14:33:16
+   LastBusyTime=2026-08-25T06:16:35 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=250G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s4b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=120.25
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s4b0n0 NodeHostName=x1000c7s4b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244233 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:44 SlurmdStartTime=2026-08-25T14:33:14
+   LastBusyTime=2026-08-25T21:26:28 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s4b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.29
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s4b0n1 NodeHostName=x1000c7s4b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=172132 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:42 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-25T20:16:22 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s4b1n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=128.98
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s4b1n0 NodeHostName=x1000c7s4b1n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=240000 FreeMem=185263 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:38 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-25T20:06:28 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=240000M
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1000c7s4b1n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=121.13
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=x1000c7s4b1n1 NodeHostName=x1000c7s4b1n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244111 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=cpu 
+   BootTime=2026-08-07T13:05:48 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-25T21:56:10 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=250G,billing=128
+   AllocTRES=cpu=128,mem=125G
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=10 CPUEfctv=64 CPUTot=64 CPULoad=2.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s0b0n0 NodeHostName=x1001c0s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=34368 FreeMem=212179 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:54 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-04T11:11:23 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=10,mem=34368M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.64
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s0b0n1 NodeHostName=x1001c0s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=239993 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:50:07 SlurmdStartTime=2026-08-25T14:33:16
+   LastBusyTime=2026-08-26T01:21:33 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=12 CPUEfctv=64 CPUTot=64 CPULoad=12.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s1b0n0 NodeHostName=x1001c0s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=12000 FreeMem=247734 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:55 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-25T14:03:12 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=12,mem=12000M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=57 CPUEfctv=64 CPUTot=64 CPULoad=19.73
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s1b0n1 NodeHostName=x1001c0s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=57000 FreeMem=204821 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:51 SlurmdStartTime=2026-08-25T14:33:15
+   LastBusyTime=2026-08-19T14:10:31 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=57,mem=57000M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=58 CPUEfctv=64 CPUTot=64 CPULoad=4.64
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s2b0n0 NodeHostName=x1001c0s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=107136 FreeMem=152137 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:50:03 SlurmdStartTime=2026-08-25T14:33:16
+   LastBusyTime=2026-08-24T08:17:19 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=58,mem=107136M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.01
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s2b0n1 NodeHostName=x1001c0s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=247719 Sockets=4 Boards=1
+   State=IDLE+RESERVED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:52 SlurmdStartTime=2026-08-25T14:33:16
+   LastBusyTime=2026-08-25T03:46:17 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+   ReservationName=pr_promi
+
+NodeName=x1001c0s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=57 CPUEfctv=64 CPUTot=64 CPULoad=19.63
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s3b0n0 NodeHostName=x1001c0s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=57000 FreeMem=182850 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:52 SlurmdStartTime=2026-08-25T14:33:16
+   LastBusyTime=2026-08-23T19:44:25 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=57,mem=57000M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c0s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=57 CPUEfctv=64 CPUTot=64 CPULoad=19.63
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c0s3b0n1 NodeHostName=x1001c0s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=57000 FreeMem=190276 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:57 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-16T17:19:55 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=57,mem=57000M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=32.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s0b0n0 NodeHostName=x1001c1s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=244327 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-19T13:49:10 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-19T15:15:33 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=32.14
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s0b0n1 NodeHostName=x1001c1s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=243825 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-19T13:49:10 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-19T14:55:52 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=52 CPUEfctv=64 CPUTot=64 CPULoad=5.52
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s1b0n0 NodeHostName=x1001c1s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=197608 FreeMem=189870 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-19T09:36:03 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-24T20:35:06 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=52,mem=197608M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=1.35
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s1b0n1 NodeHostName=x1001c1s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=249430 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-19T09:36:02 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-26T01:33:24 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=7.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s2b0n0 NodeHostName=x1001c1s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=232122 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:21 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-26T01:34:57 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=42 CPUEfctv=64 CPUTot=64 CPULoad=6.23
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s2b0n1 NodeHostName=x1001c1s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=42724 FreeMem=185897 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:51 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-21T10:39:52 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=42,mem=42724M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=33 CPUEfctv=64 CPUTot=64 CPULoad=32.96
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s3b0n0 NodeHostName=x1001c1s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=33000 FreeMem=248039 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:56 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-25T07:59:03 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=33,mem=33000M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c1s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=63.50
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c1s3b0n1 NodeHostName=x1001c1s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=237997 Sockets=4 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:51 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-21T12:24:14 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=62.50G,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=0.09
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s0b0n0 NodeHostName=x1001c2s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=150800 Sockets=4 Boards=1
+   State=ALLOCATED+RESERVED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:52 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-01T03:34:14 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=250G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+   ReservationName=c_tengrai_324
+
+NodeName=x1001c2s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=57 CPUEfctv=64 CPUTot=64 CPULoad=6.54
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s0b0n1 NodeHostName=x1001c2s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=105536 FreeMem=157975 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:57 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-19T13:27:51 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=57,mem=105536M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.14
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s1b0n0 NodeHostName=x1001c2s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=248575 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-18T11:22:37 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-26T01:16:45 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=18 CPUEfctv=64 CPUTot=64 CPULoad=2.78
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s1b0n1 NodeHostName=x1001c2s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=66536 FreeMem=222765 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:50:07 SlurmdStartTime=2026-08-25T14:33:17
+   LastBusyTime=2026-08-16T19:38:50 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=18,mem=66536M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=49 CPUEfctv=64 CPUTot=64 CPULoad=49.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s2b0n0 NodeHostName=x1001c2s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=49000 FreeMem=223968 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:50:01 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-24T11:08:26 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=49,mem=49000M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=18 CPUEfctv=64 CPUTot=64 CPULoad=2.65
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s2b0n1 NodeHostName=x1001c2s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=66536 FreeMem=225779 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:55 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-25T14:48:17 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=18,mem=66536M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=8.04
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s3b0n0 NodeHostName=x1001c2s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=247261 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:54 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-23T14:33:05 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c2s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=65.35
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c2s3b0n1 NodeHostName=x1001c2s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=234771 Sockets=4 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:58 SlurmdStartTime=2026-08-25T14:33:34
+   LastBusyTime=2026-08-24T03:07:14 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=62.50G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=0.54
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s0b0n0 NodeHostName=x1001c3s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=256000 FreeMem=108586 Sockets=4 Boards=1
+   State=ALLOCATED+RESERVED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:52 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-01T03:34:14 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=250G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+   ReservationName=c_tengrai_324
+
+NodeName=x1001c3s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=8.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s0b0n1 NodeHostName=x1001c3s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=248784 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:24 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-21T08:52:51 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=8.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s1b0n0 NodeHostName=x1001c3s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=248592 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:28 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-21T08:53:21 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=54 CPUEfctv=64 CPUTot=64 CPULoad=49.10
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s1b0n1 NodeHostName=x1001c3s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=68480 FreeMem=229876 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:20 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-13T21:28:08 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=54,mem=68480M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=56 CPUEfctv=64 CPUTot=64 CPULoad=21.91
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s2b0n0 NodeHostName=x1001c3s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=56000 FreeMem=170167 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:55 SlurmdStartTime=2026-08-25T14:33:18
+   LastBusyTime=2026-08-24T08:00:36 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=56,mem=56000M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=58 CPUEfctv=64 CPUTot=64 CPULoad=20.70
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s2b0n1 NodeHostName=x1001c3s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=61000 FreeMem=191754 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:56 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-14T12:25:46 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=58,mem=61000M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=63.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s3b0n0 NodeHostName=x1001c3s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=234452 Sockets=4 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:56 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-21T01:47:08 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=62.50G,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c3s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=58 CPUEfctv=64 CPUTot=64 CPULoad=21.61
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c3s3b0n1 NodeHostName=x1001c3s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=58000 FreeMem=172720 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:25 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-18T12:30:13 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=58,mem=58000M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c4s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=37 CPUEfctv=64 CPUTot=64 CPULoad=37.15
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s0b0n0 NodeHostName=x1001c4s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=37000 FreeMem=241550 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:53 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-25T03:46:17 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=37,mem=37000M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c4s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=58 CPUEfctv=64 CPUTot=64 CPULoad=4.53
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s0b0n1 NodeHostName=x1001c4s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=106536 FreeMem=141473 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:27 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-16T16:51:16 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=58,mem=106536M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c4s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=16 CPUEfctv=64 CPUTot=64 CPULoad=0.64
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s1b0n0 NodeHostName=x1001c4s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=186372 Sockets=4 Boards=1
+   State=MIXED+RESERVED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:54 SlurmdStartTime=2026-08-25T14:33:25
+   LastBusyTime=2026-08-01T03:34:14 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=16,mem=62.50G,gres/gpu=1
+   CurrentWatts=0 AveWatts=0
+   
+   ReservationName=c_tengrai_324
+
+NodeName=x1001c4s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s1b0n1 NodeHostName=x1001c4s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=249528 Sockets=4 Boards=1
+   State=IDLE+RESERVED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-07-31T22:49:52 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-25T03:46:17 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+   ReservationName=c_tengrai_324
+
+NodeName=x1001c4s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=36 CPUEfctv=64 CPUTot=64 CPULoad=5.33
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s2b0n0 NodeHostName=x1001c4s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=133072 FreeMem=196601 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:23 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-24T19:06:51 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=36,mem=133072M,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c4s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=18 CPUEfctv=64 CPUTot=64 CPULoad=4.61
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s2b0n1 NodeHostName=x1001c4s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=66536 FreeMem=215036 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:24 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-24T19:09:54 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=18,mem=66536M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c4s3b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s3b0n0 NodeHostName=x1001c4s3b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=250057 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:19 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-25T23:49:50 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c4s3b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c4s3b0n1 NodeHostName=x1001c4s3b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=233613 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=test 
+   BootTime=2026-07-31T22:49:52 SlurmdStartTime=2026-08-25T14:33:20
+   LastBusyTime=2026-08-25T21:53:15 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c5s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=8.09
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c5s0b0n0 NodeHostName=x1001c5s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=248176 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:25 SlurmdStartTime=2026-08-25T14:33:19
+   LastBusyTime=2026-08-23T15:11:37 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c5s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c5s0b0n1 NodeHostName=x1001c5s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=248612 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:22 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-25T23:35:11 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c5s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=32.24
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c5s1b0n0 NodeHostName=x1001c5s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=240123 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:25 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-19T16:49:36 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c5s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=18 CPUEfctv=64 CPUTot=64 CPULoad=18.26
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c5s1b0n1 NodeHostName=x1001c5s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=18000 FreeMem=238329 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:25 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-24T10:58:02 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=18,mem=18000M,gres/gpu=3
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c5s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=63.59
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c5s2b0n0 NodeHostName=x1001c5s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=241290 Sockets=4 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-11T13:42:30 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-21T02:25:42 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=62.50G,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c5s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=8.07
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c5s2b0n1 NodeHostName=x1001c5s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=248512 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-11T13:42:31 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-21T08:51:01 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c6s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=56 CPUEfctv=64 CPUTot=64 CPULoad=25.08
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c6s0b0n0 NodeHostName=x1001c6s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=56000 FreeMem=172820 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:24 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-24T10:58:06 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=56,mem=56000M,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c6s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c6s0b0n1 NodeHostName=x1001c6s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=247127 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:24 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-25T23:18:20 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c6s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c6s1b0n0 NodeHostName=x1001c6s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=248603 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:21 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-25T23:18:07 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c6s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c6s1b0n1 NodeHostName=x1001c6s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=247793 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:29 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-25T23:17:52 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c6s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.05
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c6s2b0n0 NodeHostName=x1001c6s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=244816 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:31 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-25T21:48:11 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c6s2b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=32 CPUEfctv=64 CPUTot=64 CPULoad=8.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c6s2b0n1 NodeHostName=x1001c6s2b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=128000 FreeMem=246329 Sockets=4 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:22 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-23T15:00:26 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=32,mem=125G,gres/gpu=4
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c7s0b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=64 CPUEfctv=64 CPUTot=64 CPULoad=63.35
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c7s0b0n0 NodeHostName=x1001c7s0b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=64000 FreeMem=242774 Sockets=4 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:27 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-24T08:17:28 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=cpu=64,mem=62.50G,gres/gpu=2
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c7s0b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.58
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c7s0b0n1 NodeHostName=x1001c7s0b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=245844 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:22 SlurmdStartTime=2026-08-25T14:33:21
+   LastBusyTime=2026-08-26T01:27:39 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c7s1b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.65
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c7s1b0n0 NodeHostName=x1001c7s1b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=246555 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:23 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-26T01:15:48 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c7s1b0n1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.06
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c7s1b0n1 NodeHostName=x1001c7s1b0n1 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=249673 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:26 SlurmdStartTime=2026-08-25T14:33:23
+   LastBusyTime=2026-08-25T23:41:34 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c7s2b0n0 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.02
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:4(S:0-3)
+   NodeAddr=x1001c7s2b0n0 NodeHostName=x1001c7s2b0n0 Version=24.11.6
+   OS=Linux 4.18.0-553.144.1.el8_10.x86_64 #1 SMP Mon Jul 13 11:33:25 EDT 2026 
+   RealMemory=256000 AllocMem=0 FreeMem=248813 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-08-07T13:05:24 SlurmdStartTime=2026-08-25T14:33:22
+   LastBusyTime=2026-08-25T21:48:12 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+
+NodeName=x1001c7s2b0n1 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=64 CPUTot=64 CPULoad=0.00
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:nvidia_a100-sxm4-40gb:3(S:0-2)
+   NodeAddr=x1001c7s2b0n1 NodeHostName=x1001c7s2b0n1 
+   RealMemory=256000 AllocMem=0 FreeMem=N/A Sockets=4 Boards=1
+   State=DOWN+DRAIN+NOT_RESPONDING ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=None SlurmdStartTime=None
+   LastBusyTime=2026-08-19T03:36:17 ResumeAfterTime=None
+   CfgTRES=cpu=64,mem=250G,billing=64,gres/gpu=4
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+   Reason=GPU3 missing : Not responding [slurm@2026-08-20T03:21:55]
+
