@@ -1,8 +1,6 @@
-#### CRM AI RESEACH
+## CRM AI RESEACH
 
 Deployment of local crm with AI integration
-
-
 
 #### Quick  Setup Guide
 
