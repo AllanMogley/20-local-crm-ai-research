@@ -2,7 +2,9 @@
 
 Deployment of local crm with AI integration
 
-https://github.com/AllanMogley/17-IT-Project-Management/blob/main/GoMi.png?raw=true
+![](https://raw.githubusercontent.com/AllanMogley/20-local-crm-ai-research/refs/heads/main/.assets/CRM%20Research.png)
+
+
 
 #### Quick  Setup Guide
 
