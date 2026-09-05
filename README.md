@@ -1,10 +1,10 @@
-## 20-local-crm-ai-research
+#### CRM AI RESEACH
 
 Deployment of local crm with AI integration
 
 
 
-#### Quick  Setup
+#### Quick  Setup Guide
 
 Clone repository
 
