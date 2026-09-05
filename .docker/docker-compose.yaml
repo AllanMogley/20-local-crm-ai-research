@@ -15,8 +15,8 @@ services:
     # devices:
       # - /dev/kfd
       # - /dev/dri
-    environment:
-      - OLLAMA_CONTEXT_LENGTH=200
+    # environment:
+      # - OLLAMA_CONTEXT_LENGTH=200
       # - OLLAMA_VULKAN=1
       # - OLLAMA_NUM_PARALLEL=4
 
@@ -28,6 +28,8 @@ services:
     container_name: tau-bench
     networks:
       - crm
+    ports:
+      - 8004:8004
     stdin_open: true
     tty: true
     environment:
@@ -68,24 +70,26 @@ services:
       stdin_open: true
       command:
 
-        - "mcpo"
-        - "--port"
-        - "8000"
-        - "--"
-        - "uvx"
-        - "mcp-server-time"
-        - "--local-timezone=America/New_York"
+        # - "mcpo"
+        # - "--port"
+        # - "8000"
+        # - "--"
+        # - "uvx"
+        # - "mcp-server-time"
+        # - "--local-timezone=Europe/Budapest"
 
 
-        # - mcpo
-        # - --port
-        # - "8001"
-        # - --server-type
-        # - streamable-http
-        # - --header
-        # - '{"Authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBjODg2OTBiLTgwMzItNGQ4OS05YzZmLTg2NzQzZGFiMzBjMSJ9.eyJzdWIiOiI1M2VhMjE4ZS03MzYxLTQ4N2YtODJjZC05YjdjMjcxODZjMWMiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiNTNlYTIxOGUtNzM2MS00ODdmLTgyY2QtOWI3YzI3MTg2YzFjIiwiaWF0IjoxNzg2Mzc4Mzc0LCJleHAiOjQ5Mzk4OTE5NzMsImp0aSI6IjhmYTRmZmZhLThlNmUtNDI2ZC1hZGY0LWY2ZTA5MmZhMWU3NSJ9.ZppVYTKNSxHZ7nv47o-ubUt-D7qLxQCJ6RaksDS0kS4QPj3FxMexdwVys-lT25vrILaQqW7iOOVAO82-l9L57g"}'
-        # - --
-        # - http://server:3000/mcp
+        - mcpo
+        - --port
+        - "8001"
+        # - "--"
+        # - "uvx"
+        - --server-type
+        - streamable-http
+        - --header
+        - '{"Authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBjODg2OTBiLTgwMzItNGQ4OS05YzZmLTg2NzQzZGFiMzBjMSJ9.eyJzdWIiOiI1M2VhMjE4ZS03MzYxLTQ4N2YtODJjZC05YjdjMjcxODZjMWMiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiNTNlYTIxOGUtNzM2MS00ODdmLTgyY2QtOWI3YzI3MTg2YzFjIiwiaWF0IjoxNzg3NTEyODU0LCJleHAiOjQ5NDA5NDAwNTMsImp0aSI6IjMzYmYxYzAwLWQ4ZWEtNDMxMy05OTQzLTdkYWJmZTMwNDFkZiJ9.keK6e-vN_H3BpxiznmHfwvVM7---C7WSrVK0_gTUTsXhEyE109uDc2AoqSc9UdW2sp8R6kVoJQiestLnjdOXLg"}'
+        - --
+        - http://server:3000/mcp
       
       networks:
         - crm
