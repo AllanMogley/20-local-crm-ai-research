@@ -1,0 +1,67 @@
+Let me pull the full catalog of available tools from your connected tools system.
+The full catalog returned **250 tools across 9 categories**. Let me save this as a note so it's easy to reference later, then present the full list.
+Done! I've compiled the full list of **all 250 tools** across your connected Twenty workspace and saved it as a note (**"All Connected Tools (Twenty)"**) for future reference. Here's the complete list organized by category:
+
+## ⚙️ ACTION (6)
+1. `send_email` — Send an email via connected account
+2. `draft_email` — Create a draft email (not sent)
+3. `create_calendar_event` — Create calendar event on Google/Microsoft
+4. `search_help_center` — Search Twenty docs & help center
+5. `navigate_app` — Navigate the app (record/object/view)
+6. `save_campaign` — Create/edit draft email campaigns
+
+## 🗄️ DATABASE_CRUD (165) — per-object CRUD tools
+Each object below has `find_many_*`, `find_one_*`, `group_by_*`, plus `create/update/upsert/delete` variants (single & many) where applicable:
+
+**Companies (10):** find_many_companies, find_one_company, group_by_companies, create_one_company, create_many_companies, update_one_company, update_many_companies, upsert_many_companies, delete_one_company, delete_many_companies
+**People (10):** find_many_people, find_one_person, group_by_people, create_one_person, create_many_people, update_one_person, update_many_people, upsert_many_people, delete_one_person, delete_many_people
+**Dashboards (5):** find_many_dashboards, find_one_dashboard, group_by_dashboards, delete_one_dashboard, delete_many_dashboards
+**Calendar Events (5):** find_many_calendar_events, find_one_calendar_event, group_by_calendar_events, delete_one_calendar_event, delete_many_calendar_events
+**Attachments (10):** find_many_attachments, find_one_attachment, group_by_attachments, create_one_attachment, create_many_attachments, update_one_attachment, update_many_attachments, upsert_many_attachments, delete_one_attachment, delete_many_attachments
+**Blocklists (10):** find_many_blocklists, find_one_blocklist, group_by_blocklists, create_one_blocklist, create_many_blocklists, update_one_blocklist, update_many_blocklists, upsert_many_blocklists, delete_one_blocklist, delete_many_blocklists
+**Calendar Channel Event Associations (5):** find_many_calendar_channel_event_associations, find_one_calendar_channel_event_association, group_by_calendar_channel_event_associations, delete_one_calendar_channel_event_association, delete_many_calendar_channel_event_associations
+**Calendar Event Participants (5):** find_many_calendar_event_participants, find_one_calendar_event_participant, group_by_calendar_event_participants, delete_one_calendar_event_participant, delete_many_calendar_event_participants
+**Notes (10):** find_many_notes, find_one_note, group_by_notes, create_one_note, create_many_notes, update_one_note, update_many_notes, upsert_many_notes, delete_one_note, delete_many_notes
+**Opportunities (10):** find_many_opportunities, find_one_opportunity, group_by_opportunities, create_one_opportunity, create_many_opportunities, update_one_opportunity, update_many_opportunities, upsert_many_opportunities, delete_one_opportunity, delete_many_opportunities
+**Tasks (10):** find_many_tasks, find_one_task, group_by_tasks, create_one_task, create_many_tasks, update_one_task, update_many_tasks, upsert_many_tasks, delete_one_task, delete_many_tasks
+**Workspace Members (5):** find_many_workspace_members, find_one_workspace_member, group_by_workspace_members, delete_one_workspace_member, delete_many_workspace_members
+**Call Recordings (10):** find_many_call_recordings, find_one_call_recording, group_by_call_recordings, create_one_call_recording, create_many_call_recordings, update_one_call_recording, update_many_call_recordings, upsert_many_call_recordings, delete_one_call_recording, delete_many_call_recordings
+**Message Channel Message Associations (5):** find_many_message_channel_message_associations, find_one_message_channel_message_association, group_by_message_channel_message_associations, delete_one_message_channel_message_association, delete_many_message_channel_message_associations
+**Msg Channel Msg Assoc Message Folders (10):** find_many_message_channel_message_association_message_folders, find_one_message_channel_message_association_message_folder, group_by_message_channel_message_association_message_folders, create_one_message_channel_message_association_message_folder, create_many_message_channel_message_association_message_folders, update_one_message_channel_message_association_message_folder, update_many_message_channel_message_association_message_folders, upsert_many_message_channel_message_association_message_folders, delete_one_message_channel_message_association_message_folder, delete_many_message_channel_message_association_message_folders
+**Message Participants (5):** find_many_message_participants, find_one_message_participant, group_by_message_participants, delete_one_message_participant, delete_many_message_participants
+**Message Threads (5):** find_many_message_threads, find_one_message_thread, group_by_message_threads, delete_one_message_thread, delete_many_message_threads
+**Messages (5):** find_many_messages, find_one_message, group_by_messages, delete_one_message, delete_many_messages
+**Note Targets (10):** find_many_note_targets, find_one_note_target, group_by_note_targets, create_one_note_target, create_many_note_targets, update_one_note_target, update_many_note_targets, upsert_many_note_targets, delete_one_note_target, delete_many_note_targets
+**Task Targets (10):** find_many_task_targets, find_one_task_target, group_by_task_targets, create_one_task_target, create_many_task_targets, update_one_task_target, update_many_task_targets, upsert_many_task_targets, delete_one_task_target, delete_many_task_targets
+**Timeline Activities (10):** find_many_timeline_activities, find_one_timeline_activity, group_by_timeline_activities, create_one_timeline_activity, create_many_timeline_activities, update_one_timeline_activity, update_many_timeline_activities, upsert_many_timeline_activities, delete_one_timeline_activity, delete_many_timeline_activities
+
+## 📋 METADATA (13)
+- get_object_metadata, create_object_metadata, update_object_metadata, delete_object_metadata, create_many_object_metadata, update_many_object_metadata
+- get_field_metadata, create_field_metadata, update_field_metadata, delete_field_metadata, create_many_field_metadata, update_many_field_metadata
+- create_many_relation_fields
+
+## 🧭 NAVIGATION_MENU_ITEM (4)
+- list_navigation_menu_items, create_navigation_menu_item, update_navigation_menu_item, delete_navigation_menu_item
+
+## 🛡️ ROLE (7)
+- list_roles, create_role, update_role, delete_role, assign_role_to_workspace_member, upsert_object_permissions, upsert_row_level_permission_rules
+
+## 👁️ VIEW (22)
+- get_views, get_view_query_parameters, get_view_fields, get_view_filters, get_view_sorts, upsert_complete_view
+- create_view, update_view, delete_view
+- create_view_field, update_view_field, delete_view_field, create_many_view_fields, update_many_view_fields
+- create_view_filter, create_many_view_filters, update_view_filter, delete_view_filter
+- create_view_sort, create_many_view_sorts, update_view_sort, delete_view_sort
+
+## 🔗 WEBHOOK (4)
+- list_webhooks, create_webhook, update_webhook, delete_webhook
+
+## 🔄 WORKFLOW (22)
+- create_complete_workflow, create_workflow_version_step, update_workflow_version_step, update_workflow_version_trigger, delete_workflow_version_step, create_workflow_version_edge, delete_workflow_version_edge, create_draft_from_workflow_version, update_workflow_version_positions, activate_workflow_version, deactivate_workflow_version, compute_step_output_schema, get_workflow_current_version, list_workflows, delete_workflow, get_workflow_run, list_workflow_runs, get_logic_function_source, update_logic_function_source, list_logic_function_tools, update_agent, validate_workflow
+
+## 📊 DASHBOARD (7)
+- create_complete_dashboard, list_dashboards, get_dashboard, add_dashboard_tab, add_dashboard_widget, update_dashboard_widget, delete_dashboard_widget
+
+---
+
+The full categorized list is also saved in your note **"All Connected Tools (Twenty)"**. Want me to expand any category with full descriptions, or filter this list down to just the tools for a specific object?
