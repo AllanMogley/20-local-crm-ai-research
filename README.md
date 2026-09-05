@@ -1,6 +1,8 @@
-## CRM AI RESEACH
+#### CRM AI RESEACH
 
 Deployment of local crm with AI integration
+
+https://github.com/AllanMogley/17-IT-Project-Management/blob/main/GoMi.png?raw=true
 
 #### Quick  Setup Guide
 
@@ -11,8 +13,6 @@ git clone --depth 1 https://github.com/AllanMogley/20-local-crm-ai-research.git
 cd 20-local-crm-ai-research/.docker
 docker compose up -d
 ```
-
-
 
 ##### Open WebUI : accessed via web browser
 
