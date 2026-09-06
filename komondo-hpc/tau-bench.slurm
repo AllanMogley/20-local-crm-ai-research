@@ -47,6 +47,7 @@ fi
 
 
 # --nv -> mounts nvidia CUDA libraries
+# --userns -> runs continer with usernamespaces
 apptainer instance start \
     --userns \
     --nv \
