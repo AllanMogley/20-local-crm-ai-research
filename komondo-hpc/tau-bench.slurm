@@ -1,9 +1,12 @@
 #!/bin/bash
+#SBATCH --account=nr_szetdk
 #SBATCH --job-name=tau-bench
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:1
 #SBATCH --mem=32G
 #SBATCH --time=00:30:00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=EMAIL
 #SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/slurm-%j.out
 #SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/slurm-%j.err
 
@@ -42,7 +45,10 @@ fi
 # Start Apptainer instance
 # --------------------------------------------------
 
+
+# --nv -> mounts nvidia CUDA libraries
 apptainer instance start \
+    --userns \
     --nv \
     --no-home \
     --bind "${WORKDIR}:${WORKDIR}" \
@@ -58,6 +64,7 @@ cleanup() {
     apptainer instance stop "${INSTANCE}" || true
 }
 
+# Send signal to run cleanup() function
 trap cleanup EXIT
 
 # --------------------------------------------------
@@ -88,7 +95,7 @@ echo "  srun --jobid=${SLURM_JOB_ID} --pty bash"
 echo
 echo "Then:"
 echo
-echo "  apptainer exec instance://${INSTANCE} bash"
+echo "  apptainer exec --userns instance://tau-bench-14341293 bash"
 echo
 echo "========================================"
 
