@@ -1,2 +1,5 @@
 .env
 *.sif
+*.out
+*.err
+opencode

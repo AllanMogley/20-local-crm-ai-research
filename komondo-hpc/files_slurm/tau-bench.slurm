@@ -1,14 +1,15 @@
 #!/bin/bash
 #SBATCH --account=nr_szetdk
 #SBATCH --job-name=tau-bench
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:1
-#SBATCH --mem=32G
+#SBATCH --partition=cpu
+#SBATCH --mem=2G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2
 #SBATCH --time=00:30:00
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=EMAIL
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/slurm-%j.err
+#SBATCH --mail-user=afula.allan.wanjala@hallgato.sze.h
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/tau-bench/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/tau-bench/err/slurm-%j.err
 
 set -e
 
@@ -16,17 +17,16 @@ set -e
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/2-apptainer-images/tau-bench.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/apptainer-images/tau-bench.sif"
 INSTANCE="tau-bench-${SLURM_JOB_ID}"
-WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala"
+TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/tau-bench/tau2-bench"
+TAU_CONTAINER_DIR="/workspace/tau2-bench"
 
 echo "========================================"
 echo "Tau2-Bench Slurm Job"
 echo "========================================"
 echo "Job ID:        ${SLURM_JOB_ID}"
 echo "Node:          $(hostname)"
-echo "GPU:"
-nvidia-smi
 echo "SIF:           ${SIF}"
 echo "Instance:      ${INSTANCE}"
 echo "========================================"
@@ -46,13 +46,11 @@ fi
 # --------------------------------------------------
 
 
-# --nv -> mounts nvidia CUDA libraries
-# --userns -> runs continer with usernamespaces
 apptainer instance start \
     --userns \
-    --nv \
     --no-home \
-    --bind "${WORKDIR}:${WORKDIR}" \
+    --writable-tmpfs \
+    --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
     "${SIF}" \
     "${INSTANCE}"
 
@@ -96,7 +94,7 @@ echo "  srun --jobid=${SLURM_JOB_ID} --pty bash"
 echo
 echo "Then:"
 echo
-echo "  apptainer exec --userns instance://tau-bench-14341293 bash"
+echo "  apptainer exec instance://${INSTANCE} bash"
 echo
 echo "========================================"
 
