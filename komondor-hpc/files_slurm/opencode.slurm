@@ -1,32 +1,40 @@
 #!/bin/bash
 #SBATCH --account=nr_szetdk
-#SBATCH --job-name=ollama
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:1
-#SBATCH --mem=32G
-#SBATCH --time=00:30:00
+#SBATCH --job-name=opencode
+#SBATCH --partition=cpu
+#SBATCH --mem=8G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --time=00:20:00
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=EMAIL
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/ollama/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/ollama/err/slurm-%j.err
+#SBATCH --mail-user=wafula.allan.wanjala@hallgato.sze.h
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/opencode/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/opencode/err/slurm-%j.err
 
+# Stop Job incase an error occurs
 set -e
+
+# Load modules
+module load apptainer
 
 # --------------------------------------------------
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/apptainer-images/ollama.sif"
-INSTANCE="ollama-${SLURM_JOB_ID}"
-WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/opencode.sif"
+INSTANCE="opencode-${SLURM_JOB_ID}"
+
+# Bind paths
+OPENCODE_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode"
+OPENCODE_CONTAINER_DIR="/workspace/opencode"
+TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/tau-bench/tau2-bench"
+TAU_CONTAINER_DIR="/workspace/tau2-bench"
 
 echo "========================================"
-echo "Ollama Slurm Job"
+echo "Tau2-Bench Slurm Job"
 echo "========================================"
 echo "Job ID:        ${SLURM_JOB_ID}"
 echo "Node:          $(hostname)"
-echo "GPU:"
-nvidia-smi
 echo "SIF:           ${SIF}"
 echo "Instance:      ${INSTANCE}"
 echo "========================================"
@@ -46,18 +54,14 @@ fi
 # --------------------------------------------------
 
 
-# --nv -> mounts nvidia CUDA libraries
 apptainer instance start \
     --userns \
-    --nv \
-    --bind "${WORKDIR}:/work" \
-    --env "OLLAMA_MODELS=/work/models/.ollama" \
+    --no-home \
+    --writable-tmpfs \
+    --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
+    --bind "${OPENCODE_DIR}:${OPENCODE_CONTAINER_DIR}" \
     "${SIF}" \
     "${INSTANCE}"
-
-apptainer exec --userns instance://"${INSTANCE}" ollama create -f /work/models/Modelfile qwen3.8:27b
-# apptainer exec --userns instance://"${INSTANCE}" bash -c 'cd "$HOME"'
-apptainer exec --userns instance://"${INSTANCE}" ollama serve
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits

@@ -1,24 +1,28 @@
 #!/bin/bash
 #SBATCH --account=nr_szetdk
-#SBATCH --job-name=llama-cpp-cuda
+#SBATCH --job-name=ollama
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:1
 #SBATCH --mem=32G
 #SBATCH --time=00:30:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=EMAIL
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/llama/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/llama/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/ollama/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/ollama/err/slurm-%j.err
 
+# Stop Job incase an error occurs
 set -e
+
+# Load modules
+module load apptainer
 
 # --------------------------------------------------
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/apptainer-images/llama-cpp-cuda.sif"
-INSTANCE="llama-${SLURM_JOB_ID}"
-WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/ollama.sif"
+INSTANCE="ollama-${SLURM_JOB_ID}"
+WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/"
 
 echo "========================================"
 echo "Ollama Slurm Job"
@@ -51,12 +55,13 @@ apptainer instance start \
     --userns \
     --nv \
     --bind "${WORKDIR}:/work" \
-    --env "HOME=/work" \
+    --env "OLLAMA_MODELS=/work/models/.ollama" \
     "${SIF}" \
     "${INSTANCE}"
 
-apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea off --host 0.0.0.0'
-# apptainer exec --userns instance://"${INSTANCE}" ollama serve
+apptainer exec --userns instance://"${INSTANCE}" ollama create -f /work/models/Modelfile qwen3.8:27b
+# apptainer exec --userns instance://"${INSTANCE}" bash -c 'cd "$HOME"'
+apptainer exec --userns instance://"${INSTANCE}" ollama serve
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
