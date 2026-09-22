@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# bash replace-words.sh /path/to/dir
 OLD="komondo-hpc"
 NEW="komondor-hpc"
 
