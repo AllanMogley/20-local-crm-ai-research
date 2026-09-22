@@ -7,8 +7,8 @@
 #SBATCH --time=00:30:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=EMAIL
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/llama/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/llama/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/llama/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/llama/err/slurm-%j.err
 
 set -e
 
@@ -16,7 +16,7 @@ set -e
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/apptainer-images/llama-cpp-cuda.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/llama-cpp-cuda.sif"
 INSTANCE="llama-${SLURM_JOB_ID}"
 WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala"
 

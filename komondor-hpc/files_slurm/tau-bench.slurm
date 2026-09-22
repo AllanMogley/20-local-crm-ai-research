@@ -8,8 +8,8 @@
 #SBATCH --time=00:30:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=afula.allan.wanjala@hallgato.sze.h
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/tau-bench/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/tau-bench/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/tau-bench/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/tau-bench/err/slurm-%j.err
 
 set -e
 
@@ -17,7 +17,7 @@ set -e
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/apptainer-images/tau-bench.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/tau-bench.sif"
 INSTANCE="tau-bench-${SLURM_JOB_ID}"
 TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/tau-bench/tau2-bench"
 TAU_CONTAINER_DIR="/workspace/tau2-bench"

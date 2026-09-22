@@ -8,8 +8,8 @@
 #SBATCH --time=00:20:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=wafula.allan.wanjala@hallgato.sze.h
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/opencode/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/outputs_slurm/opencode/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/opencode/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/opencode/err/slurm-%j.err
 
 set -e
 
@@ -17,13 +17,13 @@ set -e
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/apptainer-images/opencode.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/opencode.sif"
 INSTANCE="opencode-${SLURM_JOB_ID}"
 
 # Bind paths
-OPENCODE_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/opencode"
+OPENCODE_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode"
 OPENCODE_CONTAINER_DIR="/workspace/opencode"
-TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc/tau-bench/tau2-bench"
+TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/tau-bench/tau2-bench"
 TAU_CONTAINER_DIR="/workspace/tau2-bench"
 
 echo "========================================"
