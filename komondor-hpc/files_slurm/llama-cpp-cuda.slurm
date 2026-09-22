@@ -10,7 +10,11 @@
 #SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/llama/out/slurm-%j.out
 #SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/llama/err/slurm-%j.err
 
+# Stop Job incase an error occurs
 set -e
+
+# Load modules
+module load apptainer
 
 # --------------------------------------------------
 # Configuration
