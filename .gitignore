@@ -4,5 +4,5 @@
 *.err
 opencode
 apptainer-images
-imodels
+models
 uv.lock
