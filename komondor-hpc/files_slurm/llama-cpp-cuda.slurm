@@ -22,7 +22,7 @@ module load apptainer
 
 SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/llama-cpp-cuda.sif"
 INSTANCE="llama-${SLURM_JOB_ID}"
-WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala"
+WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc"
 
 echo "========================================"
 echo "Ollama Slurm Job"
@@ -54,11 +54,12 @@ fi
 apptainer instance start \
     --userns \
     --nv \
+    --no-mount home,cwd \
     --bind "${WORKDIR}:/work" \
     "${SIF}" \
     "${INSTANCE}"
 
-apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea off --host 0.0.0.0'
+apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea off --host 0.0.0.0'
 # apptainer exec --userns instance://"${INSTANCE}" ollama serve
 
 # --------------------------------------------------
