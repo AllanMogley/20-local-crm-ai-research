@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # bash replace-words.sh /path/to/dir
-OLD="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images"
-NEW="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images"
+OLD="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/"
+NEW="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurm/"
 
 # Directory to search; defaults to current directory
 DIR="${1:-.}"
