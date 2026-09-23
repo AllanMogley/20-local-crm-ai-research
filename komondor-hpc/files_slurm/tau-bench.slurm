@@ -23,7 +23,7 @@ module load apptainer
 
 SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/tau-bench.sif"
 INSTANCE="tau-bench-${SLURM_JOB_ID}"
-TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/tau-bench"
+TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/tau-bench/tau2-bench"
 TAU_CONTAINER_DIR="/workspace/tau2-bench"
 
 echo "========================================"
@@ -53,8 +53,8 @@ fi
 apptainer instance start \
     --userns \
     --no-home \
-    --writable-tmpfs \
     --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
+    --pwd "${TAU_CONTAINER_DIR}"
     "${SIF}" \
     "${INSTANCE}"
 
