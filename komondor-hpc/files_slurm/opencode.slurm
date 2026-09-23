@@ -56,8 +56,6 @@ fi
 
 apptainer instance start \
     --userns \
-    --no-home \
-    --writable-tmpfs \
     --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
     --bind "${OPENCODE_DIR}:${OPENCODE_CONTAINER_DIR}" \
     "${SIF}" \
