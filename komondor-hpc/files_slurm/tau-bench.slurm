@@ -21,7 +21,7 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/tau-bench.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/tau-bench.sif"
 INSTANCE="tau-bench-${SLURM_JOB_ID}"
 TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/tau-bench/tau2-bench"
 TAU_CONTAINER_DIR="/workspace/tau2-bench"

@@ -20,7 +20,7 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/ollama.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/ollama.sif"
 INSTANCE="ollama-${SLURM_JOB_ID}"
 WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/"
 

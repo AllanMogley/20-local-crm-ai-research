@@ -20,7 +20,7 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/llama-cpp-cuda.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/llama-cpp-cuda.sif"
 INSTANCE="llama-${SLURM_JOB_ID}"
 WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala"
 

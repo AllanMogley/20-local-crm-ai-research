@@ -21,7 +21,7 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images/opencode.sif"
+SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/opencode.sif"
 INSTANCE="opencode-${SLURM_JOB_ID}"
 
 # Bind paths
