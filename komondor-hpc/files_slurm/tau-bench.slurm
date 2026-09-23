@@ -8,8 +8,8 @@
 #SBATCH --time=00:30:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=afula.allan.wanjala@hallgato.sze.h
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/tau-bench/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/tau-bench/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurmtau-bench/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurmtau-bench/err/slurm-%j.err
 
 # Stop Job incase an error occurs
 set -e
@@ -52,9 +52,7 @@ fi
 
 apptainer instance start \
     --userns \
-    --no-home \
     --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
-    --pwd "${TAU_CONTAINER_DIR}"
     "${SIF}" \
     "${INSTANCE}"
 

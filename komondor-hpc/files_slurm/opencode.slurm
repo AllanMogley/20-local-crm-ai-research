@@ -8,8 +8,8 @@
 #SBATCH --time=00:20:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=wafula.allan.wanjala@hallgato.sze.h
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/opencode/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/opencode/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurmopencode/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurmopencode/err/slurm-%j.err
 
 # Stop Job incase an error occurs
 set -e

@@ -7,8 +7,8 @@
 #SBATCH --time=00:30:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=EMAIL
-#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/llama/out/slurm-%j.out
-#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/llama/err/slurm-%j.err
+#SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurmllama/out/slurm-%j.out
+#SBATCH --error=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurmllama/err/slurm-%j.err
 
 # Stop Job incase an error occurs
 set -e
@@ -55,7 +55,6 @@ apptainer instance start \
     --userns \
     --nv \
     --bind "${WORKDIR}:/work" \
-    --env "HOME=/work" \
     "${SIF}" \
     "${INSTANCE}"
 
