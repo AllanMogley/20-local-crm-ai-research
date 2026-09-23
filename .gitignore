@@ -3,3 +3,5 @@
 *.out
 *.err
 opencode
+apptainer-images
+models
