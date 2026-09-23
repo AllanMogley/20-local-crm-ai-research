@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # bash replace-words.sh /path/to/dir
-OLD="komondo-hpc"
-NEW="komondor-hpc"
+OLD="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/apptainer-images"
+NEW="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images"
 
 # Directory to search; defaults to current directory
 DIR="${1:-.}"
@@ -14,6 +14,6 @@ while IFS= read -r -d '' file; do
         echo "$file"
 
         # Replace all occurrences in the file
-        sed -i "s/${OLD}/${NEW}/g" "$file"
+        sed -i "s|${OLD}|${NEW}|g" "$file"
     fi
 done
