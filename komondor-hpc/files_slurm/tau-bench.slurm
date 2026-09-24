@@ -52,7 +52,7 @@ fi
 
 apptainer instance start \
     --userns \
-    --no-mount home, cwd \
+    --no-mount home,cwd \
     --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
     "${SIF}" \
     "${INSTANCE}"

@@ -54,7 +54,7 @@ fi
 apptainer instance start \
     --userns \
     --nv \
-    --no-mount home, cwd \
+    --no-mount home,cwd \
     --bind "${WORKDIR}:/work" \
     --env "OLLAMA_MODELS=/work/models/.ollama" \
     "${SIF}" \
