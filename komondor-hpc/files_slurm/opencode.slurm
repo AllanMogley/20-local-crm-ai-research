@@ -59,6 +59,7 @@ apptainer instance start \
     --no-mount home,cwd \
     --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
     --bind "${OPENCODE_DIR}:${OPENCODE_CONTAINER_DIR}" \
+    --env HOME=/workspace \
     "${SIF}" \
     "${INSTANCE}"
 
