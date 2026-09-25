@@ -57,6 +57,7 @@ fi
 apptainer instance start \
     --userns \
     --no-mount home,cwd \
+    --pwd /workspace \
     --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
     --bind "${OPENCODE_DIR}:${OPENCODE_CONTAINER_DIR}" \
     --env HOME=/workspace \
