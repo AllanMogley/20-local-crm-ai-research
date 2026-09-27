@@ -57,6 +57,9 @@ apptainer instance start \
     --no-mount home,cwd \
     --home / \
     --bind "${POSTGRES_DIR}:${POSTGRES_CONTAINER_DIR}" \
+    --env POSTGRES_DB=default \
+    --env POSTGRES_USER=postgres \
+    --env POSTGRES_PASSWORD=05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6
     "${SIF}" \
     "${INSTANCE}"
 
