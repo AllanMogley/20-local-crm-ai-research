@@ -56,6 +56,7 @@ apptainer instance start \
     --userns \
     --no-mount home,cwd \
     --home / \
+    --writable \
     --bind "${POSTGRES_DIR}:${POSTGRES_CONTAINER_DIR}" \
     --env POSTGRES_DB=default \
     --env POSTGRES_USER=postgres \
