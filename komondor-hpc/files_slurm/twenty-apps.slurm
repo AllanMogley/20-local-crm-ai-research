@@ -21,31 +21,43 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
-SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/postgres-16.sif"
-INSTANCE="twenty-apps-postgres-${SLURM_JOB_ID}"
+POSTGRES_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/postgres-16.sif"
+POSTGRES_INSTANCE="twenty-apps-postgres-${SLURM_JOB_ID}"
+
+REDIS_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/redis.sif"
+REDIS_INSTANCE="twenty-apps-redis-${SLURM_JOB_ID}"
 
 # Bind paths
 POSTGRES_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/postgres"
 POSTGRES_CONTAINER_DIR="/var/lib/postgresql/data"
+
+REDIS_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/redis"
+REDIS_CONTAINER_DIR="/redis"
 
 echo "========================================"
 echo "Twenty-apps-postgres Slurm Job"
 echo "========================================"
 echo "Job ID:        ${SLURM_JOB_ID}"
 echo "Node:          $(hostname)"
-echo "SIF:           ${SIF}"
-echo "Instance:      ${INSTANCE}"
+echo "POSTGRES_SIF:           ${POSTGRES_SIF}"
+echo "Instance:      ${POSTGRES_INSTANCE}"
 echo "========================================"
 
 # --------------------------------------------------
-# Check SIF
+# Check POSTGRES_SIF
 # --------------------------------------------------
 
-if [ ! -f "${SIF}" ]; then
-    echo "ERROR: SIF does not exist:"
-    echo "${SIF}"
+if [ ! -f "${POSTGRES_SIF}" ]; then
+    echo "ERROR: POSTGRES_SIF does not exist:"
+    echo "${POSTGRES_SIF}"
     exit 1
 fi
+
+if [ ! -f "${REDIS_SIF}" ]; then
+    echo "ERROR: POSTGRES_SIF does not exist:"
+    echo "${REDIS_SIF}"
+    exit 1
+fiX
 
 # --------------------------------------------------
 # Start Apptainer instance
@@ -61,16 +73,30 @@ apptainer instance start \
     --env POSTGRES_DB=default \
     --env POSTGRES_USER=postgres \
     --env POSTGRES_PASSWORD=05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6 \
-    "${SIF}" \
-    "${INSTANCE}"
+    "${POSTGRES_SIF}" \
+    "${POSTGRES_INSTANCE}"
+
+apptainer instance start \
+    --userns \
+    --no-mount home,cwd \
+    --home / \
+    --writable-tmpfs \
+    --bind "${REDIS_DIR}:${REDIS_CONTAINER_DIR}" \
+    "${REDIS_SIF}" \
+    "${REDIS_INSTANCE}"
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
 # --------------------------------------------------
 
 cleanup() {
-    echo "Stopping Apptainer instance ${INSTANCE}..."
-    apptainer instance stop "${INSTANCE}" || true
+    echo "Stopping Postgres instance ${POSTGRES_INSTANCE}..."
+    apptainer instance stop "${POSTGRES_INSTANCE}" || true
+}
+
+cleanup() {
+    echo "Stopping Redis instance ${REDIS_INSTANCE}..."
+    apptainer instance stop "${REDIS_INSTANCE}" || true
 }
 
 # Send signal to run cleanup() function
@@ -96,7 +122,7 @@ echo "Job ID:"
 echo "  ${SLURM_JOB_ID}"
 echo
 echo "Instance:"
-echo "  ${INSTANCE}"
+echo "  ${POSTGRES_INSTANCE}"
 echo
 echo "Connect with:"
 echo
@@ -104,7 +130,7 @@ echo "  srun --jobid=${SLURM_JOB_ID} --pty bash"
 echo
 echo "Then:"
 echo
-echo "  apptainer exec instance://${INSTANCE} bash"
+echo "  apptainer exec instance://${POSTGRES_INSTANCE} bash"
 echo
 echo "========================================"
 
