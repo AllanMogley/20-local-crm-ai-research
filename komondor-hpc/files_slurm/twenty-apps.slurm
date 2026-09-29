@@ -21,18 +21,25 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
+# Credentials
+POSTGRES_USER="postgres"
+POSTGRES_PASSWORD="05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6"
+
+
 POSTGRES_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/postgres-16.sif"
 POSTGRES_INSTANCE="twenty-apps-postgres-${SLURM_JOB_ID}"
-
 REDIS_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/redis.sif"
 REDIS_INSTANCE="twenty-apps-redis-${SLURM_JOB_ID}"
+TWENTY_SERVER_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/twenty-server.sif"
+TWENTY_SERVER_INSTANCE="twenty-apps-twenty-server-${SLURM_JOB_ID}"
 
 # Bind paths
 POSTGRES_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/postgres"
 POSTGRES_CONTAINER_DIR="/var/lib/postgresql/data"
-
 REDIS_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/redis"
 REDIS_CONTAINER_DIR="/redis"
+TWENTY_SERVER_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/twenty-server"
+TWENTY_SERVER_CONTAINER_DIR="/twenty"
 
 echo "========================================"
 echo "Twenty-apps-postgres Slurm Job"
@@ -63,7 +70,7 @@ fi
 # Start Apptainer instance
 # --------------------------------------------------
 
-
+# POSTGRES
 apptainer instance start \
     --userns \
     --no-mount home,cwd \
@@ -71,11 +78,12 @@ apptainer instance start \
     --writable-tmpfs \
     --bind "${POSTGRES_DIR}:${POSTGRES_CONTAINER_DIR}" \
     --env POSTGRES_DB=default \
-    --env POSTGRES_USER=postgres \
-    --env POSTGRES_PASSWORD=05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6 \
+    --env POSTGRES_USER="${POSTGRES_USER}" \
+    --env POSTGRES_PASSWORD="${POSTGRES_PASSWORD}" \
     "${POSTGRES_SIF}" \
     "${POSTGRES_INSTANCE}"
 
+# REDIS
 apptainer instance start \
     --userns \
     --no-mount home,cwd \
@@ -84,6 +92,22 @@ apptainer instance start \
     --bind "${REDIS_DIR}:${REDIS_CONTAINER_DIR}" \
     "${REDIS_SIF}" \
     "${REDIS_INSTANCE}"
+
+# TWENTY SERVER
+apptainer instance start \
+    --userns \
+    --no-mount home,cwd \
+    --home / \
+    --writable-tmpfs \
+    --env APP_SECRET='cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI=' \
+    --env NODE_PORT='3000' \
+    --env PG_DATABASE_URL="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/default" \
+    --env REDIS_URL="redis://localhost:6379" \
+    --env SERVER_URL='http://localhost:3000' \
+    --env STORAGE_TYPE='local' \
+    --bind "${TWENTY_SERVER_DIR}:${TWENTY_SERVER_CONTAINER_DIR}" \
+    "${TWENTY_SERVER_SIF}" \
+    "${TWENTY_SERVER_INSTANCE}"
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
@@ -95,6 +119,9 @@ cleanup() {
 
     echo "Stopping Redis instance ${REDIS_INSTANCE}..."
     apptainer instance stop "${REDIS_INSTANCE}" || true
+
+    echo "Stopping Twenty-server instance ${TWENTY_SERVER_INSTANCE}..."
+    apptainer instance stop "${TWENTY_SERVER_INSTANCE}" || true
     }
 
 # Send signal to run cleanup() function
