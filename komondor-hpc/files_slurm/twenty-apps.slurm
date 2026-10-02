@@ -99,6 +99,7 @@ apptainer instance start \
     --no-mount home,cwd \
     --home / \
     --writable-tmpfs \
+    --network-args "portmap=3000:3000/tcp"
     --env APP_SECRET=cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI= \
     --env NODE_PORT=3000 \
     --env PG_DATABASE_URL="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/" \
