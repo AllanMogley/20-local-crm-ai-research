@@ -101,7 +101,7 @@ apptainer instance start \
     --writable-tmpfs \
     --env APP_SECRET=cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI= \
     --env NODE_PORT=3000 \
-    --env PG_DATABASE_URL="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/default" \
+    --env PG_DATABASE_URL="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/" \
     --env REDIS_URL=redis://localhost:6379 \
     --env SERVER_URL=http://localhost:3000 \
     --env STORAGE_TYPE=local \
