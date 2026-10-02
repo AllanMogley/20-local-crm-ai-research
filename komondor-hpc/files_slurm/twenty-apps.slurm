@@ -94,17 +94,17 @@ apptainer instance start \
     "${REDIS_INSTANCE}"
 
 # TWENTY SERVER
-export APPTAINERENV_NODE_PORT=3000
 apptainer instance start \
     --userns \
     --no-mount home,cwd \
     --home / \
     --writable-tmpfs \
-    --env "APP_SECRET=cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI=" \
-    --env "PG_DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/default" \
-    --env "REDIS_URL=redis://localhost:6379" \
-    --env "SERVER_URL=http://localhost:3000" \
-    --env "STORAGE_TYPE=local" \
+    --env APP_SECRET=cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI= \
+    --env NODE_PORT=3000 \
+    --env PG_DATABASE_URL="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/default" \
+    --env REDIS_URL=redis://localhost:6379 \
+    --env SERVER_URL=http://localhost:3000 \
+    --env STORAGE_TYPE=local \
     --bind "${TWENTY_SERVER_DIR}:${TWENTY_SERVER_CONTAINER_DIR}" \
     "${TWENTY_SERVER_SIF}" \
     "${TWENTY_SERVER_INSTANCE}"
