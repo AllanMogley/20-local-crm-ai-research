@@ -21,11 +21,6 @@ module load apptainer
 # Configuration
 # --------------------------------------------------
 
-# Credentials
-# POSTGRES_USER="postgres"
-# POSTGRES_PASSWORD="05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6"
-
-
 POSTGRES_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/postgres-16.sif"
 POSTGRES_INSTANCE="twenty-apps-postgres-${SLURM_JOB_ID}"
 REDIS_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/redis.sif"
@@ -88,6 +83,7 @@ apptainer instance start \
     --no-mount home,cwd \
     --home / \
     --writable-tmpfs \
+    --cleanenv \
     --bind "${REDIS_DIR}:${REDIS_CONTAINER_DIR}" \
     "${REDIS_SIF}" \
     "${REDIS_INSTANCE}"
@@ -98,6 +94,7 @@ apptainer instance start \
     --no-mount home,cwd \
     --home / \
     --writable-tmpfs \
+    --cleanenv \
     --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
     --bind "${TWENTY_SERVER_DIR}:${TWENTY_SERVER_CONTAINER_DIR}" \
     "${TWENTY_SERVER_SIF}" \
