@@ -34,7 +34,7 @@ POSTGRES_CONTAINER_DIR="/var/lib/postgresql/data"
 REDIS_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/redis"
 REDIS_CONTAINER_DIR="/redis"
 TWENTY_SERVER_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/twenty-server"
-TWENTY_SERVER_CONTAINER_DIR="/twenty"
+TWENTY_SERVER_CONTAINER_DIR="/app/packages/twenty-server/.local-storage"
 
 echo "========================================"
 echo "Twenty-apps-postgres Slurm Job"
