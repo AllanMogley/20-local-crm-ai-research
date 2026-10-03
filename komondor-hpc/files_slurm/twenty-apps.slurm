@@ -22,8 +22,8 @@ module load apptainer
 # --------------------------------------------------
 
 # Credentials
-POSTGRES_USER="postgres"
-POSTGRES_PASSWORD="05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6"
+# POSTGRES_USER="postgres"
+# POSTGRES_PASSWORD="05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6"
 
 
 POSTGRES_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/postgres-16.sif"
@@ -77,6 +77,8 @@ apptainer instance start \
     --home / \
     --writable-tmpfs \
     --bind "${POSTGRES_DIR}:${POSTGRES_CONTAINER_DIR}" \
+    --cleanenv \
+    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
     --env POSTGRES_DB=default \
     --env POSTGRES_USER="${POSTGRES_USER}" \
     --env POSTGRES_PASSWORD="${POSTGRES_PASSWORD}" \
