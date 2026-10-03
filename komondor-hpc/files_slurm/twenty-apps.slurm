@@ -77,7 +77,12 @@ apptainer instance start \
     "${POSTGRES_SIF}" \
     "${POSTGRES_INSTANCE}"
 
-sleep 20
+# Wait for Postgres healthy
+until apptainer exec --userns instance://${POSTGRES_INSTANCE} \
+    pg_isready -U postgres -h 127.0.0.1 -d default; do
+    echo "Waiting for PostgreSQL..."
+    sleep 2
+done
 
 # REDIS
 apptainer instance start \
@@ -90,7 +95,13 @@ apptainer instance start \
     "${REDIS_SIF}" \
     "${REDIS_INSTANCE}"
 
-sleep 20
+# Wait for Redis healthy
+until apptainer exec instance://${REDIS_INSTANCE} \
+    redis-cli -h 127.0.0.1 ping | grep -q PONG; do
+    echo "Waiting for Redis..."
+    sleep 2
+done
+
 # TWENTY SERVER
 apptainer instance start \
     --userns \
