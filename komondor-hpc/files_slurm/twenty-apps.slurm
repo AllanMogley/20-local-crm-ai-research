@@ -80,8 +80,8 @@ apptainer instance start \
     --cleanenv \
     --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
     --env POSTGRES_DB=default \
-    --env POSTGRES_USER="${POSTGRES_USER}" \
-    --env POSTGRES_PASSWORD="${POSTGRES_PASSWORD}" \
+    --env POSTGRES_USER=postgres_user \
+    --env POSTGRES_PASSWORD=postgres_password \
     "${POSTGRES_SIF}" \
     "${POSTGRES_INSTANCE}"
 
