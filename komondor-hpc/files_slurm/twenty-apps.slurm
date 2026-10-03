@@ -77,6 +77,8 @@ apptainer instance start \
     "${POSTGRES_SIF}" \
     "${POSTGRES_INSTANCE}"
 
+sleep 20
+
 # REDIS
 apptainer instance start \
     --userns \
@@ -88,6 +90,7 @@ apptainer instance start \
     "${REDIS_SIF}" \
     "${REDIS_INSTANCE}"
 
+sleep 20
 # TWENTY SERVER
 apptainer instance start \
     --userns \
