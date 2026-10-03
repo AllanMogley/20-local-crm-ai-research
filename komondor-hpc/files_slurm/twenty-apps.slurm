@@ -106,7 +106,7 @@ done
 apptainer instance start \
     --userns \
     --no-mount home,cwd \
-    --home / \
+    --home /app \
     --writable-tmpfs \
     --cleanenv \
     --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
