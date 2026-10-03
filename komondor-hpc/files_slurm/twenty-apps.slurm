@@ -98,9 +98,8 @@ apptainer instance start \
     --no-mount home,cwd \
     --home / \
     --writable-tmpfs \
-    --network-args "portmap=3000:3000/tcp" \
+    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
     --env APP_SECRET=cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI= \
-    --env NODE_PORT=3000 \
     --env PG_DATABASE_URL="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/" \
     --env REDIS_URL=redis://localhost:6379 \
     --env SERVER_URL=http://localhost:3000 \
@@ -109,6 +108,8 @@ apptainer instance start \
     "${TWENTY_SERVER_SIF}" \
     "${TWENTY_SERVER_INSTANCE}"
 
+    # --env NODE_PORT=3000 \
+    # --network-args "portmap=3000:3000/tcp" \
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
 # --------------------------------------------------
