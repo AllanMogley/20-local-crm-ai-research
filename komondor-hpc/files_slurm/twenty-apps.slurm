@@ -81,9 +81,6 @@ apptainer instance start \
     --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
     "${POSTGRES_SIF}" \
     "${POSTGRES_INSTANCE}"
-    # --env POSTGRES_DB=default \
-    # --env POSTGRES_USER=postgres_user \
-    # --env POSTGRES_PASSWORD=postgres_password \
 
 # REDIS
 apptainer instance start \
