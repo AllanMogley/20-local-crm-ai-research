@@ -114,7 +114,6 @@ apptainer instance start \
     "${TWENTY_SERVER_SIF}" \
     "${TWENTY_SERVER_INSTANCE}"
 
-    # --network-args "portmap=3000:3000/tcp" \
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
 # --------------------------------------------------
