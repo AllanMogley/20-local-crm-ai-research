@@ -97,7 +97,7 @@ apptainer instance start \
 
 # Wait for Redis healthy
 until apptainer exec instance://${REDIS_INSTANCE} \
-    redis-cli -h 127.0.0.1 ping | grep -q PONG; do
+    redis-cli -h 127.0.0.1 ping; do
     echo "Waiting for Redis..."
     sleep 2
 done
