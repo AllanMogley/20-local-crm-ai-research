@@ -27,6 +27,8 @@ REDIS_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/appta
 REDIS_INSTANCE="twenty-apps-redis-${SLURM_JOB_ID}"
 TWENTY_SERVER_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/twenty-server.sif"
 TWENTY_SERVER_INSTANCE="twenty-apps-twenty-server-${SLURM_JOB_ID}"
+TWENTY_WORKER_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/twenty-worker.sif"
+TWENTY_WORKER_INSTANCE="twenty-apps-twenty-worker-${SLURM_JOB_ID}"
 
 # Bind paths
 POSTGRES_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/postgres"
@@ -99,7 +101,7 @@ apptainer instance start \
 until apptainer exec --userns instance://${REDIS_INSTANCE} \
     redis-cli -h 127.0.0.1 ping; do
     echo "Waiting for Redis..."
-    sleep 2
+    sleep b
 done
 
 # TWENTY SERVER
@@ -114,6 +116,25 @@ apptainer instance start \
     "${TWENTY_SERVER_SIF}" \
     "${TWENTY_SERVER_INSTANCE}"
 
+# Wait for Twenty Server healthy
+until curl -fsS http://localhost:3000; do
+    echo "Waiting for Twenty..."
+    sleep 2
+done
+
+# TWENT WORKER
+apptainer instance start \
+    --userns \
+    --no-mount home,cwd \
+    --home /app \
+    --writable-tmpfs \
+    --cleanenv \
+    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
+    --bind "${TWENTY_SERVER_DIR}:${TWENTY_SERVER_CONTAINER_DIR}" \
+    "${TWENTY_WORKER_SIF}" \
+    "${TWENTY_WORKER_INSTANCE}"
+
+
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
 # --------------------------------------------------
@@ -127,6 +148,9 @@ cleanup() {
 
     echo "Stopping Twenty-server instance ${TWENTY_SERVER_INSTANCE}..."
     apptainer instance stop "${TWENTY_SERVER_INSTANCE}" || true
+
+    echo "Stopping Twenty-worker instance ${TWENTY_WORKER_INSTANCE}..."
+    apptainer instance stop "${TWENTY_WORKER_INSTANCE}" || true
     }
 
 # Send signal to run cleanup() function
