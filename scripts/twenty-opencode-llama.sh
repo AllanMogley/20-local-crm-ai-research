@@ -2,7 +2,7 @@
 sbatch /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm
 
 # Find the first pending/running llama job
-JOB_ID=$(squeue -h -o "%A %j" | awk '$2 ~ /^llama-/ {print $1; exit}')
+JOB_ID=$(squeue -h -u nr_szww -o "%A %j" | awk '$2 ~ /^llama-/ {print $1; exit}')
 
 echo "Watching job $JOB_ID..."
 
