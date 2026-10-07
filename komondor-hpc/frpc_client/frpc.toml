@@ -1,0 +1,18 @@
+serverAddr = "${FRP_SERVER_ADDR}"
+serverPort = ${FRP_SERVER_PORT}
+
+auth.method = "${FRP_AUTH_METHOD}"
+auth.token = "${FRP_AUTH_TOKEN}"
+
+[[proxies]]
+name = "${FRP_PROXY_NAME}"
+type = "${FRP_PROXY_TYPE}"
+localIP = "${FRP_PROXY_LOCAL_IP}"
+localPort = ${FRP_PROXY_LOCAL_PORT}
+
+# Recommended: protect the public endpoint with HTTP Basic Authentication
+httpUser = "${FRP_HTTP_USER}"
+httpPassword = "${FRP_HTTP_PASSWORD}"
+
+# Choose a unique subdomain
+subdomain = "${FRP_SUBDOMAIN}"
