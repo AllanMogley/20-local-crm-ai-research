@@ -1,36 +1,66 @@
 #!/usr/bin/bash
-sbatch /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm
+FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm"
 
-# Find the first pending/running llama job
-JOB_ID=$(squeue -h -u nr_szww -o "%A %j" | awk '$2 ~ /^llama-/ {print $1; exit}')
+LLAMA_JOB=$(sbatch --parsable \
+    /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm)
+echo "Submitted LLAMA job: ${LLAMA_JOB}"
 
-echo "Watching job $JOB_ID..."
-
+# Wait for LLAMA to start
 while true; do
-    STATE=$(squeue -h -j "$JOB_ID" -o "%T")
+    STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
 
     if [[ "$STATE" == "RUNNING" ]]; then
-        NODE=$(squeue -h -j "$JOB_ID" -o "%N")
-
-        echo "LLAMA is running on node: $NODE"
-
-        # Store the node name
-        echo "$NODE" > llama_node.txt
-
-        # Submit other jobs
-        sbatch /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm
-        sbatch /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm
-
+        NODE=$(squeue -h -j "${LLAMA_JOB}" -o "%N")
+        echo "LLAMA is running on node: ${NODE}"
+        echo "${NODE}" > llama_node.txt
         break
     elif [[ -z "$STATE" ]]; then
-        echo "Job $JOB_ID is no longer in the queue."
+        echo "LLAMA job ${LLAMA_JOB} is no longer in the queue."
         exit 1
     else
-        echo "Job $JOB_ID state: $STATE"
+        echo "LLAMA job ${LLAMA_JOB} state: ${STATE}"
     fi
-
     sleep 10
 done
 
+# Submit the other jobs
+OPENCODE_JOB=$(sbatch --parsable \
+    /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm)
+TWENTY_JOB=$(sbatch --parsable \
+    /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm)
 
+echo "Submitted OpenCode job: ${OPENCODE_JOB}"
+echo "Submitted Twenty job: ${TWENTY_JOB}"
 
+# Set .env variables
+set -a
+source "${FRPC_ENV}"
+set +a
+
+# Wait until all three are RUNNING
+while true; do
+    LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
+    OPENCODE_STATE=$(squeue -h -j "${OPENCODE_JOB}" -o "%T")
+    TWENTY_STATE=$(squeue -h -j "${TWENTY_JOB}" -o "%T")
+
+    echo "LLAMA=${LLAMA_STATE} OpenCode=${OPENCODE_STATE} Twenty=${TWENTY_STATE}"
+
+    if [[ "$LLAMA_STATE" == "RUNNING" &&
+          "$OPENCODE_STATE" == "RUNNING" &&
+          "$TWENTY_STATE" == "RUNNING" ]]; then
+
+        echo "All jobs are RUNNING."
+
+        mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
+All HPC jobs are now RUNNING.
+
+LLAMA:    ${LLAMA_JOB}
+OpenCode: ${OPENCODE_JOB}
+Twenty:   ${TWENTY_JOB}
+
+LLAMA node: $(cat llama_node.txt)
+EOF
+        break
+    fi
+    sleep 10
+done
