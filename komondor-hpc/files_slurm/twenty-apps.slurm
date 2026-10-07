@@ -79,7 +79,7 @@ apptainer instance start \
     --writable-tmpfs \
     --bind "${POSTGRES_DIR}:${POSTGRES_CONTAINER_DIR}" \
     --cleanenv \
-    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
+    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm" \
     "${POSTGRES_SIF}" \
     "${POSTGRES_INSTANCE}"
 
@@ -115,7 +115,7 @@ apptainer instance start \
     --home /app \
     --writable-tmpfs \
     --cleanenv \
-    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
+    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm" \
     --bind "${TWENTY_SERVER_DIR}:${TWENTY_SERVER_CONTAINER_DIR}" \
     "${TWENTY_SERVER_SIF}" \
     "${TWENTY_SERVER_INSTANCE}"
@@ -133,7 +133,7 @@ apptainer instance start \
     --home /app \
     --writable-tmpfs \
     --cleanenv \
-    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env" \
+    --env-file "/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm" \
     --bind "${TWENTY_SERVER_DIR}:${TWENTY_SERVER_CONTAINER_DIR}" \
     "${TWENTY_WORKER_SIF}" \
     "${TWENTY_WORKER_INSTANCE}"
