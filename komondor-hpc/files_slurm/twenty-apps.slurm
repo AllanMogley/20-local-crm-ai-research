@@ -105,7 +105,7 @@ apptainer instance start \
 until apptainer exec --userns instance://${REDIS_INSTANCE} \
     redis-cli -h 127.0.0.1 ping; do
     echo "Waiting for Redis..."
-    sleep b
+    sleep 2
 done
 
 # TWENTY SERVER
