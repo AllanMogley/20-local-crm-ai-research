@@ -30,6 +30,10 @@ TWENTY_SERVER_INSTANCE="twenty-apps-twenty-server-${SLURM_JOB_ID}"
 TWENTY_WORKER_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/twenty-worker.sif"
 TWENTY_WORKER_INSTANCE="twenty-apps-twenty-worker-${SLURM_JOB_ID}"
 
+# FRPC CONFIG
+FRPC_TOML="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/frpc_client/frpc.toml"
+FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/frpc_client/.env_frpc"
+
 # Bind paths
 POSTGRES_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/postgres"
 POSTGRES_CONTAINER_DIR="/var/lib/postgresql/data"
@@ -135,11 +139,22 @@ apptainer instance start \
     "${TWENTY_WORKER_INSTANCE}"
 
 
+# START FRPC CLIENT
+# Set env variables and start frpc client
+set -a
+source "${FRPC_ENV}"
+set +a
+./frpc --config "${FRPC_TOML}" &
+frpc_pid=$!
+
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
 # --------------------------------------------------
 
 cleanup() {
+    echo "Stopping frpc..."
+    kill "${frpc_pid}" 2>/dev/null || true # kill frpc client
+
     echo "Stopping Postgres instance ${POSTGRES_INSTANCE}..."
     apptainer instance stop "${POSTGRES_INSTANCE}" || true
 
@@ -184,7 +199,7 @@ echo "  srun --jobid=${SLURM_JOB_ID} --pty bash"
 echo
 echo "Then:"
 echo
-echo "  apptainer exec instance://${POSTGRES_INSTANCE} bash"
+echo "  apptainer exec --userns instance://${POSTGRES_INSTANCE} bash"
 echo
 echo "========================================"
 
