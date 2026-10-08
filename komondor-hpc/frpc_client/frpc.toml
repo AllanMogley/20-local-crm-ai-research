@@ -1,5 +1,5 @@
 serverAddr = "${FRP_SERVER_ADDR}"
-serverPort = ${FRP_SERVER_PORT}
+serverPort = 7000
 
 auth.method = "${FRP_AUTH_METHOD}"
 auth.token = "${FRP_AUTH_TOKEN}"
@@ -8,7 +8,7 @@ auth.token = "${FRP_AUTH_TOKEN}"
 name = "${FRP_PROXY_NAME}"
 type = "${FRP_PROXY_TYPE}"
 localIP = "${FRP_PROXY_LOCAL_IP}"
-localPort = ${FRP_PROXY_LOCAL_PORT}
+localPort = 3000
 
 # Recommended: protect the public endpoint with HTTP Basic Authentication
 httpUser = "${FRP_HTTP_USER}"
