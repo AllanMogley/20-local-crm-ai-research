@@ -145,7 +145,10 @@ apptainer instance start \
 set -a
 source "${FRPC_ENV}"
 set +a
-"${FRPC_FILE}" --config "${FRPC_TOML}" &
+echo "FRPC_FILE=${FRPC_FILE}"
+echo "FRPC_TOML=${FRPC_TOML}"
+
+"${FRPC_FILE}" --config "${FRPC_TOML}" > frpc.log 2>&1 &
 frpc_pid=$!
 
 # --------------------------------------------------
