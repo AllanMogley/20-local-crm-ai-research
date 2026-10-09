@@ -31,7 +31,7 @@ TWENTY_WORKER_SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-h
 TWENTY_WORKER_INSTANCE="twenty-apps-twenty-worker-${SLURM_JOB_ID}"
 
 # FRPC CONFIG
-FRPC_FILE="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/frpc_client/frp_0.71.0_freebsd_amd64/frpc"
+FRPC_FILE="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/frpc_client/frp_0.71.0_linux_amd64/frpc"
 FRPC_TOML="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/frpc_client/frpc.toml"
 FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/frpc_client/.env_frpc"
 
