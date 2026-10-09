@@ -145,10 +145,14 @@ apptainer instance start \
 set -a
 source "${FRPC_ENV}"
 set +a
-echo "FRPC_FILE=${FRPC_FILE}"
-echo "FRPC_TOML=${FRPC_TOML}"
 
-"${FRPC_FILE}" --config "${FRPC_TOML}" > frpc.log 2>&1 &
+# Generate new TOML file to fix quotes
+FRPC_GENERATED="${FRPC_TOML%.toml}.generated.toml"
+envsubst < "${FRPC_TOML}" > "${FRPC_GENERATED}"
+echo "FRPC_FILE=${FRPC_FILE}"
+echo "FRPC_GENERATED=${FRPC_GENERATED}"
+# Start frpc
+"${FRPC_FILE}" --config "${FRPC_GENERATED}" > frpc.log 2>&1 &
 frpc_pid=$!
 
 # --------------------------------------------------
