@@ -11,8 +11,8 @@ localIP = "${FRP_PROXY_LOCAL_IP}"
 localPort = 3000
 
 # Recommended: protect the public endpoint with HTTP Basic Authentication
-httpUser = "${FRP_HTTP_USER}"
-httpPassword = "${FRP_HTTP_PASSWORD}"
+# httpUser = "${FRP_HTTP_USER}"
+# httpPassword = "${FRP_HTTP_PASSWORD}"
 
 # Choose a unique subdomain
 subdomain = "${FRP_SUBDOMAIN}"
