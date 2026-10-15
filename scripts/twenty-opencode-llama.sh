@@ -1,8 +1,12 @@
 #!/usr/bin/bash
 FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm"
 
-LLAMA_JOB=$(sbatch --parsable \
-    /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm)
+LLAMA_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm"
+OPENCODE_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm"
+TWENTY_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm"
+
+# Submit LLAMA Job
+LLAMA_JOB=$(sbatch --parsable "${LLAMA_SLURM}")
 echo "Submitted LLAMA job: ${LLAMA_JOB}"
 
 # Wait for LLAMA to start
@@ -24,10 +28,8 @@ while true; do
 done
 
 # Submit the other jobs
-OPENCODE_JOB=$(sbatch --parsable \
-    /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm)
-TWENTY_JOB=$(sbatch --parsable \
-    /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm)
+OPENCODE_JOB=$(sbatch --parsable "${OPENCODE_SLURM}")
+TWENTY_JOB=$(sbatch --parsable "${TWENTY_SLURM}")
 
 echo "Submitted OpenCode job: ${OPENCODE_JOB}"
 echo "Submitted Twenty job: ${TWENTY_JOB}"
@@ -43,20 +45,19 @@ while true; do
     OPENCODE_STATE=$(squeue -h -j "${OPENCODE_JOB}" -o "%T")
     TWENTY_STATE=$(squeue -h -j "${TWENTY_JOB}" -o "%T")
 
-    echo "LLAMA=${LLAMA_STATE} OpenCode=${OPENCODE_STATE} Twenty=${TWENTY_STATE}"
+    echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE} Twenty${TWENTY_STATE}"
 
     if [[ "$LLAMA_STATE" == "RUNNING" &&
           "$OPENCODE_STATE" == "RUNNING" &&
           "$TWENTY_STATE" == "RUNNING" ]]; then
-
         echo "All jobs are RUNNING."
-
         mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
+
 All HPC jobs are now RUNNING.
 
-LLAMA:    ${LLAMA_JOB}
-OpenCode: ${OPENCODE_JOB}
-Twenty:   ${TWENTY_JOB}
+LLAMA JOB   :   ${LLAMA_JOB}
+OpenCodeJOB :   ${OPENCODE_JOB}
+TwentyJOB   :   ${TWENTY_JOB}
 
 LLAMA node: $(cat llama_node.txt)
 EOF
