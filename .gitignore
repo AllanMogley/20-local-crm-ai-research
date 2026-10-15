@@ -5,7 +5,8 @@
 *.log
 
 *frpc.generated.toml
-*.twenty_api_key-env
+*.twenty_api_key-envi
+*.crm_environment_env
 *llama_node.txt
 
 opencode
