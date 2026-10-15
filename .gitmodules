@@ -2,7 +2,3 @@
 	path = openwebui
 	url = git@github.com:AllanMogley/22-open-webui.git
 	branch = main
-[submodule "tau-bench"]
-	path = tau-bench
-	url = git@github.com:AllanMogley/23-tau2-bench.git
-	branch = main
