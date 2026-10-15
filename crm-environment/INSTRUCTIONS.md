@@ -17,3 +17,15 @@ INSTRUCTIONS:
         The model should try to convince him and change his mind become our customer.
     c)  Remember that this has to be connected to my Twenty crm server.
         When the model performs actions, it should interact with my Twenty crm server via the mcp.
+
+2. Don't create the domain yet.
+    a) I want you to go through the following directory (tau2-bench) to understand the structure of a tau2-bench domain 
+        and how to add a custom domain.
+
+3. Twenty is running on localhost on port 3000
+    a) The twenty server is running locally on port 3000
+    b) the mcp is available at 3000/mcp
+    c) the API key for the server is avalable on the .env file in this directory, read it fro the Bearer
+    d) Test the mcp and learn what is possible from that mcp server and available tools.
+
+THANKS
