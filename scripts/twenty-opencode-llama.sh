@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm"
-
 LLAMA_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm"
 OPENCODE_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm"
 TWENTY_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm"
+OPENCODE_JSON="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode/.opencode/opencode.json"
 
 # Submit LLAMA Job
 LLAMA_JOB=$(sbatch --parsable "${LLAMA_SLURM}")
@@ -39,6 +39,9 @@ set -a
 source "${FRPC_ENV}"
 set +a
 
+# Update opencode.json
+sed -i "s|\(\"baseURL\"[[:space:]]*:[[:space:]]*\"http://\)[^:\"]*:8080|\1${NODE}:8080|" "${OPENCODE_JSON}"
+
 # Wait until all three are RUNNING
 while true; do
     LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
@@ -60,6 +63,7 @@ OpenCodeJOB :   ${OPENCODE_JOB}
 TwentyJOB   :   ${TWENTY_JOB}
 
 LLAMA node: $(cat llama_node.txt)
+OPENCODE.JSON UPDATED
 EOF
         break
     fi
