@@ -8,11 +8,13 @@ that I will check in the Web UI.
 
 ARCHITECTURE:
 1. Twenty CRM is up and running
-    a) The twenty server is running on port 3000, get the server's hostname from the .env file in this directory.
+    a) The twenty server is running on port 3000, get the server's hostname from the .crm_environment_env file in this directory.
         Read it from the TWENTY_HOSTNAME variable.
     b) The mcp is served on port 3000/mcp
-    c) The API key for the server is avalable on the .env file in this directory, read it from the Bearer variable.
+    c) The API key for the server is avalable on the .crm_environment_env file in this directory, read it from the Bearer variable.
     d) Test the mcp and learn what is possible from that mcp server and available tools.
+
+2. Save the sessions within the sessions directory
 
 INSTRUCTIONS:
 1. Help me structure and create the CRM domain in tau-bench.
