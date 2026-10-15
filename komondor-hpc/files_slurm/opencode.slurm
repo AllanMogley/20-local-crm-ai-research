@@ -28,11 +28,8 @@ INSTANCE="opencode-${SLURM_JOB_ID}"
 OPENCODE_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode"
 OPENCODE_CONTAINER_DIR="/workspace/opencode"
 
-TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/tau-bench/tau2-bench"
-TAU_CONTAINER_DIR="/workspace/tau2-bench"
-
-TWENTY_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty"
-TWENTY_CONTAINER_DIR="/workspace/twenty"
+CRM_ENV_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/crm-environment"
+CRM_ENV_CONTAINER_DIR="/workspace/crm-environment"
 
 echo "========================================"
 echo "Tau2-Bench Slurm Job"
@@ -62,9 +59,8 @@ apptainer instance start \
     --userns \
     --no-mount home,cwd \
     --home /workspace/opencode \
-    --bind "${TAU_DIR}:${TAU_CONTAINER_DIR}" \
     --bind "${OPENCODE_DIR}:${OPENCODE_CONTAINER_DIR}" \
-    --bind "${TWENTY_DIR}:${TWENTY_CONTAINER_DIR}" \
+    --bind "${CRM_ENV_DIR}:${CRM_ENV_CONTAINER_DIR}" \
     "${SIF}" \
     "${INSTANCE}"
 
