@@ -2,6 +2,7 @@
 *.sif
 *.out
 *.err
+*.log
 opencode
 apptainer-images
 models
