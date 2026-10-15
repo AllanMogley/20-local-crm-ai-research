@@ -1,9 +1,11 @@
 #!/usr/bin/bash
 FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm"
+CRM_ENVIRONMENT_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/crm-environment/.crm_environment_env"
+OPENCODE_JSON="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode/.opencode/opencode.json"
+
 LLAMA_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm"
 OPENCODE_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm"
 TWENTY_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm"
-OPENCODE_JSON="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode/.opencode/opencode.json"
 
 # Submit LLAMA Job
 LLAMA_JOB=$(sbatch --parsable "${LLAMA_SLURM}")
@@ -54,6 +56,11 @@ while true; do
           "$OPENCODE_STATE" == "RUNNING" &&
           "$TWENTY_STATE" == "RUNNING" ]]; then
         echo "All jobs are RUNNING."
+        # Get TWENTY NODE NAME
+        TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N")
+        # Update Twenty Node Name in crm-environment-env file
+        sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
+        # Send Email
         mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
 
 All HPC jobs are now RUNNING.
@@ -63,7 +70,7 @@ OpenCodeJOB :   ${OPENCODE_JOB}
 TwentyJOB   :   ${TWENTY_JOB}
 
 LLAMA node: $(cat llama_node.txt)
-OPENCODE.JSON UPDATED
+OpenCode Json Updated
 EOF
         break
     fi

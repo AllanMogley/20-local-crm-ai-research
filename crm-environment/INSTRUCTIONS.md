@@ -6,6 +6,14 @@ Twenty has a postgres DB running on port 5432
 During testing different models on the crm domain, tau should be able to connect to Twenty via the mcp and perform actions
 that I will check in the Web UI.
 
+ARCHITECTURE:
+1. Twenty CRM is up and running
+    a) The twenty server is running on port 3000, get the server's hostname from the .env file in this directory.
+        Read it from the TWENTY_HOSTNAME variable.
+    b) The mcp is served on port 3000/mcp
+    c) The API key for the server is avalable on the .env file in this directory, read it from the Bearer variable.
+    d) Test the mcp and learn what is possible from that mcp server and available tools.
+
 INSTRUCTIONS:
 1. Help me structure and create the CRM domain in tau-bench.
     a)  Research on this excellent applicable CRM based theory for this exvironment.
@@ -21,11 +29,5 @@ INSTRUCTIONS:
 2. Don't create the domain yet.
     a) I want you to go through the following directory (tau2-bench) to understand the structure of a tau2-bench domain 
         and how to add a custom domain.
-
-3. Twenty is running on localhost on port 3000
-    a) The twenty server is running locally on port 3000
-    b) the mcp is available at 3000/mcp
-    c) the API key for the server is avalable on the .env file in this directory, read it fro the Bearer
-    d) Test the mcp and learn what is possible from that mcp server and available tools.
 
 THANKS
