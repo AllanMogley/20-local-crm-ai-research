@@ -1,19 +1,47 @@
 #!/usr/bin/env bash
 
-# bash replace-words.sh /path/to/dir
-OLD="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/outputs_slurm/"
-NEW="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurm/"
+# Usage:
+# ./replace-words.sh old_word new_word /path/to/dir
+# ./replace-words.sh old_word new_word /path/to/file.json
 
-# Directory to search; defaults to current directory
-DIR="${1:-.}"
+OLD="${1:-}"
+NEW="${2:-}"
+TARGET="${3:-.}"
 
-find "$DIR" -type f -print0 |
-while IFS= read -r -d '' file; do
-    # Skip binary files
-    if grep -Iq "$OLD" "$file"; then
-        echo "$file"
+if [[ -z "$OLD" ]]; then
+    echo "Usage: $0 old_word new_word [directory|file]" >&2
+    exit 1
+fi
 
-        # Replace all occurrences in the file
-        sed -i "s|${OLD}|${NEW}|g" "$file"
+if [[ ! -e "$TARGET" ]]; then
+    echo "Error: '$TARGET' does not exist." >&2
+    exit 1
+fi
+
+if [[ -f "$TARGET" ]]; then
+    # Process a single file
+    files=("$TARGET")
+elif [[ -d "$TARGET" ]]; then
+    # Process all files recursively
+    mapfile -d '' files < <(find "$TARGET" -type f -print0)
+else
+    echo "Error: '$TARGET' is not a regular file or directory." >&2
+    exit 1
+fi
+
+for file in "${files[@]}"; do
+    # Skip binary files and files without OLD
+    if grep -IqF -- "$OLD" "$file"; then
+        echo "Updating: $file"
+
+        # Replace literal occurrences of OLD
+        OLD_SED="${OLD//\\/\\\\}"
+        OLD_SED="${OLD_SED//|/\\|}"
+        OLD_SED="${OLD_SED//&/\\&}"
+        NEW_SED="${NEW//\\/\\\\}"
+        NEW_SED="${NEW_SED//|/\\|}"
+        NEW_SED="${NEW_SED//&/\\&}"
+
+        sed -i "s|${OLD_SED}|${NEW_SED}|g" "$file"
     fi
 done
