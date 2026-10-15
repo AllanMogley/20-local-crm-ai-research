@@ -2,3 +2,6 @@
 	path = openwebui
 	url = git@github.com:AllanMogley/22-open-webui.git
 	branch = main
+[submodule "crm-environment/tau2-bench"]
+	path = crm-environment/tau2-bench
+	url = git@github.com:AllanMogley/23-tau2-bench.git
