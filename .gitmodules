@@ -5,3 +5,6 @@
 [submodule "crm-environment/tau2-bench"]
 	path = crm-environment/tau2-bench
 	url = git@github.com:AllanMogley/23-tau2-bench.git
+[submodule "crm-environment/twenty-crm"]
+	path = crm-environment/twenty-crm
+	url = git@github.com:AllanMogley/twenty.git
