@@ -63,7 +63,7 @@ apptainer instance start \
 
 apptainer exec --userns instance://"${INSTANCE}" bash -c '
     llama serve \
-        -m /home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/models/Kimi/UD-Q8_K_XL/Kimi-K3-UD-Q8_K_XL-00033-of-00034.gguf \
+        -m /work/models/Kimi/UD-Q8_K_XL/Kimi-K3-UD-Q8_K_XL-00033-of-00034.gguf \
         --split-mode layer \
         --tensor-split 1,1 \
         -ngl 999 \
