@@ -22,7 +22,7 @@ module load apptainer
 
 SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/llama-cpp-cuda.sif"
 INSTANCE="llama-${SLURM_JOB_ID}"
-WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc"
+WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/models"
 
 echo "========================================"
 echo "Ollama Slurm Job"
@@ -63,7 +63,7 @@ apptainer instance start \
 
 apptainer exec --userns instance://"${INSTANCE}" bash -c '
     llama serve \
-        -m /work/models/Kimi/UD-Q8_K_XL/Kimi-K3-UD-Q8_K_XL-00033-of-00034.gguf \
+        -m /work/Kimi/Kimi-Linear-48B-A3B-Instruct-Q8_0.gguf \
         --split-mode layer \
         --tensor-split 1,1 \
         -ngl 999 \
