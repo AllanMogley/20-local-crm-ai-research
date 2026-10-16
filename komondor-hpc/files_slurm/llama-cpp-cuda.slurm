@@ -2,7 +2,7 @@
 #SBATCH --account=nr_szetdk
 #SBATCH --job-name=llama-cpp-cuda
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:1
+#SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:2
 #SBATCH --mem=32G
 #SBATCH --time=00:40:00
 #SBATCH --mail-type=ALL
@@ -59,8 +59,16 @@ apptainer instance start \
     "${SIF}" \
     "${INSTANCE}"
 
-apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea off --host 0.0.0.0'
-# apptainer exec --userns instance://"${INSTANCE}" ollama serve
+# apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea on --host 0.0.0.0'
+
+apptainer exec --userns instance://"${INSTANCE}" bash -c '
+    llama serve \
+        -m /work/models/Kimi/Kimi-K3-UD-Q8_K_XL-00001-of-00034.gguf \
+        --split-mode layer \
+        --tensor-split 1,1 \
+        -ngl 999 \
+        -rea on \
+        --host 0.0.0.0'
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
