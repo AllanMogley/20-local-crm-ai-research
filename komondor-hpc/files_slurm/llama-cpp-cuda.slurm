@@ -24,6 +24,10 @@ SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-i
 INSTANCE="llama-${SLURM_JOB_ID}"
 WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/models"
 
+# MODEL DIRS
+# MODEL_DIR="/work/Kimi/Kimi-Linear-48B-A3B-Instruct-Q8_0.gguf" # Kimi-Linear
+MODEL_DIR="/work/Coding-models/Qwen3-Coder-Next-Q4_K_M.gguf" # QwenCoder
+
 echo "========================================"
 echo "Ollama Slurm Job"
 echo "========================================"
@@ -61,14 +65,15 @@ apptainer instance start \
 
 # apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea on --host 0.0.0.0'
 
-apptainer exec --userns instance://"${INSTANCE}" bash -c '
+apptainer exec --userns instance://"${INSTANCE}" bash -c "
     llama serve \
-        -m /work/Kimi/Kimi-Linear-48B-A3B-Instruct-Q8_0.gguf \
+        -m '${MODEL_DIR}' \
         --split-mode layer \
         --tensor-split 1,1 \
         -ngl 999 \
         -rea on \
-        --host 0.0.0.0'
+        --jinja \
+        --host 0.0.0.0"
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
