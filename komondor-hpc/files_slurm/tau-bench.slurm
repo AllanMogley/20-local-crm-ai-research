@@ -23,7 +23,7 @@ module load apptainer
 
 SIF="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/apptainer-images/tau-bench.sif"
 INSTANCE="tau-bench-${SLURM_JOB_ID}"
-TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/tau-bench/tau2-bench"
+TAU_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/crm-environment/tau2-bench-backup"
 TAU_CONTAINER_DIR="/workspace/tau2-bench"
 
 echo "========================================"

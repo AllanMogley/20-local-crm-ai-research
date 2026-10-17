@@ -31,5 +31,6 @@ INSTRUCTIONS:
 2. Don't create the domain yet.
     a) I want you to go through the following directory (tau2-bench) to understand the structure of a tau2-bench domain 
         and how to add a custom domain.
+3. Create a copy of the tau-bench directory and name it tau2-bench-copy and then add the domain from here
 
 THANKS
