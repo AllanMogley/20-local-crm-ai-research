@@ -71,9 +71,9 @@ apptainer exec --userns instance://"${INSTANCE}" bash -c "
         --split-mode layer \
         --tensor-split 1,1 \
         -ngl 999 \
-        -rea on \
         --jinja \
         --host 0.0.0.0"
+        # -rea on \
 
 # --------------------------------------------------
 # Make sure instance is stopped when job exits
