@@ -5,7 +5,7 @@
 #SBATCH --mem=2G
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
-#SBATCH --time=00:30:00
+#SBATCH --time=00:40:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=afula.allan.wanjala@hallgato.sze.h
 #SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurm/tau-bench/out/slurm-%j.out
