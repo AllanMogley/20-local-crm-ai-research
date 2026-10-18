@@ -63,7 +63,7 @@ apptainer instance start \
     "${SIF}" \
     "${INSTANCE}"
 
-apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/models/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea on --host 0.0.0.0'
+apptainer exec --userns instance://"${INSTANCE}" bash -c 'llama serve -m /work/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf -rea on --host 0.0.0.0'
 
 # apptainer exec --userns instance://"${INSTANCE}" bash -c "
 #     llama serve \
