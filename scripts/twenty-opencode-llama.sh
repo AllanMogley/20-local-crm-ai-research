@@ -6,6 +6,7 @@ OPENCODE_JSON="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode/.open
 LLAMA_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm"
 OPENCODE_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm"
 TWENTY_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/twenty-apps.slurm"
+TAU2_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/tau-bench.slurm"
 
 # Submit LLAMA Job
 LLAMA_JOB=$(sbatch --parsable "${LLAMA_SLURM}")
@@ -32,6 +33,7 @@ done
 # Submit the other jobs
 OPENCODE_JOB=$(sbatch --parsable "${OPENCODE_SLURM}")
 TWENTY_JOB=$(sbatch --parsable "${TWENTY_SLURM}")
+TAU2_JOB=$(sbatch --parsable "${TAU2_SLURM}")
 
 echo "Submitted OpenCode job: ${OPENCODE_JOB}"
 echo "Submitted Twenty job: ${TWENTY_JOB}"
@@ -49,12 +51,14 @@ while true; do
     LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
     OPENCODE_STATE=$(squeue -h -j "${OPENCODE_JOB}" -o "%T")
     TWENTY_STATE=$(squeue -h -j "${TWENTY_JOB}" -o "%T")
+    TAU2_STATE=$(squeue -h -j "${TAU2_JOB}" -o "%T")
 
     echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE} Twenty${TWENTY_STATE}"
 
     if [[ "$LLAMA_STATE" == "RUNNING" &&
           "$OPENCODE_STATE" == "RUNNING" &&
-          "$TWENTY_STATE" == "RUNNING" ]]; then
+          "$TWENTY_STATE" == "RUNNING" &&
+          "$TAU2_STATE" == "RUNNING" ]]; then
         echo "All jobs are RUNNING."
         # Get TWENTY NODE NAME
         TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N")
@@ -68,6 +72,7 @@ All HPC jobs are now RUNNING.
 LLAMA JOB   :   ${LLAMA_JOB}
 OpenCodeJOB :   ${OPENCODE_JOB}
 TwentyJOB   :   ${TWENTY_JOB}
+Tau2JOB     :   ${TAU2_JOB}
 
 LLAMA node: $(cat llama_node.txt)
 OpenCode Json Updated
