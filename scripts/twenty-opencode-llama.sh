@@ -2,6 +2,7 @@
 FRPC_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/.env_files_slurm"
 CRM_ENVIRONMENT_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/crm-environment/.crm_environment_env"
 OPENCODE_JSON="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/opencode/.opencode/opencode.json"
+TAU2_BENCH_ENV="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/crm-environment/tau2-bench-backup/.env"
 
 LLAMA_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/llama-cpp-cuda.slurm"
 OPENCODE_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/files_slurm/opencode.slurm"
@@ -46,6 +47,9 @@ set +a
 # Update opencode.json
 sed -i "s|\(\"baseURL\"[[:space:]]*:[[:space:]]*\"http://\)[^:\"]*:8080|\1${NODE}:8080|" "${OPENCODE_JSON}"
 
+# Update tau2-bench credentials
+sed -i "/^OPENAI_BASE_URL=/s|\(http://\)[^:/]*|\1${NODE}|" "${TAU2_BENCH_ENV}"
+
 # Wait until all three are RUNNING
 while true; do
     LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
@@ -60,10 +64,12 @@ while true; do
           "$TWENTY_STATE" == "RUNNING" &&
           "$TAU2_STATE" == "RUNNING" ]]; then
         echo "All jobs are RUNNING."
+
         # Get TWENTY NODE NAME
         TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N")
-        # Update Twenty Node Name in crm-environment-env file
+        # Update Twenty Node Name in crm-environment-env and tau2-bench files
         sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
+        sed -i "/^CRM_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
         # Send Email
         mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
 
