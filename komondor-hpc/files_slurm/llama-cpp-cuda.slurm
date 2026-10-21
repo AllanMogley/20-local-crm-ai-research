@@ -3,7 +3,7 @@
 #SBATCH --job-name=llama-cpp-cuda
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:2
-#SBATCH --mem=32G
+#SBATCH --mem=12G
 #SBATCH --time=00:40:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=EMAIL
