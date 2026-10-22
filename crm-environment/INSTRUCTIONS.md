@@ -12,8 +12,8 @@ ARCHITECTURE:
         Read it from the TWENTY_HOSTNAME variable.
     b) The mcp is served on port 3000/mcp
     c) The API key for the server is avalable on the .crm_environment_env file in this directory, read it from the Bearer variable.
-    d) Test the mcp and learn what is possible from that mcp server and available tools.
-    e) Ensuse to go through the mcp directory to understand the structure of the mcp server tools.
+    d) Ensuse to go through the mcp directory to understand the structure of the mcp server tools.
+    e) Test the mcp to make sure it is reachable and it works.
 
 2. Save the sessions within the sessions directory
 
@@ -34,5 +34,6 @@ INSTRUCTIONS:
         and how to add a custom domain.
 3. Create a copy of the tau-bench directory and name it tau2-bench-copy and then add the domain from here.
 4. This tau2 domain should use the twenty mcp server as provided above and be able to interact with it.
-
+5. For tau2 to use the mcp, in the copied tau directory, please a .evf file, it should reflect the .env-example file.
+   This should expose twenty mcp url and the bearer token, dont hard code these in the domain.
 THANKS
