@@ -13,6 +13,7 @@ ARCHITECTURE:
     b) The mcp is served on port 3000/mcp
     c) The API key for the server is avalable on the .crm_environment_env file in this directory, read it from the Bearer variable.
     d) Test the mcp and learn what is possible from that mcp server and available tools.
+    e) Ensuse to go through the mcp directory to understand the structure of the mcp server tools.
 
 2. Save the sessions within the sessions directory
 
@@ -31,6 +32,7 @@ INSTRUCTIONS:
 2. Don't create the domain yet.
     a) I want you to go through the following directory (tau2-bench) to understand the structure of a tau2-bench domain 
         and how to add a custom domain.
-3. Create a copy of the tau-bench directory and name it tau2-bench-copy and then add the domain from here
+3. Create a copy of the tau-bench directory and name it tau2-bench-copy and then add the domain from here.
+4. This tau2 domain should use the twenty mcp server as provided above and be able to interact with it.
 
 THANKS
