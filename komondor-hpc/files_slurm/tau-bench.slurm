@@ -2,7 +2,7 @@
 #SBATCH --account=nr_szetdk
 #SBATCH --job-name=tau-bench
 #SBATCH --partition=cpu
-#SBATCH --mem=2G
+#SBATCH --mem=8G
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
 #SBATCH --time=00:40:00

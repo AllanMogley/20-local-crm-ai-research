@@ -2,7 +2,7 @@
 #SBATCH --account=nr_szetdk
 #SBATCH --job-name=llama-cpp-cuda
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:1
+#SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:2
 #SBATCH --mem=12G
 #SBATCH --time=00:40:00
 #SBATCH --mail-type=ALL
@@ -26,8 +26,8 @@ WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/models"
 
 # MODEL DIRS
 # MODEL_DIR="/work/Kimi/Kimi-Linear-48B-A3B-Instruct-Q8_0.gguf" # Kimi-Linear
-# MODEL_DIR="/work/Coding-models/Qwen3-Coder-Next-Q4_K_M.gguf" # QwenCoder
-MODEL_DIR="/work/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf" # Normal Model
+MODEL_DIR="/work/Coding-models/Qwen3-Coder-Next-Q4_K_M.gguf" # QwenCoder
+# MODEL_DIR="/work/Qwen/Qwen3.8-27B-UD-IQ2_XXS.gguf" # Normal Model
 
 echo "========================================"
 echo "Ollama Slurm Job"
