@@ -1,0 +1,13 @@
+{
+    "id": 3,
+    "jsonrpc": "2.0",
+    "result": {
+        "content": [
+            {
+                "type": "text",
+                "text": "{\"success\":false,\"message\":\"Tool \\\"learn_tools\\\" not found\",\"error\":\"Tool \\\"learn_tools\\\" not found. Use learn_tools to discover available tools.\"}"
+            }
+        ],
+        "isError": false
+    }
+}

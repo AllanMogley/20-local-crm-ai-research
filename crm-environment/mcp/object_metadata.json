@@ -1,0 +1,13 @@
+{
+    "id": 2,
+    "jsonrpc": "2.0",
+    "result": {
+        "content": [
+            {
+                "type": "text",
+                "text": "{\"objectNames\":[\"attachments\",\"blocklists\",\"calendar_channel_event_associations\",\"calendar_event_participants\",\"calendar_events\",\"call_recordings\",\"companies\",\"dashboards\",\"message_campaigns\",\"message_channel_message_association_message_folders\",\"message_channel_message_associations\",\"message_list_members\",\"message_lists\",\"message_participants\",\"message_threads\",\"messages\",\"note_targets\",\"notes\",\"opportunities\",\"people\",\"task_targets\",\"tasks\",\"timeline_activities\",\"workspace_members\"],\"message\":\"Found 24 object(s): attachments, blocklists, calendar_channel_event_associations, calendar_event_participants, calendar_events, call_recordings, companies, dashboards, message_campaigns, message_channel_message_association_message_folders, message_channel_message_associations, message_list_members, message_lists, message_participants, message_threads, messages, note_targets, notes, opportunities, people, task_targets, tasks, timeline_activities, workspace_members.\"}"
+            }
+        ],
+        "isError": false
+    }
+}
