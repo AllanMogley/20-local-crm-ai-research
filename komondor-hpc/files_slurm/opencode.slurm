@@ -32,7 +32,7 @@ CRM_ENV_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/crm-environment"
 CRM_ENV_CONTAINER_DIR="/workspace/crm-environment"
 
 RESEARCH_WORK="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/research-work"
-RESEARCH_WORK_CONTAINER_DIR="/workspace/research-work"
+R_WORK_CONTAINER_DIR="/workspace/research-work"
 
 echo "========================================"
 echo "Tau2-Bench Slurm Job"
@@ -64,7 +64,7 @@ apptainer instance start \
     --home /workspace/opencode \
     --bind "${OPENCODE_DIR}:${OPENCODE_CONTAINER_DIR}" \
     --bind "${CRM_ENV_DIR}:${CRM_ENV_CONTAINER_DIR}" \
-    --bind "${RESEARCH_WORK}:${RESEARCH_WORK_CONTAINER_DIR}" \
+    --bind "${RESEARCH_WORK}:${R_WORK_CONTAINER_DIR}" \
     "${SIF}" \
     "${INSTANCE}"
 
