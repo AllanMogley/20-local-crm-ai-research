@@ -1,10 +1,11 @@
 Hello there,
 
-1. You are supposed to write a code that will download these papers.
+1. You are supposed to download these research papers provided in the "Title Link Theme Priority.csv" file.
 
-2. The file "Title Link Theme Priority.csv" contains the Titles and links of the files, these were generated from scopus.
+2. The file "Title Link Theme Priority.csv" contains the Titles and links of the research papers, these were generated from scopus.
 
-3. You should generate a code that will search and download the papers from scopus. The file contains the links to the researches.
+3. You should either generate a code that will search and download the papers from scopus or find you own way.
+    The file contains the links to the researche papers. Some might be downloadable easily and other not. Try to search for the same papers in the internet.
 
 4. Download the files and save them in the directory named papers.
 
