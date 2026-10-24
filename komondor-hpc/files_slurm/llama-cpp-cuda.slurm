@@ -4,7 +4,7 @@
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:nvidia_a100-sxm4-40gb:2
 #SBATCH --mem=12G
-#SBATCH --time=00:40:00
+#SBATCH --time=01:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=EMAIL
 #SBATCH --output=/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/outputs_slurm/llama/out/slurm-%j.out
