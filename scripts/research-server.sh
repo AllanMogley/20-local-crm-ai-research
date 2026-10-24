@@ -45,10 +45,10 @@ while true; do
     LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
     OPENCODE_STATE=$(squeue -h -j "${OPENCODE_JOB}" -o "%T")
 
-    echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE}
+    echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE}"
 
     if [[ "$LLAMA_STATE" == "RUNNING" &&
-          "$OPENCODE_STATE" == "RUNNING" &&
+          "$OPENCODE_STATE" == "RUNNING" ]]; then
         echo "All jobs are RUNNING."
         # Send Email
         mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
