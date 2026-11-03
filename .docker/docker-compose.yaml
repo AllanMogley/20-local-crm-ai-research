@@ -1,25 +1,5 @@
 services:
 
-  ollama:
-    # image: ollama/ollama
-    image: ollama/ollama:0.32.15
-    volumes:
-      - /mnt/my-space/1-ai-agents/1-models/1-ollama:/ollama
-    container_name: ollama
-    networks:
-      - crm
-    ports:
-      - "11434:11434"
-    stdin_open: true
-    tty: true
-    # devices:
-      # - /dev/kfd
-      # - /dev/dri
-    # environment:
-      # - OLLAMA_CONTEXT_LENGTH=200
-      # - OLLAMA_VULKAN=1
-      # - OLLAMA_NUM_PARALLEL=4
-
   tau-bench:
     build:
       context: .
@@ -32,10 +12,7 @@ services:
       - 8004:8004
     stdin_open: true
     tty: true
-    environment:
-      - OPENAI_API_BASE=ollama:11434
-      - OPENAI_API_KEY=ollama
-      - MODEL=qwen3:8b
+    env_file: ".env-docker-compose"
 
   open-webui:
     build:
@@ -68,6 +45,7 @@ services:
       container_name: mcp
       tty: true
       stdin_open: true
+      env_file: ".env-docker-compose"
       command:
 
         # - "mcpo"
@@ -87,7 +65,7 @@ services:
         - --server-type
         - streamable-http
         - --header
-        - '{"Authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBjODg2OTBiLTgwMzItNGQ4OS05YzZmLTg2NzQzZGFiMzBjMSJ9.eyJzdWIiOiI1M2VhMjE4ZS03MzYxLTQ4N2YtODJjZC05YjdjMjcxODZjMWMiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiNTNlYTIxOGUtNzM2MS00ODdmLTgyY2QtOWI3YzI3MTg2YzFjIiwiaWF0IjoxNzg3NTEyODU0LCJleHAiOjQ5NDA5NDAwNTMsImp0aSI6IjMzYmYxYzAwLWQ4ZWEtNDMxMy05OTQzLTdkYWJmZTMwNDFkZiJ9.keK6e-vN_H3BpxiznmHfwvVM7---C7WSrVK0_gTUTsXhEyE109uDc2AoqSc9UdW2sp8R6kVoJQiestLnjdOXLg"}'
+        - '{"Authorization": "Bearer ${MCP_BEARER_TOKEN}"}'
         - --
         - http://server:3000/mcp
       
