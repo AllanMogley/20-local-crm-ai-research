@@ -1,0 +1,124 @@
+name: twenty
+services:
+  db:
+    environment:
+      POSTGRES_DB: default
+      POSTGRES_PASSWORD: 05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6
+      POSTGRES_USER: postgres
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U postgres -h localhost -d postgres
+      timeout: 5s
+      interval: 5s
+      retries: 10
+    image: postgres:16
+    networks:
+      net: null
+    restart: always
+    volumes:
+      - type: volume
+        source: db-data
+        target: /var/lib/postgresql/data
+        volume: {}
+  redis:
+    command:
+      - --maxmemory-policy
+      - noeviction
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      timeout: 5s
+      interval: 5s
+      retries: 10
+    image: redis
+    networks:
+      net: null
+    restart: always
+  server:
+    depends_on:
+      db:
+        condition: service_healthy
+        required: true
+      redis:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_SECRET: cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI=
+      DISABLE_CRON_JOBS_REGISTRATION: ""
+      DISABLE_DB_MIGRATIONS: ""
+      ENCRYPTION_KEY: ""
+      FALLBACK_ENCRYPTION_KEY: ""
+      NODE_PORT: "3000"
+      PG_DATABASE_URL: postgres://postgres:05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6@db:5432/default
+      REDIS_URL: redis://redis:6379
+      SERVER_URL: http://localhost:3000
+      STORAGE_S3_ENDPOINT: ""
+      STORAGE_S3_NAME: ""
+      STORAGE_S3_REGION: ""
+      STORAGE_TYPE: local
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - curl --fail http://localhost:3000/healthz
+      timeout: 5s
+      interval: 5s
+      retries: 20
+    image: twentycrm/twenty:v2.30.0
+    networks:
+      net: null
+    ports:
+      - mode: ingress
+        target: 3000
+        published: "3000"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: volume
+        source: server-local-data
+        target: /app/packages/twenty-server/.local-storage
+        volume: {}
+  worker:
+    command:
+      - yarn
+      - worker:prod
+    depends_on:
+      db:
+        condition: service_healthy
+        required: true
+      server:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_SECRET: cr+aD+VMXwjJgAMJ8fI6Ikz+TuNEXXRehrjCkkg4nTI=
+      DISABLE_CRON_JOBS_REGISTRATION: "true"
+      DISABLE_DB_MIGRATIONS: "true"
+      ENCRYPTION_KEY: ""
+      FALLBACK_ENCRYPTION_KEY: ""
+      PG_DATABASE_URL: postgres://postgres:05ab9d6143d1fe891059cfe83b1fb059b0d4481851df88ddb02ef24d5890ceb6@db:5432/default
+      REDIS_URL: redis://redis:6379
+      SERVER_URL: http://localhost:3000
+      STORAGE_S3_ENDPOINT: ""
+      STORAGE_S3_NAME: ""
+      STORAGE_S3_REGION: ""
+      STORAGE_TYPE: local
+    image: twentycrm/twenty:v2.30.0
+    networks:
+      net: null
+    restart: always
+    volumes:
+      - type: volume
+        source: server-local-data
+        target: /app/packages/twenty-server/.local-storage
+        volume: {}
+networks:
+  net:
+    name: docker_crm
+    external: true
+volumes:
+  db-data:
+    name: twenty_db-data
+  server-local-data:
+    name: twenty_server-local-data
