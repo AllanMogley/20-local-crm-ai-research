@@ -9,9 +9,9 @@ Protocol: MCP v1.0 (protocolVersion 2025-06-18)
 ```
 
 ## Authentication
-
+## 
 ```bash
-export MCP_TOKEN="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImViNWUyMDUxLWFlYmYtNDU0NC04ODQyLTMxOWI0NzczZTdlMCJ9.eyJzdWIiOiJjYzNlODFmOC05YmQzLTQ0Y2QtYmMzOS01YTQ0ZTg3Y2ZkNTgiLCJ0eXBlIjoiQVBJX0tFWSIsIndvcmtzcGFjZUlkIjoiY2MzZTgxZjgtOWJkMy00NGNkLWJjMzktNWE0NGU4N2NmZDU4IiwiaWF0IjoxNzkyNjc3OTIyLCJleHAiOjQ5NDYyNzc5MjEsImp0aSI6IjE3NWZmZDk2LTVjYjctNDNhYy05MmNlLTAzNmQ2Yzk1ZTE5OCJ9.JAYa5Hd6YtIRqN5ziCnyIXNsS4dbMP2Fi3M_f8lsLJl4sEocmyhJ-h0XDmX9dN9scZ37tBE1xzHNlVoHwBeKFg"
+export MCP_TOKEN="$(grep '^Bearer=' ../.crm_environment_env | cut -d '=' -f2- | tr -d "'")"
 ```
 
 ## Top-Level Tools (8)
