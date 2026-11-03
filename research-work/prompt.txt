@@ -1,0 +1,63 @@
+TITLE:
+Local-first Agentic AI for SMEs CRM Decision Support: A Comparative Design-Science Evaluation of On-Premises AI solutions
+
+ABSTRACT
+CRM systems increasingly integrate AI-based automation, but current implementations are unstructured,
+inconsistent and difficult to audit, especially under GDPR constraints. This leads to unreliable business decisions,
+weak trust and poor reproducibility. There is a lack of systematic evaluation of standardized tool-use architectures
+and local-first deployments for dependable CRM automation.
+This thesis investigates locally deployed AI-based CRM systems under GDPR and data sovereignty constraints,
+addressing the lack of structured AI integration that can lead to inconsistent outputs and weak auditability. It
+proposes a local-first, MCP-based CRM framework on Twenty CRM with standardized tool use and reusable “skills”
+for customer lifecycle operations. The thesis will benchmark suitable open-weight models (LLaMA, Qwen, Granite)
+and compare against cloud-based models on their accuracy, reliability, latency, token efficiency, cost, prompt-
+injection robustness and audit logging overhead, with the aim of developing a structured CRM architecture and
+comprehensive evaluation framework.
+
+SUBTASKS:
+• Literature review of CRM systems and Agentic AI solutions
+• Design a local-first CRM AI architecture using MCP-based standardized tool integration.
+• Evaluate and compare system performance in terms of task accuracy, workflow reliability, latency, token
+efficiency and operational cost across different architectures and model classes.
+• Identify, investigate and benchmark open-weight models against selected cloud-based models in CRM
+workflows.
+• Develop reusable workflow “skills” and evaluate their impact on CRM business operations such as customer
+lifecycle management, lead qualification and meeting scheduling.
+• Identify and analyze GDPR-related risks in AI-assisted CRM workflows, including unauthorized data access,
+excessive data exposure and insufficient transparency.
+• Assess the impact of audit logging mechanisms on traceability, compliance and system overhead under GDPR
+constraints.
+
+
+
+=============================================================================================================================================
+LITERATURE REVIEW PROMPT
+Please generate the subtopics that I would dicuss in my Literature review.
+I need some mathematical concepts or scientific concepts or AI related concepts and theories.
+Especially I would love to touch on model parameters(eg. is 3b to 7b parameters or more enough?), model quantizations and determine their perfomance in tau3 benchmarks.
+My research should touch on how different model families, quantization levels and model paramenters degrade or improve in performance within simulated CRM environment and what curve do they follow (eg. is it logarithmic increase or decrease?)
+It therefore investigates how good openweights models perform in real world tasks in comparison to closed models.
+Is it possible to run these models on local hardware such as a laptop, what local models will fit and work on most consumer laptops?
+Use my provided Abstract and Title as a guide in comibination with the provided sources.
+I'm thinking of introducing a phylosophical concept like Commitment-Trust Theory (Morgan & Hunt, 1994) or any concept you might find relevant from the provided sources.
+The phylosophical concept should guide me in designing the CRM domain in tau3-bench with GDPR in mind; propose a phylosophical concept relevant to this research.
+My environment in built on a custom crm domain in tau3-bench, although there are multiple benchmarking methods, I would love to emphasize why I'm preferring tau3-bench over the others. Open source Twenty CRM is the sotware my tau3-bench CRM environment is connecting to using MCP protocol. 
+
+
+
+=============================================================================================================================================
+MODELS TO WATCH
+**Local Open-Source Models**
+1. Kimi K2.5 Q3
+2. DeepSeek V3.2 Q4_K_M
+3. Qwen 3.5 397B Q4_K_M
+4. Llama 4 Maverick Q4KS
+
+**Cloud API Models**
+1. Gemini 2.5 Flash
+2. Gemini 3.1 Pro Preview
+3. Claude Sonnet 4.5
+4. GPT-5.1
+5. Claude Opus 4.5
+
+

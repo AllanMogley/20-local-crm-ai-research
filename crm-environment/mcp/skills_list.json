@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "content": [
+            {
+                "type": "text",
+                "text": "{\"skillNames\":[\"code-interpreter\",\"custom-objects-cleanup\",\"dashboard-building\",\"data-manipulation\",\"xlsx\",\"metadata-building\",\"pdf\",\"pptx\",\"research\",\"roles\",\"view-building\",\"view-filters-and-sorts\",\"docx\",\"workflow-building\",\"workspace-demo-seeding\"],\"message\":\"Found 15 skill(s): code-interpreter, custom-objects-cleanup, dashboard-building, data-manipulation, xlsx, metadata-building, pdf, pptx, research, roles, view-building, view-filters-and-sorts, docx, workflow-building, workspace-demo-seeding.\"}"
+            }
+        ],
+        "isError": false
+    }
+}

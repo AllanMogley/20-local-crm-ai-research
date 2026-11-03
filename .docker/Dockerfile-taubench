@@ -39,10 +39,15 @@ ENV PATH="/usr/local/bin:${PATH}"
 USER $NB_USER
 WORKDIR /workspace
 RUN uv python install 3.13
+
+# Set .venv path
+ENV UV_PROJECT_ENVIRONMENT=/workspace/.venv
+ENV PATH="/workspace/.venv/bin:/usr/local/bin:${PATH}"
+
 RUN git clone --depth 1 --single-branch --branch main https://github.com/sierra-research/tau2-bench && \
     cd tau2-bench && \
     uv sync 
-ENV PATH="/workspace/tau2-bench/.venv/bin:$PATH"
+# ENV PATH="/workspace/tau2-bench/.venv/bin:$PATH"
 
 WORKDIR /workspace/tau2-bench
 ENTRYPOINT ["/bin/tini", "-s", "--"]

@@ -1,0 +1,30 @@
+TITLE:
+Local-first Agentic AI for SMEs CRM Decision Support: A Comparative Design-Science Evaluation of On-Premises AI
+solutions
+
+ABSTRACT
+CRM systems increasingly integrate AI-based automation, but current implementations are unstructured,
+inconsistent and difficult to audit, especially under GDPR constraints. This leads to unreliable business decisions,
+weak trust and poor reproducibility. There is a lack of systematic evaluation of standardized tool-use architectures
+and local-first deployments for dependable CRM automation.
+This thesis investigates locally deployed AI-based CRM systems under GDPR and data sovereignty constraints,
+addressing the lack of structured AI integration that can lead to inconsistent outputs and weak auditability. It
+proposes a local-first, MCP-based CRM framework on Twenty CRM with standardized tool use and reusable “skills”
+for customer lifecycle operations. The thesis will benchmark suitable open-weight models (LLaMA, Qwen, Granite)
+and compare against cloud-based models on their accuracy, reliability, latency, token efficiency, cost, prompt-
+injection robustness and audit logging overhead, with the aim of developing a structured CRM architecture and
+comprehensive evaluation framework.
+
+SUBTASKS:
+• Literature review of CRM systems and Agentic AI solutions
+• Design a local-first CRM AI architecture using MCP-based standardized tool integration.
+• Evaluate and compare system performance in terms of task accuracy, workflow reliability, latency, token
+efficiency and operational cost across different architectures and model classes.
+• Identify, investigate and benchmark open-weight models against selected cloud-based models in CRM
+workflows.
+• Develop reusable workflow “skills” and evaluate their impact on CRM business operations such as customer
+lifecycle management, lead qualification and meeting scheduling.
+• Identify and analyze GDPR-related risks in AI-assisted CRM workflows, including unauthorized data access,
+excessive data exposure and insufficient transparency.
+• Assess the impact of audit logging mechanisms on traceability, compliance and system overhead under GDPR
+constraints.

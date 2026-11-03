@@ -1,0 +1,5 @@
+{
+    "message": "Unexpected non-whitespace character after JSON at position 194 (line 1 column 195)",
+    "error": "Bad Request",
+    "statusCode": 400
+}

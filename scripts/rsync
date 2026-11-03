@@ -1,2 +1,2 @@
-rsync -avz --ignore-existing --exclude 'tau-bench' --exclude 'models/' --exclude 'apptainer-images/' nr_szww@komondor.hpc.dkf.hu:/home/nr_szww/nr_szetdk/allan_wanjala/komondo-hpc ../
+rsync -avz --ignore-existing --exclude 'tau-bench' --exclude 'models/' --exclude 'apptainer-images/' nr_szww@komondor.hpc.dkf.hu:/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc ../
 

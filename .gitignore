@@ -1,5 +1,16 @@
-.env
+*.env*
 *.sif
 *.out
 *.err
+*.log
+
+*frpc.generated.toml
+*.twenty_api_key-envi
+*.crm_environment_env
+*.env_research
+*llama_node.txt
+
 opencode
+apptainer-images
+models
+uv.lock
