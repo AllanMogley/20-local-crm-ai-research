@@ -1,0 +1,18 @@
+CRM Domain Tasks (data/tau2/domains/crm/tasks.json)
+====================================================
+
+ID | Persona                                | Focus (Commitment-Trust mapping)
+---+----------------------------------------+--------------------------------------
+0  | Sarah Chen (Skeptical Business Owner)  | Initial contact with low-commitment prospect; build initial trust through competence
+1  | Mark Reynolds (Stubborn Decision Maker)| Stubborn/distrustful user - hard to convert, needs trust-building before commitment
+2  | Priya Sharma (Analytical Evaluation Manager) | Trust via reliability & competence; detailed technical evaluation
+3  | David Kim (Evidence-Seeking Buyer)     | Trust via transparency - needs specific data, case studies, references
+4  | Emma Rodriguez (Cautious Commitment Tester) | Small commitments to test reliability before larger ones
+5  | James Wilson (Strategic Decision Maker)| Long-term value; commitment strengthening beyond the sale
+6  | Maria Garcia (Challenged Customer)     | Trust maintenance during problem resolution
+7  | Alex Thompson (Advocate Customer)      | Referral request; relationship strength / commitment manifestation
+8  | Rachel Brown (Loyal Customer)          | Loyalty reinforcement, deepening relationship over time
+9  | Chris Martinez (At-Risk Customer)      | Churn prevention / trust restoration - one last chance to fix issues
+
+Evaluation: all tasks use reward_basis ["DB", "COMMUNICATE"] with nl_assertions
+(LLM-judged) on trust/commitment behaviors; actions and communicate_info are empty.
