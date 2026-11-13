@@ -10,7 +10,13 @@
 *.env_research
 *llama_node.txt
 
+*CRM_DOMAIN_SUMMARY.md*
+*CRM_INTEGRATION_GUIDE.md*
+
 opencode
 apptainer-images
 models
 uv.lock
+
+
+crm-environment/twenty-apps-volumes/postgres/
