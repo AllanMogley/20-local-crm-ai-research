@@ -1,18 +1,27 @@
 CRM Domain Tasks (data/tau2/domains/crm/tasks.json)
 ====================================================
 
-ID | Persona                                | Focus (Commitment-Trust mapping)
----+----------------------------------------+--------------------------------------
-0  | Sarah Chen (Skeptical Business Owner)  | Initial contact with low-commitment prospect; build initial trust through competence
-1  | Mark Reynolds (Stubborn Decision Maker)| Stubborn/distrustful user - hard to convert, needs trust-building before commitment
-2  | Priya Sharma (Analytical Evaluation Manager) | Trust via reliability & competence; detailed technical evaluation
-3  | David Kim (Evidence-Seeking Buyer)     | Trust via transparency - needs specific data, case studies, references
-4  | Emma Rodriguez (Cautious Commitment Tester) | Small commitments to test reliability before larger ones
-5  | James Wilson (Strategic Decision Maker)| Long-term value; commitment strengthening beyond the sale
-6  | Maria Garcia (Challenged Customer)     | Trust maintenance during problem resolution
-7  | Alex Thompson (Advocate Customer)      | Referral request; relationship strength / commitment manifestation
-8  | Rachel Brown (Loyal Customer)          | Loyalty reinforcement, deepening relationship over time
-9  | Chris Martinez (At-Risk Customer)      | Churn prevention / trust restoration - one last chance to fix issues
+ID | Persona                      | Focus
+---+------------------------------+--------------------------------------
+0  | Skeptical Business Owner     | Build trust via competence; log lead
+1  | Stubborn Decision Maker      | Overcome skepticism; log lead
+2  | Analytical Evaluation Manager| Follow through + expertise; log lead + pilot opportunity
+3  | Evidence-Seeking Buyer       | Provide proof/transparency; log lead + opportunity
+4  | Cautious Commitment Tester   | Honor small commitments; log lead + small pilot opportunity
+5  | Strategic Decision Maker     | Show long-term value; log lead + strategic opportunity
+6  | Challenged Customer          | Maintain trust in problem resolution; opportunity -> problem-resolution stage
+7  | Advocate Customer            | Request referrals; log lead + referral opportunity
+8  | Loyal Customer Seeking More  | Deepen relationship; log lead + renewal opportunity
+9  | At-Risk Customer             | Rebuild trust/churn prevention; log lead + churn-risk opportunity
 
-Evaluation: all tasks use reward_basis ["DB", "COMMUNICATE"] with nl_assertions
-(LLM-judged) on trust/commitment behaviors; actions and communicate_info are empty.
+Full purposes:
+  0: Initial contact with low-commitment prospect. Tests agent's ability to build initial trust through competence and professionalism, and to log the prospect in the CRM.
+  1: Stubborn user who is difficult to convert due to low trust. Tests agent's ability to overcome skepticism and build trust, while logging the lead in the CRM.
+  2: Building trust through reliability and competence. Tests agent's ability to follow through on promises and demonstrate expertise, while logging the lead and a pilot opportunity in the CRM.
+  3: Customer seeking assurance through evidence and transparency. Tests agent's ability to provide proof and be transparent, while logging the lead and an opportunity in the CRM.
+  4: Testing small commitments to gauge reliability. Tests agent's ability to honor small commitments and build momentum, while logging the lead and a small pilot opportunity in the CRM.
+  5: Demonstrating long-term value to strengthen commitment. Tests agent's ability to show sustained value beyond initial sale, while logging the lead and a strategic opportunity in the CRM.
+  6: Problem resolution tests trust during challenges. Tests agent's ability to maintain trust during problem resolution, while logging the lead and moving the opportunity to a problem-resolution stage in the CRM.
+  7: Referral request tests relationship strength. Tests agent's ability to request referrals and handle the request appropriately, while logging the lead and a referral opportunity in the CRM.
+  8: Loyalty reinforcement tests relationship deepening. Tests agent's ability to strengthen commitment and deepen relationships, while logging the lead and a renewal opportunity in the CRM.
+  9: Churn prevention tests trust restoration. Tests agent's ability to rebuild trust and commitment when relationship is at risk, while logging the lead and a churn-risk opportunity in the CRM.
