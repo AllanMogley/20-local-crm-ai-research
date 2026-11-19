@@ -47,7 +47,7 @@ set +a
 # Update opencode.json
 sed -i "s|\(\"baseURL\"[[:space:]]*:[[:space:]]*\"http://\)[^:\"]*:8080|\1${NODE}:8080|" "${OPENCODE_JSON}"
 
-# Update tau2-bench credentials
+# Update tau2-bench credentials (LLAMA NODE)
 sed -i "/^OPENAI_BASE_URL=/s|\(http://\)[^:/]*|\1${NODE}|" "${TAU2_BENCH_ENV}"
 
 # Wait until all three are RUNNING
@@ -69,7 +69,8 @@ while true; do
         TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N")
         # Update Twenty Node Name in crm-environment-env and tau2-bench files
         sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
-        sed -i "/^CRM_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
+        sed -i "/^TWENTY_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
+	sed -i "/^TWENTY_DB_URL=/s|\(@\)[^:]*:|\1${TWENTY_NODE}:|" "${TAU2_BENCH_ENV}"
         # Send Email
         mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
 
@@ -87,3 +88,4 @@ EOF
     fi
     sleep 10
 done
+
