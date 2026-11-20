@@ -68,8 +68,10 @@ while true; do
         # Get TWENTY NODE NAME
         TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N")
         # Update Twenty Node Name in crm-environment-env and tau2-bench files
+        Update Twenty Node Name in crm-environment-env and tau2-bench files
         sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
         sed -i "/^TWENTY_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
+	    sed -i "/^TWENTY_DB_URL=/s|\(@\)[^:]*:|\1${TWENTY_NODE}:|" "${TAU2_BENCH_ENV}"
         # Send Email
         mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
 
