@@ -159,20 +159,30 @@ LLAMA_READY=1
 for PORT in "${USER_PORT}" "${AGENT_PORT}"; do
     echo "Waiting for llama server on ${NODE}:${PORT}..."
     READY=0
+    MISSES=0
     for i in $(seq 1 180); do
-        if curl -fsS "http://${NODE}:${PORT}/health" >/dev/null 2>&1; then
+        if curl -fsS --connect-timeout 3 --max-time 5 \
+            "http://${NODE}:${PORT}/health" >/dev/null 2>&1; then
             READY=1
             break
         fi
-        # Every ~30s, make sure the llama job did not die while loading.
-        if [ $((i % 6)) -eq 0 ]; then
-            STATE=$(job_state "${LLAMA_JOB}")
-            case "${TERMINAL_STATES}" in
-                *" ${STATE} "*)
-                    echo "ERROR: LLAMA job ${LLAMA_JOB} ended in state ${STATE} while loading."
-                    exit 1
-                    ;;
-            esac
+
+        # Make sure the llama job is still alive while the model loads.
+        STATE=$(job_state "${LLAMA_JOB}")
+        case "${TERMINAL_STATES}" in
+            *" ${STATE} "*)
+                echo "ERROR: LLAMA job ${LLAMA_JOB} ended in state ${STATE} while loading."
+                exit 1
+                ;;
+        esac
+        if [ -z "${STATE}" ]; then
+            MISSES=$((MISSES + 1))
+            if [ "${MISSES}" -ge 3 ]; then
+                echo "ERROR: LLAMA job ${LLAMA_JOB} is gone (cancelled or purged) while loading."
+                exit 1
+            fi
+        else
+            MISSES=0
         fi
         sleep 5
     done
@@ -273,3 +283,4 @@ else
     echo "WARNING: not all jobs are RUNNING; check squeue/sacct."
     echo "Check: sacct -j ${LLAMA_JOB},${OPENCODE_JOB},${TWENTY_JOB},${TAU2_JOB} --format=JobID,JobName%24,State,ExitCode,NodeList"
 fi
+
