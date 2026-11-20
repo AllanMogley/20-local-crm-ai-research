@@ -13,60 +13,112 @@ TAU2_SLURM="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/file
 USER_PORT=8080
 AGENT_PORT=8081
 
-job_state() {
-    local id="$1"
-    local state
-    state=$(squeue -h -j "${id}" -o "%T" 2>/dev/null | head -1)
-    if [ -z "${state}" ]; then
-        state=$(scontrol show job "${id}" 2>/dev/null |
-            sed -n 's/.*JobState=\([^ ]*\).*/\1/p' | head -1)
+# States after which a job will never come back.
+TERMINAL_STATES=" COMPLETED FAILED CANCELLED TIMEOUT NODE_FAIL OUT_OF_MEMORY PREEMPTED BOOT_FAIL DEADLINE REVOKED SPECIAL_EXIT "
+
+# Submit a job and return only its numeric ID. sbatch's own messages
+# (e.g. "also queued in cpu-short") still go to the terminal. Some sites
+# return "<id>;<cluster>" from --parsable, so strip anything after ';'.
+submit_job() {
+    local file="$1" raw id
+    raw=$(sbatch --parsable "${file}") || {
+        echo "ERROR: sbatch failed for ${file}" >&2
+        return 1
+    }
+    id=$(printf '%s\n' "${raw}" | sed -nE 's/^([0-9]+).*/\1/p' | tail -1)
+    if [ -z "${id}" ]; then
+        echo "ERROR: sbatch returned no job id for ${file} (got '${raw}')." >&2
+        return 1
     fi
-    printf '%s' "${state}"
+    printf '%s' "${id}"
 }
 
-job_node() {
-    local id="$1"
-    local node
-    node=$(squeue -h -j "${id}" -o "%N" 2>/dev/null | head -1)
-    if [ -z "${node}" ]; then
-        node=$(scontrol show job "${id}" 2>/dev/null |
-            sed -n 's/.* NodeList=\([^ ]*\).*/\1/p' | head -1)
+# Query one field of a job. squeue only knows jobs that are still in the
+# queue, so fall back to scontrol and then sacct for finished jobs. All
+# Slurm errors are silenced: "slurm_load_jobs error: Invalid job id
+# specified" simply means the job is no longer in the queue.
+job_field() {
+    local id="$1" fmt="$2" val=""
+    val=$(squeue -h -j "${id}" -o "${fmt}" 2>/dev/null | head -1)
+    if [ -z "${val}" ] && command -v scontrol >/dev/null 2>&1; then
+        if [ "${fmt}" = "%T" ]; then
+            val=$(scontrol show job "${id}" 2>/dev/null |
+                sed -n 's/.*JobState=\([^ ]*\).*/\1/p' | head -1)
+        else
+            val=$(scontrol show job "${id}" 2>/dev/null |
+                sed -n 's/.* NodeList=\([^ ]*\).*/\1/p' | head -1)
+        fi
     fi
-    if [ "${node}" = "(null)" ]; then
-        node=""
+    if [ -z "${val}" ] && command -v sacct >/dev/null 2>&1; then
+        if [ "${fmt}" = "%T" ]; then
+            val=$(sacct -n -X -j "${id}" --format=State 2>/dev/null |
+                awk '{print $1}' | head -1)
+        else
+            val=$(sacct -n -X -j "${id}" --format=NodeList 2>/dev/null |
+                awk '{print $1}' | head -1)
+        fi
     fi
-    printf '%s' "${node}"
+    case "${val}" in
+        "(null)"|"None"|"None assigned"|"n/a"|"") val="" ;;
+    esac
+    if [ "${fmt}" = "%T" ]; then
+        # Ignore anything that is not a plain Slurm state name.
+        [[ "${val}" =~ ^[A-Z][A-Z_]*$ ]] || val=""
+    else
+        [[ "${val}" =~ ^[A-Za-z0-9._-]+$ ]] || val=""
+    fi
+    printf '%s' "${val}"
 }
 
-# Submit LLAMA Job
-LLAMA_JOB=$(sbatch --parsable "${LLAMA_SLURM}")
+job_state() { job_field "$1" "%T"; }
+job_node()  { job_field "$1" "%N"; }
+
+# Block until a job is RUNNING and has a node. Exits with an error if the
+# job finishes or disappears from Slurm. The result node is stored in the
+# variable named by $3.
+wait_for_running() {
+    local id="$1" name="$2" outvar="$3"
+    local state node misses=0
+    while true; do
+        state=$(job_state "${id}")
+        node=$(job_node "${id}")
+
+        if [ "${state}" = "RUNNING" ] && [ -n "${node}" ]; then
+            printf -v "${outvar}" '%s' "${node}"
+            return 0
+        fi
+
+        case "${TERMINAL_STATES}" in
+            *" ${state} "*)
+                echo "ERROR: ${name} job ${id} ended in state ${state}." >&2
+                echo "Check: sacct -j ${id} --format=JobID,JobName%24,State,ExitCode,NodeList" >&2
+                return 1
+                ;;
+        esac
+
+        if [ -z "${state}" ]; then
+            misses=$((misses + 1))
+            if [ "${misses}" -ge 3 ]; then
+                echo "ERROR: ${name} job ${id} is unknown to Slurm (finished or purged)." >&2
+                echo "Check: sacct -j ${id} --format=JobID,JobName%24,State,ExitCode,NodeList" >&2
+                return 1
+            fi
+        else
+            misses=0
+            printf '%s job %s state: %s\n' "${name}" "${id}" "${state}"
+        fi
+        sleep 10
+    done
+}
+
+# Submit LLAMA job
+LLAMA_JOB=$(submit_job "${LLAMA_SLURM}") || exit 1
 echo "Submitted LLAMA job: ${LLAMA_JOB}"
 
 # Wait for LLAMA to start
-while true; do
-    STATE=$(job_state "${LLAMA_JOB}")
-
-    if [ "${STATE}" = "RUNNING" ]; then
-        NODE=$(job_node "${LLAMA_JOB}")
-        if [ -z "${NODE}" ]; then
-            echo "ERROR: LLAMA job is running but its node is unknown."
-            exit 1
-        fi
-        echo "LLAMA is running on node: ${NODE}"
-        echo "${NODE}" > llama_node.txt
-        break
-    elif [ -z "${STATE}" ] || [ "${STATE}" = "CANCELLED" ] ||
-         [ "${STATE}" = "FAILED" ] || [ "${STATE}" = "COMPLETED" ] ||
-         [ "${STATE}" = "TIMEOUT" ] || [ "${STATE}" = "NODE_FAIL" ] ||
-         [ "${STATE}" = "OUT_OF_MEMORY" ] || [ "${STATE}" = "PREEMPTED" ]; then
-        echo "LLAMA job ${LLAMA_JOB} is not running (state: ${STATE:-gone})."
-        echo "Check: sacct -j ${LLAMA_JOB} --format=JobID,JobName%24,State,ExitCode"
-        exit 1
-    else
-        echo "LLAMA job ${LLAMA_JOB} state: ${STATE}"
-    fi
-    sleep 10
-done
+wait_for_running "${LLAMA_JOB}" LLAMA NODE || exit 1
+echo "LLAMA is running on node: ${NODE}"
+echo "${NODE}" > llama_node.txt
 
 # Update the llama URLs immediately after the node is known. These no longer
 # depend on the /health checks below.
@@ -93,12 +145,13 @@ if ! grep -q "^OPENAI_BASE_URL=http://${NODE}:${USER_PORT}/v1$" "${TAU2_BENCH_EN
 fi
 
 # Submit the other jobs
-OPENCODE_JOB=$(sbatch --parsable "${OPENCODE_SLURM}")
-TWENTY_JOB=$(sbatch --parsable "${TWENTY_SLURM}")
-TAU2_JOB=$(sbatch --parsable "${TAU2_SLURM}")
+OPENCODE_JOB=$(submit_job "${OPENCODE_SLURM}") || exit 1
+TWENTY_JOB=$(submit_job "${TWENTY_SLURM}") || exit 1
+TAU2_JOB=$(submit_job "${TAU2_SLURM}") || exit 1
 
 echo "Submitted OpenCode job: ${OPENCODE_JOB}"
 echo "Submitted Twenty job: ${TWENTY_JOB}"
+echo "Submitted Tau2 job: ${TAU2_JOB}"
 
 # Wait until both llama servers finish loading. RUNNING only means the job
 # started; the models can take several minutes to become ready.
@@ -106,10 +159,20 @@ LLAMA_READY=1
 for PORT in "${USER_PORT}" "${AGENT_PORT}"; do
     echo "Waiting for llama server on ${NODE}:${PORT}..."
     READY=0
-    for _ in $(seq 1 180); do
+    for i in $(seq 1 180); do
         if curl -fsS "http://${NODE}:${PORT}/health" >/dev/null 2>&1; then
             READY=1
             break
+        fi
+        # Every ~30s, make sure the llama job did not die while loading.
+        if [ $((i % 6)) -eq 0 ]; then
+            STATE=$(job_state "${LLAMA_JOB}")
+            case "${TERMINAL_STATES}" in
+                *" ${STATE} "*)
+                    echo "ERROR: LLAMA job ${LLAMA_JOB} ended in state ${STATE} while loading."
+                    exit 1
+                    ;;
+            esac
         fi
         sleep 5
     done
@@ -128,32 +191,10 @@ set -a
 source "${FRPC_ENV}"
 set +a
 
-# Wait for Twenty and update its host as soon as it is RUNNING. If the job
-# finished, fall back to scontrol so the node is still recorded.
-TWENTY_NODE=""
-TWENTY_STATE=""
-while true; do
-    TWENTY_STATE=$(job_state "${TWENTY_JOB}")
-    TWENTY_NODE=$(job_node "${TWENTY_JOB}")
-
-    if [ "${TWENTY_STATE}" = "RUNNING" ] && [ -n "${TWENTY_NODE}" ]; then
-        echo "Twenty is running on node: ${TWENTY_NODE}"
-        break
-    elif [ -n "${TWENTY_NODE}" ]; then
-        echo "WARNING: Twenty job state is ${TWENTY_STATE:-gone}; using node ${TWENTY_NODE}."
-        break
-    elif [ -z "${TWENTY_STATE}" ] || [ "${TWENTY_STATE}" = "CANCELLED" ] ||
-         [ "${TWENTY_STATE}" = "FAILED" ] || [ "${TWENTY_STATE}" = "COMPLETED" ] ||
-         [ "${TWENTY_STATE}" = "TIMEOUT" ] || [ "${TWENTY_STATE}" = "NODE_FAIL" ] ||
-         [ "${TWENTY_STATE}" = "OUT_OF_MEMORY" ] || [ "${TWENTY_STATE}" = "PREEMPTED" ]; then
-        echo "ERROR: Twenty job ${TWENTY_JOB} is not running (state: ${TWENTY_STATE:-gone})."
-        echo "Check: sacct -j ${TWENTY_JOB} --format=JobID,JobName%24,State,ExitCode,NodeList"
-        exit 1
-    else
-        echo "Twenty job ${TWENTY_JOB} state: ${TWENTY_STATE}"
-    fi
-    sleep 10
-done
+# Wait for Twenty to be RUNNING. wait_for_running fails instead of looping
+# forever if the job dies or is purged from Slurm.
+wait_for_running "${TWENTY_JOB}" Twenty TWENTY_NODE || exit 1
+echo "Twenty is running on node: ${TWENTY_NODE}"
 
 # Update Twenty Node Name in crm-environment-env and tau2-bench files.
 sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
@@ -179,13 +220,14 @@ fi
 LLAMA_STATE=$(job_state "${LLAMA_JOB}")
 OPENCODE_STATE=$(job_state "${OPENCODE_JOB}")
 TAU2_STATE=$(job_state "${TAU2_JOB}")
+TWENTY_STATE=$(job_state "${TWENTY_JOB}")
 
-echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE} Twenty${TWENTY_STATE} Tau2${TAU2_STATE}"
+echo "LLAMA=${LLAMA_STATE:-unknown} OpenCode=${OPENCODE_STATE:-unknown} Twenty=${TWENTY_STATE:-unknown} Tau2=${TAU2_STATE:-unknown}"
 
-if [[ "$LLAMA_STATE" == "RUNNING" &&
-      "$OPENCODE_STATE" == "RUNNING" &&
-      "$TWENTY_STATE" == "RUNNING" &&
-      "$TAU2_STATE" == "RUNNING" ]]; then
+if [[ "${LLAMA_STATE}" == "RUNNING" &&
+      "${OPENCODE_STATE}" == "RUNNING" &&
+      "${TWENTY_STATE}" == "RUNNING" &&
+      "${TAU2_STATE}" == "RUNNING" ]]; then
     echo "All jobs are RUNNING."
 
     # Send Email
@@ -206,4 +248,5 @@ OpenCode Json Updated
 EOF
 else
     echo "WARNING: not all jobs are RUNNING; check squeue/sacct."
+    echo "Check: sacct -j ${LLAMA_JOB},${OPENCODE_JOB},${TWENTY_JOB},${TAU2_JOB} --format=JobID,JobName%24,State,ExitCode,NodeList"
 fi
