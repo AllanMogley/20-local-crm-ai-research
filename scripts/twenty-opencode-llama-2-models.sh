@@ -63,6 +63,15 @@ for PORT in "${USER_PORT}" "${AGENT_PORT}"; do
 done
 echo "Both llama servers are ready."
 
+# Publish the current llama endpoints for tau2.
+sed -i '/^LLAMA_NODE=/d;/^LLAMA_USER_BASE_URL=/d;/^LLAMA_AGENT_BASE_URL=/d' "${TAU2_BENCH_ENV}"
+{
+    echo ""
+    echo "LLAMA_NODE=${NODE}"
+    echo "LLAMA_USER_BASE_URL=http://${NODE}:${USER_PORT}/v1"
+    echo "LLAMA_AGENT_BASE_URL=http://${NODE}:${AGENT_PORT}/v1"
+} >> "${TAU2_BENCH_ENV}"
+
 # Set .env variables
 set -a
 source "${FRPC_ENV}"
@@ -71,8 +80,8 @@ set +a
 # Update opencode.json to the user model on port 8080.
 sed -i -E "s|(\"baseURL\"[[:space:]]*:[[:space:]]*\"http://)[^:\"]*(:[0-9]+)?|\1${NODE}:${USER_PORT}|" "${OPENCODE_JSON}"
 
-# Update tau2-bench user model endpoint. The agent model runs on port 8081 and
-# must be passed per run through --agent-args / --agent-llm-args.
+# Update the tau2-bench user model endpoint. The agent model runs on port 8081;
+# its base URL is available as LLAMA_AGENT_BASE_URL in the same .env file.
 sed -i -E "/^OPENAI_BASE_URL=/s#^(OPENAI_BASE_URL=http://)[^:/]+(:[0-9]+)?#\1${NODE}:${USER_PORT}#" "${TAU2_BENCH_ENV}"
 
 # Wait until all three are RUNNING
@@ -115,4 +124,3 @@ EOF
     fi
     sleep 10
 done
-
