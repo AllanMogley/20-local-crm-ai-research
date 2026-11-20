@@ -176,6 +176,32 @@ echo "Submitted OpenCode job: ${OPENCODE_JOB}"
 echo "Submitted Twenty job: ${TWENTY_JOB}"
 echo "Submitted Tau2 job: ${TAU2_JOB}"
 
+# Update the Twenty endpoint as soon as the Twenty job is RUNNING, without
+# waiting for the llama models to finish loading.
+wait_for_running "${TWENTY_JOB}" Twenty TWENTY_NODE || exit 1
+echo "Twenty is running on node: ${TWENTY_NODE}"
+
+# Update Twenty Node Name in crm-environment-env and tau2-bench files.
+sed -i 's/\r$//' "${TAU2_BENCH_ENV}"
+sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
+set_url_host TWENTY_MCP_URL "${TWENTY_NODE}" "${TAU2_BENCH_ENV}"
+set_db_host TWENTY_DB_URL "${TWENTY_NODE}" "${TAU2_BENCH_ENV}"
+
+echo "Twenty endpoints written:"
+grep -E '^[[:space:]]*(export[[:space:]]+)?(TWENTY_MCP_URL|TWENTY_DB_URL)=' "${TAU2_BENCH_ENV}" || true
+grep '^TWENTY_HOSTNAME=' "${CRM_ENVIRONMENT_ENV}" || true
+
+if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?TWENTY_MCP_URL=[\"']?https?://${TWENTY_NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
+    echo "ERROR: TWENTY_MCP_URL was not updated. Current line:"
+    grep -E 'TWENTY_MCP_URL=' "${TAU2_BENCH_ENV}" | cat -A
+    exit 1
+fi
+if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?TWENTY_DB_URL=.*@${TWENTY_NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
+    echo "ERROR: TWENTY_DB_URL was not updated. Current line:"
+    grep -E 'TWENTY_DB_URL=' "${TAU2_BENCH_ENV}" | cat -A
+    exit 1
+fi
+
 # Wait until both llama servers finish loading. RUNNING only means the job
 # started; the models can take several minutes to become ready.
 LLAMA_READY=1
@@ -223,32 +249,6 @@ fi
 set -a
 source "${FRPC_ENV}"
 set +a
-
-# Wait for Twenty to be RUNNING. wait_for_running fails instead of looping
-# forever if the job dies or is purged from Slurm.
-wait_for_running "${TWENTY_JOB}" Twenty TWENTY_NODE || exit 1
-echo "Twenty is running on node: ${TWENTY_NODE}"
-
-# Update Twenty Node Name in crm-environment-env and tau2-bench files.
-sed -i 's/\r$//' "${TAU2_BENCH_ENV}"
-sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
-set_url_host TWENTY_MCP_URL "${TWENTY_NODE}" "${TAU2_BENCH_ENV}"
-set_db_host TWENTY_DB_URL "${TWENTY_NODE}" "${TAU2_BENCH_ENV}"
-
-echo "Twenty endpoints written:"
-grep -E '^[[:space:]]*(export[[:space:]]+)?(TWENTY_MCP_URL|TWENTY_DB_URL)=' "${TAU2_BENCH_ENV}" || true
-grep '^TWENTY_HOSTNAME=' "${CRM_ENVIRONMENT_ENV}" || true
-
-if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?TWENTY_MCP_URL=[\"']?https?://${TWENTY_NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
-    echo "ERROR: TWENTY_MCP_URL was not updated. Current line:"
-    grep -E 'TWENTY_MCP_URL=' "${TAU2_BENCH_ENV}" | cat -A
-    exit 1
-fi
-if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?TWENTY_DB_URL=.*@${TWENTY_NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
-    echo "ERROR: TWENTY_DB_URL was not updated. Current line:"
-    grep -E 'TWENTY_DB_URL=' "${TAU2_BENCH_ENV}" | cat -A
-    exit 1
-fi
 
 # Report the other job states once. Do not loop forever on finished jobs.
 LLAMA_STATE=$(job_state "${LLAMA_JOB}")
