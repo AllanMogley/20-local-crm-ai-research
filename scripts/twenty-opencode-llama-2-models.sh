@@ -111,6 +111,28 @@ wait_for_running() {
     done
 }
 
+# Replace the host in a KEY=<scheme>://host[:port][/path] line. Tolerates an
+# optional "export ", surrounding quotes, spaces, https and CRLF.
+set_url_host() {
+    local key="$1" host="$2" file="$3"
+    if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?${key}=" "${file}"; then
+        echo "WARNING: ${key} not found in ${file}" >&2
+        return 1
+    fi
+    sed -i -E "/^[[:space:]]*(export[[:space:]]+)?${key}=/s#(://)[^:/\"']+#\1${host}#" "${file}"
+}
+
+# Replace the host in a KEY=...://user:pass@host[:port]/db line. The greedy
+# ".*@" targets the last @, so passwords containing @ are preserved.
+set_db_host() {
+    local key="$1" host="$2" file="$3"
+    if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?${key}=" "${file}"; then
+        echo "WARNING: ${key} not found in ${file}" >&2
+        return 1
+    fi
+    sed -i -E "/^[[:space:]]*(export[[:space:]]+)?${key}=/s#(.*@)[^:@/\"']+#\1${host}#" "${file}"
+}
+
 # Submit LLAMA job
 LLAMA_JOB=$(submit_job "${LLAMA_SLURM}") || exit 1
 echo "Submitted LLAMA job: ${LLAMA_JOB}"
@@ -122,6 +144,7 @@ echo "${NODE}" > llama_node.txt
 
 # Update the llama URLs immediately after the node is known. These no longer
 # depend on the /health checks below.
+sed -i 's/\r$//' "${TAU2_BENCH_ENV}"
 sed -i '/^LLAMA_NODE=/d;/^LLAMA_USER_BASE_URL=/d;/^LLAMA_AGENT_BASE_URL=/d' "${TAU2_BENCH_ENV}"
 {
     echo ""
@@ -130,17 +153,17 @@ sed -i '/^LLAMA_NODE=/d;/^LLAMA_USER_BASE_URL=/d;/^LLAMA_AGENT_BASE_URL=/d' "${T
     echo "LLAMA_AGENT_BASE_URL=http://${NODE}:${AGENT_PORT}/v1"
 } >> "${TAU2_BENCH_ENV}"
 
-sed -i -E "/^OPENAI_BASE_URL=/s#^(OPENAI_BASE_URL=http://)[^:/]+(:[0-9]+)?(/v1)?.*#\1${NODE}:${USER_PORT}/v1#" "${TAU2_BENCH_ENV}"
+set_url_host OPENAI_BASE_URL "${NODE}" "${TAU2_BENCH_ENV}"
 
 # Update opencode.json to the user model on port 8080.
 sed -i -E "s|(\"baseURL\"[[:space:]]*:[[:space:]]*\"http://)[^:\"]*(:[0-9]+)?|\1${NODE}:${USER_PORT}|" "${OPENCODE_JSON}"
 
 echo "LLAMA endpoints written to ${TAU2_BENCH_ENV}:"
-grep -E '^(OPENAI_BASE_URL|LLAMA_NODE|LLAMA_USER_BASE_URL|LLAMA_AGENT_BASE_URL)=' "${TAU2_BENCH_ENV}" || true
+grep -E '^[[:space:]]*(export[[:space:]]+)?(OPENAI_BASE_URL|LLAMA_NODE|LLAMA_USER_BASE_URL|LLAMA_AGENT_BASE_URL)=' "${TAU2_BENCH_ENV}" || true
 
-if ! grep -q "^OPENAI_BASE_URL=http://${NODE}:${USER_PORT}/v1$" "${TAU2_BENCH_ENV}"; then
+if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?OPENAI_BASE_URL=[\"']?https?://${NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
     echo "ERROR: OPENAI_BASE_URL was not updated. Current line:"
-    grep '^OPENAI_BASE_URL=' "${TAU2_BENCH_ENV}" | cat -A
+    grep -E 'OPENAI_BASE_URL=' "${TAU2_BENCH_ENV}" | cat -A
     exit 1
 fi
 
@@ -206,28 +229,6 @@ set +a
 wait_for_running "${TWENTY_JOB}" Twenty TWENTY_NODE || exit 1
 echo "Twenty is running on node: ${TWENTY_NODE}"
 
-# Replace the host in a KEY=<scheme>://host[:port][/path] line. Tolerates an
-# optional "export ", surrounding quotes, spaces, https and CRLF.
-set_url_host() {
-    local key="$1" host="$2" file="$3"
-    if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?${key}=" "${file}"; then
-        echo "WARNING: ${key} not found in ${file}" >&2
-        return 1
-    fi
-    sed -i -E "/^[[:space:]]*(export[[:space:]]+)?${key}=/s#(://)[^:/\"']+#\1${host}#" "${file}"
-}
-
-# Replace the host in a KEY=...://user:pass@host[:port]/db line. The greedy
-# ".*@" targets the last @, so passwords containing @ are preserved.
-set_db_host() {
-    local key="$1" host="$2" file="$3"
-    if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?${key}=" "${file}"; then
-        echo "WARNING: ${key} not found in ${file}" >&2
-        return 1
-    fi
-    sed -i -E "/^[[:space:]]*(export[[:space:]]+)?${key}=/s#(.*@)[^:@/\"']+#\1${host}#" "${file}"
-}
-
 # Update Twenty Node Name in crm-environment-env and tau2-bench files.
 sed -i 's/\r$//' "${TAU2_BENCH_ENV}"
 sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
@@ -283,4 +284,3 @@ else
     echo "WARNING: not all jobs are RUNNING; check squeue/sacct."
     echo "Check: sacct -j ${LLAMA_JOB},${OPENCODE_JOB},${TWENTY_JOB},${TAU2_JOB} --format=JobID,JobName%24,State,ExitCode,NodeList"
 fi
-
