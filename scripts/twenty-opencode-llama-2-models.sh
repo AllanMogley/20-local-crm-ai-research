@@ -84,29 +84,54 @@ sed -i -E "s|(\"baseURL\"[[:space:]]*:[[:space:]]*\"http://)[^:\"]*(:[0-9]+)?|\1
 # its base URL is available as LLAMA_AGENT_BASE_URL in the same .env file.
 sed -i -E "/^OPENAI_BASE_URL=/s#^(OPENAI_BASE_URL=http://)[^:/]+(:[0-9]+)?#\1${NODE}:${USER_PORT}#" "${TAU2_BENCH_ENV}"
 
-# Wait until all three are RUNNING
+# Wait for Twenty, then update its host as soon as it is RUNNING. Do not wait
+# for every job: if one leaves the queue, squeue returns an invalid job id.
 while true; do
-    LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T")
-    OPENCODE_STATE=$(squeue -h -j "${OPENCODE_JOB}" -o "%T")
-    TWENTY_STATE=$(squeue -h -j "${TWENTY_JOB}" -o "%T")
-    TAU2_STATE=$(squeue -h -j "${TAU2_JOB}" -o "%T")
+    TWENTY_STATE=$(squeue -h -j "${TWENTY_JOB}" -o "%T" 2>/dev/null)
 
-    echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE} Twenty${TWENTY_STATE}"
+    case "${TWENTY_STATE}" in
+        RUNNING)
+            TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N" 2>/dev/null)
+            if [ -z "${TWENTY_NODE}" ]; then
+                echo "ERROR: could not determine the Twenty node."
+                exit 1
+            fi
 
-    if [[ "$LLAMA_STATE" == "RUNNING" &&
-          "$OPENCODE_STATE" == "RUNNING" &&
-          "$TWENTY_STATE" == "RUNNING" &&
-          "$TAU2_STATE" == "RUNNING" ]]; then
-        echo "All jobs are RUNNING."
+            echo "Twenty is running on node: ${TWENTY_NODE}"
 
-        # Get TWENTY NODE NAME
-        TWENTY_NODE=$(squeue -h -j "${TWENTY_JOB}" -o "%N")
-        # Update Twenty Node Name in crm-environment-env and tau2-bench files
-        sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
-        sed -i "/^TWENTY_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
-        sed -i "/^TWENTY_DB_URL=/s|\(@\)[^:]*:|\1${TWENTY_NODE}:|" "${TAU2_BENCH_ENV}"
-        # Send Email
-        mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
+            # Update Twenty Node Name in crm-environment-env and tau2-bench files
+            sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
+            sed -i "/^TWENTY_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
+            sed -i "/^TWENTY_DB_URL=/s|\(@\)[^:]*:|\1${TWENTY_NODE}:|" "${TAU2_BENCH_ENV}"
+            break
+            ;;
+        "")
+            echo "ERROR: Twenty job ${TWENTY_JOB} is no longer in the queue."
+            echo "Check: sacct -j ${TWENTY_JOB} --format=JobID,JobName%24,State,ExitCode"
+            exit 1
+            ;;
+        *)
+            echo "Twenty job ${TWENTY_JOB} state: ${TWENTY_STATE}"
+            ;;
+    esac
+    sleep 10
+done
+
+# Report the other job states once. Do not loop forever on finished jobs.
+LLAMA_STATE=$(squeue -h -j "${LLAMA_JOB}" -o "%T" 2>/dev/null)
+OPENCODE_STATE=$(squeue -h -j "${OPENCODE_JOB}" -o "%T" 2>/dev/null)
+TAU2_STATE=$(squeue -h -j "${TAU2_JOB}" -o "%T" 2>/dev/null)
+TWENTY_STATE=RUNNING
+
+echo "LLAMA${LLAMA_STATE} OpenCode${OPENCODE_STATE} Twenty${TWENTY_STATE} Tau2${TAU2_STATE}"
+
+if [[ "$LLAMA_STATE" == "RUNNING" &&
+      "$OPENCODE_STATE" == "RUNNING" &&
+      "$TAU2_STATE" == "RUNNING" ]]; then
+    echo "All jobs are RUNNING."
+
+    # Send Email
+    mail -s "HPC jobs are running" "${MY_EMAIL}" <<EOF
 
 All HPC jobs are now RUNNING.
 
@@ -118,9 +143,10 @@ Tau2JOB     :   ${TAU2_JOB}
 LLAMA node        :   $(cat llama_node.txt)
 LLAMA user model  :   http://${NODE}:${USER_PORT}/v1
 LLAMA agent model :   http://${NODE}:${AGENT_PORT}/v1
+Twenty node       :   ${TWENTY_NODE}
 OpenCode Json Updated
 EOF
-        break
-    fi
-    sleep 10
-done
+else
+    echo "WARNING: not all jobs are RUNNING; check squeue/sacct."
+fi
+
