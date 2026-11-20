@@ -196,23 +196,46 @@ set +a
 wait_for_running "${TWENTY_JOB}" Twenty TWENTY_NODE || exit 1
 echo "Twenty is running on node: ${TWENTY_NODE}"
 
+# Replace the host in a KEY=<scheme>://host[:port][/path] line. Tolerates an
+# optional "export ", surrounding quotes, spaces, https and CRLF.
+set_url_host() {
+    local key="$1" host="$2" file="$3"
+    if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?${key}=" "${file}"; then
+        echo "WARNING: ${key} not found in ${file}" >&2
+        return 1
+    fi
+    sed -i -E "/^[[:space:]]*(export[[:space:]]+)?${key}=/s#(://)[^:/\"']+#\1${host}#" "${file}"
+}
+
+# Replace the host in a KEY=...://user:pass@host[:port]/db line. The greedy
+# ".*@" targets the last @, so passwords containing @ are preserved.
+set_db_host() {
+    local key="$1" host="$2" file="$3"
+    if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?${key}=" "${file}"; then
+        echo "WARNING: ${key} not found in ${file}" >&2
+        return 1
+    fi
+    sed -i -E "/^[[:space:]]*(export[[:space:]]+)?${key}=/s#(.*@)[^:@/\"']+#\1${host}#" "${file}"
+}
+
 # Update Twenty Node Name in crm-environment-env and tau2-bench files.
+sed -i 's/\r$//' "${TAU2_BENCH_ENV}"
 sed -i "s|^\(TWENTY_HOSTNAME='\)[^']*|\1${TWENTY_NODE}|" "${CRM_ENVIRONMENT_ENV}"
-sed -i "/^TWENTY_MCP_URL=/s|\(http://\)[^:/]*|\1${TWENTY_NODE}|" "${TAU2_BENCH_ENV}"
-sed -i "/^TWENTY_DB_URL=/s|\(@\)[^:]*:|\1${TWENTY_NODE}:|" "${TAU2_BENCH_ENV}"
+set_url_host TWENTY_MCP_URL "${TWENTY_NODE}" "${TAU2_BENCH_ENV}"
+set_db_host TWENTY_DB_URL "${TWENTY_NODE}" "${TAU2_BENCH_ENV}"
 
 echo "Twenty endpoints written:"
-grep -E '^(TWENTY_MCP_URL|TWENTY_DB_URL)=' "${TAU2_BENCH_ENV}" || true
+grep -E '^[[:space:]]*(export[[:space:]]+)?(TWENTY_MCP_URL|TWENTY_DB_URL)=' "${TAU2_BENCH_ENV}" || true
 grep '^TWENTY_HOSTNAME=' "${CRM_ENVIRONMENT_ENV}" || true
 
-if ! grep -q "^TWENTY_MCP_URL=http://${TWENTY_NODE}:" "${TAU2_BENCH_ENV}"; then
+if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?TWENTY_MCP_URL=[\"']?https?://${TWENTY_NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
     echo "ERROR: TWENTY_MCP_URL was not updated. Current line:"
-    grep '^TWENTY_MCP_URL=' "${TAU2_BENCH_ENV}" | cat -A
+    grep -E 'TWENTY_MCP_URL=' "${TAU2_BENCH_ENV}" | cat -A
     exit 1
 fi
-if ! grep -q "^TWENTY_DB_URL=.*@${TWENTY_NODE}:" "${TAU2_BENCH_ENV}"; then
+if ! grep -qE "^[[:space:]]*(export[[:space:]]+)?TWENTY_DB_URL=.*@${TWENTY_NODE}[:/\"']" "${TAU2_BENCH_ENV}"; then
     echo "ERROR: TWENTY_DB_URL was not updated. Current line:"
-    grep '^TWENTY_DB_URL=' "${TAU2_BENCH_ENV}" | cat -A
+    grep -E 'TWENTY_DB_URL=' "${TAU2_BENCH_ENV}" | cat -A
     exit 1
 fi
 
