@@ -17,8 +17,6 @@ AGENT_PORT=8081
 TERMINAL_STATES=" COMPLETED FAILED CANCELLED TIMEOUT NODE_FAIL OUT_OF_MEMORY PREEMPTED BOOT_FAIL DEADLINE REVOKED SPECIAL_EXIT "
 
 # Submit a job and return only its numeric ID. sbatch's own messages
-# (e.g. "also queued in cpu-short") still go to the terminal. Some sites
-# return "<id>;<cluster>" from --parsable, so strip anything after ';'.
 submit_job() {
     local file="$1" raw id
     raw=$(sbatch --parsable "${file}") || {
