@@ -43,6 +43,64 @@ REDIS_CONTAINER_DIR="/redis"
 TWENTY_SERVER_DIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/twenty-apps-volumes/twenty-server"
 TWENTY_SERVER_CONTAINER_DIR="/app/packages/twenty-server/.local-storage"
 
+# --------------------------------------------------
+# Cleanup must be armed before any instance starts.
+# If the job is cancelled or times out while waiting for
+# Postgres, the EXIT trap stops the instances; otherwise a
+# stale instance and postmaster.pid block the next run.
+# --------------------------------------------------
+
+frpc_pid=""
+
+cleanup() {
+    if [ -n "${frpc_pid}" ]; then
+        echo "Stopping frpc..."
+        kill "${frpc_pid}" 2>/dev/null || true
+    fi
+
+    echo "Stopping Postgres instance ${POSTGRES_INSTANCE}..."
+    apptainer instance stop "${POSTGRES_INSTANCE}" || true
+
+    echo "Stopping Redis instance ${REDIS_INSTANCE}..."
+    apptainer instance stop "${REDIS_INSTANCE}" || true
+
+    echo "Stopping Twenty-server instance ${TWENTY_SERVER_INSTANCE}..."
+    apptainer instance stop "${TWENTY_SERVER_INSTANCE}" || true
+
+    echo "Stopping Twenty-worker instance ${TWENTY_WORKER_INSTANCE}..."
+    apptainer instance stop "${TWENTY_WORKER_INSTANCE}" || true
+}
+
+trap cleanup EXIT
+
+# Bounded readiness waits: fail the job instead of looping forever.
+WAIT_TRIES="${WAIT_TRIES:-60}"
+WAIT_SLEEP="${WAIT_SLEEP:-2}"
+
+wait_until() {
+    local name="$1"
+    shift
+    local i
+    for ((i = 1; i <= WAIT_TRIES; i++)); do
+        if "$@" >/dev/null 2>&1; then
+            echo "${name} is ready."
+            return 0
+        fi
+        echo "Waiting for ${name}... (${i}/${WAIT_TRIES})"
+        sleep "${WAIT_SLEEP}"
+    done
+    echo "ERROR: ${name} did not become ready after ${WAIT_TRIES} attempts." >&2
+    echo "Check the Slurm .out/.err logs." >&2
+    echo "If Postgres failed, inspect ${POSTGRES_DIR}/postmaster.pid and" >&2
+    echo "any leftover postgres process, then remove the stale pid file." >&2
+    return 1
+}
+
+if [ -f "${POSTGRES_DIR}/postmaster.pid" ]; then
+    echo "WARNING: ${POSTGRES_DIR}/postmaster.pid exists."
+    echo "If no postgres is running, remove it before restarting this job."
+fi
+
 echo "========================================"
 echo "Twenty-apps-postgres Slurm Job"
 echo "========================================"
@@ -85,11 +143,9 @@ apptainer instance start \
     "${POSTGRES_INSTANCE}"
 
 # Wait for Postgres healthy
-until apptainer exec --userns instance://${POSTGRES_INSTANCE} \
-    pg_isready -U postgres -h 127.0.0.1 -d default; do
-    echo "Waiting for PostgreSQL..."
-    sleep 2
-done
+wait_until "PostgreSQL" \
+    apptainer exec --userns instance://${POSTGRES_INSTANCE} \
+    pg_isready -U postgres -h 127.0.0.1 -d default
 
 # REDIS
 apptainer instance start \
@@ -103,11 +159,9 @@ apptainer instance start \
     "${REDIS_INSTANCE}"
 
 # Wait for Redis healthy
-until apptainer exec --userns instance://${REDIS_INSTANCE} \
-    redis-cli -h 127.0.0.1 ping; do
-    echo "Waiting for Redis..."
-    sleep 2
-done
+wait_until "Redis" \
+    apptainer exec --userns instance://${REDIS_INSTANCE} \
+    redis-cli -h 127.0.0.1 ping
 
 # TWENTY SERVER
 apptainer instance start \
@@ -122,10 +176,7 @@ apptainer instance start \
     "${TWENTY_SERVER_INSTANCE}"
 
 # Wait for Twenty Server healthy
-until curl -fsS http://localhost:3000; do
-    echo "Waiting for Twenty..."
-    sleep 2
-done
+wait_until "Twenty" curl -fsS http://localhost:3000
 
 # TWENT WORKER
 apptainer instance start \
@@ -154,30 +205,6 @@ echo "FRPC_GENERATED=${FRPC_GENERATED}"
 # Start frpc
 "${FRPC_FILE}" --config "${FRPC_GENERATED}" > frpc.log 2>&1 &
 frpc_pid=$!
-
-# --------------------------------------------------
-# Make sure instance is stopped when job exits
-# --------------------------------------------------
-
-cleanup() {
-    echo "Stopping frpc..."
-    kill "${frpc_pid}" 2>/dev/null || true # kill frpc client
-
-    echo "Stopping Postgres instance ${POSTGRES_INSTANCE}..."
-    apptainer instance stop "${POSTGRES_INSTANCE}" || true
-
-    echo "Stopping Redis instance ${REDIS_INSTANCE}..."
-    apptainer instance stop "${REDIS_INSTANCE}" || true
-
-    echo "Stopping Twenty-server instance ${TWENTY_SERVER_INSTANCE}..."
-    apptainer instance stop "${TWENTY_SERVER_INSTANCE}" || true
-
-    echo "Stopping Twenty-worker instance ${TWENTY_WORKER_INSTANCE}..."
-    apptainer instance stop "${TWENTY_WORKER_INSTANCE}" || true
-    }
-
-# Send signal to run cleanup() function
-trap cleanup EXIT
 
 # --------------------------------------------------
 # Show instance
