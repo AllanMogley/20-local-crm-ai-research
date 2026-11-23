@@ -18,5 +18,4 @@ apptainer-images
 models
 uv.lock
 
-
-crm-environment/twenty-apps-volumes/postgres/
+twenty-apps-volumes/postgres
