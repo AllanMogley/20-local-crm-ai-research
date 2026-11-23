@@ -28,7 +28,8 @@ WORKDIR="/home/nr_szww/nr_szetdk/allan_wanjala/komondor-hpc/komondor-hpc/models"
 USER_MODEL="/work/Qwen/Qwen3.5-9B-UD-Q4_K_XL.gguf"      # User simulator
 # AGENT_MODEL="/work/Qwen/Qwen3.5-9B-UD-Q4_K_XL.gguf"  # Agent
 # AGENT_MODEL="/work/Gpt-oss/gpt-oss-20b-UD-Q4_K_XL.gguf"  # Agent
-AGENT_MODEL="/work/Qwen/Qwen3.5-4B-UD-Q4_K_XL.gguf"  # Agent
+# AGENT_MODEL="/work/Qwen/Qwen3.5-4B-UD-Q4_K_XL.gguf"  # Agent
+AGENT_MODEL="/work/Phi/Phi-4-mini-instruct-Q4_K_M.gguf"  # Agent
 
 # Both servers run in the same Apptainer instance on different ports.
 USER_PORT=8080
